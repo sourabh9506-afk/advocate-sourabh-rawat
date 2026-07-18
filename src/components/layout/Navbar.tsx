@@ -1,19 +1,26 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
+import { useTranslations, useLocale } from 'next-intl';
+import { Link, usePathname, useRouter } from '@/i18n/routing';
 
 export default function Navbar() {
   const t = useTranslations('nav');
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleLocale = () => {
+    router.replace(pathname, { locale: locale === 'en' ? 'hi' : 'en' });
+  };
 
   return (
     <>
@@ -35,10 +42,13 @@ export default function Navbar() {
           <Link href="/#faq">FAQ</Link>
           <Link href="/#location">{t('contact')}</Link>
           <Link href="/#process" className="nav-cta">{t('bookNow')}</Link>
+          <button onClick={toggleLocale} className="lang-switch" aria-label="Switch language">
+            {locale === 'en' ? 'हिं' : 'EN'}
+          </button>
         </div>
-        
-        <div 
-          className={`nav-toggle ${isOpen ? 'open' : ''}`} 
+
+        <div
+          className={`nav-toggle ${isOpen ? 'open' : ''}`}
           onClick={() => setIsOpen(!isOpen)}
         >
           <span></span>
@@ -55,6 +65,9 @@ export default function Navbar() {
         <Link href="/#faq" onClick={() => setIsOpen(false)}>FAQ</Link>
         <Link href="/#location" onClick={() => setIsOpen(false)}>{t('contact')}</Link>
         <Link href="/#process" className="mob-cta" onClick={() => setIsOpen(false)}>{t('bookNow')}</Link>
+        <button onClick={() => { toggleLocale(); setIsOpen(false); }} className="lang-switch" style={{ alignSelf: 'center', marginTop: '8px' }}>
+          {locale === 'en' ? 'हिंदी में देखें' : 'View in English'}
+        </button>
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import { Playfair_Display, Inter } from 'next/font/google';
+import { Playfair_Display, Inter, Noto_Serif_Devanagari, Noto_Sans_Devanagari } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -12,6 +12,8 @@ import '../globals.css';
 
 const playfair = Playfair_Display({ subsets: ['latin'], weight: ['400', '600', '700'], variable: '--font-playfair' });
 const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600'], variable: '--font-inter' });
+const notoSerifDev = Noto_Serif_Devanagari({ subsets: ['devanagari'], weight: ['400', '600', '700'], variable: '--font-serif-dev' });
+const notoSansDev = Noto_Sans_Devanagari({ subsets: ['devanagari'], weight: ['400', '500', '600'], variable: '--font-sans-dev' });
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -60,7 +62,7 @@ export default async function LocaleLayout({
   const legalServiceSchema = generateLegalServiceSchema(locale);
 
   return (
-    <html lang={locale} className={`${playfair.variable} ${inter.variable}`}>
+    <html lang={locale} className={`${playfair.variable} ${inter.variable} ${notoSerifDev.variable} ${notoSansDev.variable}`}>
       <body className="antialiased">
         <script
           type="application/ld+json"

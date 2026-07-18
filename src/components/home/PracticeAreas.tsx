@@ -158,16 +158,11 @@ function CategoryBlock({ cat, t }: { cat: Category; t: any }) {
 
   return (
     <div>
-      <div className="mb-7 flex justify-between items-end max-md:flex-col max-md:items-start">
-        <div>
-          <div className="flex items-center">
-            <span className="font-serif text-[13px] text-[#8A631B] font-extrabold tracking-[2px] mr-[14px]">{cat.number}</span>
-            <h3 className="font-serif font-bold text-navy text-[28px]">{t(`categories.${cat.key}.title`)}</h3>
-          </div>
-          <div className="w-12 h-[2.5px] bg-gold mt-[10px] rounded-[2px] ml-8" />
-        </div>
-        <div className="pb-2 max-md:mt-4 max-md:ml-0">
-          <p className="font-sans text-sm text-dark/85 max-w-[320px] leading-[1.6]">{t(`categories.${cat.key}.desc`)}</p>
+      <div className="mb-7">
+        <h3 className="font-serif font-bold text-navy text-[28px]">{t(`categories.${cat.key}.title`)}</h3>
+        <div className="w-12 h-[2.5px] bg-gold mt-[10px] rounded-[2px]" />
+        <div className="mt-4">
+          <p className="font-sans text-sm text-dark/85 leading-[1.6] max-w-[600px]">{t(`categories.${cat.key}.desc`)}</p>
         </div>
       </div>
 

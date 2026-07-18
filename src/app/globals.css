@@ -14,6 +14,12 @@
   --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
 }
 
+/* Hindi locale: override with Devanagari fonts */
+html[lang="hi"] {
+  --font-sans: var(--font-sans-dev), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif-dev), ui-serif, Georgia, serif;
+}
+
 :root {
   --background: var(--color-cream);
   --foreground: var(--color-dark);
@@ -98,6 +104,8 @@ nav.scrolled{box-shadow:0 2px 20px rgba(27,42,74,0.08)}
 .nav-cta{background:var(--gold)!important;color:var(--white)!important;font-weight:700!important;padding:10px 24px!important;border-radius:4px;font-size:13px!important;transition:background 0.2s,transform 0.15s!important;letter-spacing:0.3px}
 .nav-cta::after{display:none!important}
 .nav-cta:hover{background:var(--gold-dark)!important;transform:translateY(-1px)}
+.lang-switch{background:transparent;border:1.5px solid var(--gold);color:var(--gold);font-size:12px;font-weight:700;padding:6px 12px;border-radius:4px;cursor:pointer;transition:all 0.2s;letter-spacing:0.5px;font-family:var(--font-inter)}
+.lang-switch:hover{background:var(--gold);color:var(--white)}
 .nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .nav-toggle span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all 0.3s}
 .mob-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--white);border-bottom:2px solid var(--gold);padding:16px 24px;z-index:99;flex-direction:column;gap:0;box-shadow:0 8px 20px rgba(0,0,0,0.08)}

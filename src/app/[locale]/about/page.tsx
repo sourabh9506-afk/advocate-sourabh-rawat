@@ -88,7 +88,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             <div className="flex flex-col items-center text-center">
               <div className="relative w-28 h-28 rounded-full ring-4 ring-gold overflow-hidden">
                 <Image
-                  src="/images/team/sourabh.webp"
+                  src="/images/team/sourabh.png"
                   alt={`${t('name')} — ${t('designation')}`}
                   fill
                   sizes="112px"
