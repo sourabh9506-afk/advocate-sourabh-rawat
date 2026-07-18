@@ -109,6 +109,7 @@ nav.scrolled{box-shadow:0 2px 20px rgba(27,42,74,0.08)}
 .nav-cta:hover{background:var(--gold-dark)!important;transform:translateY(-1px)}
 .lang-switch{background:transparent;border:1.5px solid var(--gold);color:var(--gold);font-size:12px;font-weight:700;padding:6px 12px;border-radius:4px;cursor:pointer;transition:all 0.2s;letter-spacing:0.5px;font-family:var(--font-inter)}
 .lang-switch:hover{background:var(--gold);color:var(--white)}
+.lang-switch-mobile{display:none}
 .nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .nav-toggle span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all 0.3s}
 .mob-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--white);border-bottom:2px solid var(--gold);padding:16px 24px;z-index:99;flex-direction:column;gap:0;box-shadow:0 8px 20px rgba(0,0,0,0.08)}
@@ -117,9 +118,9 @@ nav.scrolled{box-shadow:0 2px 20px rgba(27,42,74,0.08)}
 
 /* ─── SERVICE CAROUSEL ─── */
 .carousel-section{background:var(--navy);padding:0;overflow:hidden;position:relative}
-.carousel-wrap{position:relative;height:520px}
+.carousel-wrap{position:relative;height:560px}
 .carousel-track{display:flex;height:100%;transition:transform 0.65s cubic-bezier(0.25,0.46,0.45,0.94)}
-.carousel-slide{min-width:100%;height:100%;display:flex;align-items:center;padding:0 80px;position:relative}
+.carousel-slide{min-width:100%;height:100%;display:flex;align-items:center;padding:40px 80px 80px;position:relative;box-sizing:border-box}
 .slide-bg{position:absolute;inset:0;z-index:0}
 .slide-bg-img{object-fit:cover;opacity:1}
 .slide-bg-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 60%)}
@@ -400,9 +401,10 @@ footer{background:var(--navy);color:rgba(255,255,255,0.6);padding:56px 48px 32px
   /* mob-menu top must match nav height */
   .mob-menu{top:64px}
   .mob-menu.open{display:flex}
+  .lang-switch-mobile{display:flex;align-items:center;margin-right:8px}
 
-  .carousel-wrap{height:480px}
-  .carousel-slide{padding:0 24px}
+  .carousel-wrap{height:540px}
+  .carousel-slide{padding:40px 24px 80px;box-sizing:border-box}
   .slide-title{font-size:28px}
   .carousel-dots{left:24px}
   .carousel-arrows{right:24px}
@@ -454,7 +456,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.6);padding:56px 48px 32px
   .top-bar-left a:not(:first-child){display:none}
   .top-bar-left span{display:none}
 
-  .carousel-wrap{height:440px}
+  .carousel-wrap{height:520px}
   .slide-title{font-size:24px;line-height:1.2}
   .slide-desc{font-size:13.5px;margin-bottom:20px}
   .slide-tags{margin-bottom:20px}
@@ -469,7 +471,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.6);padding:56px 48px 32px
 @media(max-width:480px){
   section,.sec-full,#practice,#why,#faq,#reviews,#location,.cta-banner{padding:48px 16px}
   .hero{padding:40px 16px}
-  .carousel-wrap{height:400px}
+  .carousel-wrap{height:520px}
   .slide-title{font-size:22px}
   .hero-title{font-size:30px}
   .sec-title{font-size:24px}

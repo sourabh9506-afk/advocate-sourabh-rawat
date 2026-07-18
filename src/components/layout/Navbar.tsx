@@ -47,6 +47,14 @@ export default function Navbar() {
           </button>
         </div>
 
+        <button
+          onClick={toggleLocale}
+          className="lang-switch lang-switch-mobile"
+          aria-label="Switch language"
+        >
+          {locale === 'en' ? 'हिं' : 'EN'}
+        </button>
+
         <div
           className={`nav-toggle ${isOpen ? 'open' : ''}`}
           onClick={() => setIsOpen(!isOpen)}
