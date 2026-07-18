@@ -1,0 +1,319 @@
+{
+  "nav": {
+    "home": "Home",
+    "practiceAreas": "Practice Areas",
+    "about": "About",
+    "consultation": "Consultation",
+    "reviews": "Client Reviews",
+    "blog": "Legal Guides",
+    "contact": "Contact",
+    "bookNow": "Book Appointment"
+  },
+  "hero": {
+    "badge": "Practicing Advocate · Lucknow",
+    "name": "Advocate Sourabh Rawat",
+    "designation": "Criminal · Civil · Family · Other Matters",
+    "desc": "Dedicated legal representation with 10+ years of practice across criminal, civil, and family courts in Lucknow.",
+    "ctaWhatsApp": "WhatsApp Consultation",
+    "ctaCall": "Call Directly"
+  },
+  "stats": {
+    "years": "Years Practice",
+    "cases": "Cases Handled",
+    "court": "High Court Lucknow"
+  },
+  "whyChoose": {
+    "label": "Why Choose Us",
+    "title": "The",
+    "titleGold": "Difference",
+    "subtitle": "What sets Advocate Sourabh Rawat apart from the crowd.",
+    "r1Title": "Direct Access",
+    "r1Desc": "No assistants, no middlemen. You speak directly with Advocate Sourabh about your case from the very first call.",
+    "r2Title": "Quick Response",
+    "r2Desc": "Every query is responded to within 2 hours. For urgent criminal matters, immediate phone consultation is available.",
+    "r3Title": "Transparent Fees",
+    "r3Desc": "Complete fee structure is explained before you commit. No hidden charges, no surprise bills — what you're told is what you pay.",
+    "r4Title": "15+ Years Experience",
+    "r4Desc": "Over a decade and a half of practice across criminal, civil, and family courts — District Court through High Court Lucknow.",
+    "r5Title": "Strict Confidentiality",
+    "r5Desc": "Every consultation and case detail is treated as strictly privileged. Your personal and legal matters stay protected.",
+    "r6Title": "Lucknow-Based",
+    "r6Desc": "Physically present across Lucknow courts and police stations. In-person meetings at the chamber for detailed case discussion."
+  },
+  "practiceAreas": {
+    "label": "Legal Services",
+    "title": "Practice",
+    "titleGold": "Areas",
+    "desc": "Comprehensive legal representation across all major practice areas — District Courts and High Court Lucknow Bench.",
+    "ctaTitle": "Have a legal matter to discuss?",
+    "ctaSub": "Reach out directly — response within 2 hours.",
+    "categories": {
+      "criminal": {
+        "title": "Criminal Law",
+        "desc": "All criminal defense matters across Lucknow.",
+        "cards": [
+          {
+            "title": "Bail Applications",
+            "desc": "Representation in bail hearings at Magistrate and Sessions Court. Quick filing and urgent hearings arranged.",
+            "tags": [
+              "Regular Bail",
+              "Sessions Court"
+            ]
+          },
+          {
+            "title": "Anticipatory Bail",
+            "desc": "Pre-arrest bail protection under Section 438 CrPC. Filed immediately when arrest is apprehended.",
+            "tags": [
+              "Sec. 438 CrPC",
+              "Pre-Arrest"
+            ]
+          },
+          {
+            "title": "FIR Defense & Quashing",
+            "desc": "Legal defense against false FIRs. High Court petitions for quashing of FIR under Section 482 CrPC.",
+            "tags": [
+              "False FIR",
+              "Sec. 482 HC"
+            ]
+          },
+          {
+            "title": "Sessions Court Trial",
+            "desc": "Full trial representation in criminal cases — charge framing, witness examination, arguments and final hearing.",
+            "tags": [
+              "Trial Defense",
+              "Cross-Examination"
+            ]
+          }
+        ]
+      },
+      "civil": {
+        "title": "Civil Law",
+        "desc": "Dispute resolution and property matters in lower courts and HC.",
+        "cards": [
+          {
+            "title": "Property Disputes",
+            "desc": "Ownership, possession, partition, and boundary disputes. Civil suits filed in District Court Lucknow.",
+            "tags": [
+              "Ownership",
+              "Partition",
+              "Possession"
+            ]
+          },
+          {
+            "title": "Civil Injunctions",
+            "desc": "Temporary and permanent injunction applications to stop illegal construction, dispossession, or encroachment.",
+            "tags": [
+              "Temp. Injunction",
+              "Stay Order"
+            ]
+          },
+          {
+            "title": "Recovery Suits",
+            "desc": "Recovery of money, loans, and dues through civil court. Summary suits and execution proceedings handled.",
+            "tags": [
+              "Money Recovery",
+              "Loan Dues"
+            ]
+          },
+          {
+            "title": "High Court Civil Writs",
+            "desc": "Writ petitions at Allahabad High Court Lucknow Bench for civil rights, government disputes, and service matters.",
+            "tags": [
+              "Writ Petition",
+              "HC Lucknow"
+            ]
+          }
+        ]
+      },
+      "family": {
+        "title": "Family Law",
+        "desc": "Divorce, child custody, and family disputes in Family Court.",
+        "cards": [
+          {
+            "title": "Divorce Proceedings",
+            "desc": "Both mutual consent and contested divorce handled in Family Court Lucknow. Complete documentation and representation.",
+            "tags": [
+              "Mutual Consent",
+              "Contested"
+            ]
+          },
+          {
+            "title": "Child Custody",
+            "desc": "Guardianship and custody cases under Hindu Minority Act and Guardians & Wards Act. Child's best interest priority.",
+            "tags": [
+              "Custody",
+              "Guardianship"
+            ]
+          },
+          {
+            "title": "Maintenance Claims",
+            "desc": "Maintenance applications under Section 125 CrPC and Hindu Marriage Act. Interim and final maintenance secured.",
+            "tags": [
+              "Sec. 125 CrPC",
+              "HMA"
+            ]
+          },
+          {
+            "title": "Domestic Violence (DV Act)",
+            "desc": "Protection orders, residence orders, and compensation under Protection of Women from Domestic Violence Act 2005.",
+            "tags": [
+              "DV Act 2005",
+              "Protection Order"
+            ]
+          }
+        ]
+      },
+      "police": {
+        "title": "Police Station Matters",
+        "desc": "On-ground legal support at police stations across Lucknow.",
+        "cards": [
+          {
+            "title": "Arrest & Detention Rights",
+            "desc": "Legal representation immediately upon arrest. Ensuring rights under Article 22 — no illegal detention beyond 24 hours.",
+            "tags": [
+              "Article 22",
+              "Legal Rights"
+            ]
+          },
+          {
+            "title": "FIR Registration Help",
+            "desc": "Assisting complainants in getting FIR registered at police station. Escalation to Magistrate if police refuses registration.",
+            "tags": [
+              "FIR Filing",
+              "Sec. 156(3)"
+            ]
+          },
+          {
+            "title": "Questioning & Statement",
+            "desc": "Legal presence during police questioning and statement recording. Preventing coerced or incorrect statements.",
+            "tags": [
+              "Statement",
+              "Section 161"
+            ]
+          },
+          {
+            "title": "24×7 Emergency Help",
+            "desc": "Available for urgent police station matters across Lucknow. WhatsApp for immediate response any time.",
+            "tags": [
+              "Urgent",
+              "Immediate Help"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "faq": {
+    "q1": "FIR ho jaaye toh kya karna chahiye?",
+    "a1": "Turant ek criminal lawyer se milein..."
+  },
+  "process": {
+    "feeLabel": "BOOK A CONSULTATION",
+    "feeIntro": "Schedule a consultation at either chamber location or via WhatsApp."
+  },
+  "common": {
+    "bookConsultation": "Book Consultation",
+    "whatsappNow": "WhatsApp Now",
+    "callNow": "Call Now",
+    "learnMore": "Learn More",
+    "consultNow": "Consult Now",
+    "readMore": "Read More",
+    "callDirectly": "Call Directly"
+  },
+  "areas": {
+    "criminal-law": {
+      "title": "Criminal Law Defense",
+      "desc": "Immediate legal representation for FIR, bail, anticipatory bail, and sessions court matters.",
+      "content": "Advocate Sourabh Rawat provides aggressive and strategic defense in all criminal matters. Whether you are facing false accusations or require urgent bail, our chambers ensure that your constitutional rights are protected at every stage of the legal process.",
+      "services": [
+        "FIR Quashing under Section 482 CrPC",
+        "Anticipatory and Regular Bail Applications",
+        "Defense in Sessions Court Trials",
+        "High Court Criminal Appeals",
+        "NDPS, POCSO, and Economic Offences"
+      ]
+    },
+    "civil-law": {
+      "title": "Civil Law & Property Disputes",
+      "desc": "Protecting your property and civil rights through expert representation.",
+      "content": "Civil litigation requires patience, meticulous documentation, and strategic foresight. We handle complex property disputes, injunctions, and recovery suits across District Courts and the High Court, ensuring your assets and rights are secured.",
+      "services": [
+        "Property and Land Disputes",
+        "Civil Injunctions and Stay Orders",
+        "Recovery Suits and Cheque Bounce (138 NI Act)",
+        "Breach of Contract and Commercial Disputes",
+        "Civil Writ Petitions in High Court"
+      ]
+    },
+    "family-law": {
+      "title": "Family Law & Matrimonial Disputes",
+      "desc": "Sensitive and confidential resolutions for family matters.",
+      "content": "Family disputes are emotionally draining. We aim to resolve matrimonial conflicts through mediation and strategic litigation, always prioritizing confidentiality, child welfare, and fair settlements.",
+      "services": [
+        "Mutual Consent and Contested Divorce",
+        "Child Custody and Visitation Rights",
+        "Maintenance and Alimony Claims",
+        "Domestic Violence (DV Act) Defense & Prosecution",
+        "Restitution of Conjugal Rights"
+      ]
+    },
+    "police-station": {
+      "title": "Police Station Matters",
+      "desc": "On-site legal support during questioning and FIR filing.",
+      "content": "The crucial moments during a police inquiry can determine the trajectory of your case. Advocate Sourabh Rawat provides immediate, on-site legal counsel to prevent unlawful detention and ensure proper statement recording.",
+      "services": [
+        "On-site presence during Police Questioning",
+        "Assistance in filing robust FIRs",
+        "Protection against Unlawful Detention",
+        "Legal guidance for Statement Recording",
+        "Immediate crisis management and counsel"
+      ]
+    }
+  },
+  "team": {
+    "label": "Our Experts",
+    "title": "Legal",
+    "titleGold": "Team",
+    "subtitle": "Experienced advocates dedicated to securing your rights and delivering results.",
+    "principal": "Principal Advocate",
+    "associate": "Associate Advocate",
+    "sourabhDesc": "With over 10 years of practice at the High Court and District Courts, Adv. Sourabh Rawat leads the chambers with expertise in criminal defense and civil litigation.",
+    "assoc1Name": "Adv. Sandeep Vishwakarma",
+    "assoc1Desc": "Expertise in handling complex family law disputes and civil matters with a strategic and compassionate approach.",
+    "assoc2Name": "Adv. Ramesh Shukla",
+    "assoc2Desc": "Specializes in comprehensive property registration, title verification, and expert legal documentation services.",
+    "assoc3Name": "Adv. Priya Singh",
+    "assoc3Desc": "Focuses on corporate law, bail matters, and providing immediate legal assistance for FIR and police station matters."
+  },
+  "about": {
+    "meta_title": "About — Adv. Sourabh Rawat | Advocate High Court Lucknow",
+    "meta_description": "Advocate Sourabh Rawat, enrolled with Bar Council of Uttar Pradesh, practises criminal, civil, and family law at District Court and High Court Lucknow.",
+    "hero_label": "Practicing Advocate · Lucknow",
+    "name": "Adv. Sourabh Rawat",
+    "designation": "Advocate · High Court Lucknow",
+    "enrollment": "Enrolled — Bar Council of Uttar Pradesh",
+    "bio_1": "Advocate Sourabh Rawat is enrolled with the Bar Council of Uttar Pradesh and practises across District Court Lucknow and the High Court of Judicature at Allahabad, Lucknow Bench.",
+    "bio_2": "His practice covers criminal, civil, and family law matters. With over a decade of practice, he has represented clients across a range of proceedings in Lucknow courts.",
+    "bio_3": "Consultations are available at both chamber locations during practice hours. Initial queries are responded to within two hours.",
+    "details_label": "Professional Details",
+    "practice_title": "Practice Details",
+    "areas_label": "Practice Areas",
+    "courts_label": "Courts",
+    "registration_label": "Registration",
+    "practice_label": "Practice",
+    "areas": ["Criminal Law", "Civil Law", "Family Law"],
+    "courts": ["District Court, Lucknow", "High Court Lucknow Bench"],
+    "location_label": "Location",
+    "location": "Lucknow, Uttar Pradesh",
+    "response_label": "Response Time",
+    "response": "Within 2 Hours",
+    "visit_label": "Visit Us",
+    "chambers_title": "Chamber Locations",
+    "chamber1_label": "Chamber 1",
+    "chamber1_address": "616/188/A Semra Gaudhi, Thana Madiyaon, Lucknow",
+    "chamber2_label": "Chamber 2",
+    "chamber2_address": "Near CHC Building, Gate 8, Kaiserbagh, Lucknow",
+    "hours_weekday": "Mon–Fri: 10AM – 6PM",
+    "hours_saturday": "Saturday: 10AM – 2PM"
+  }
+}

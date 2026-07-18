@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Sitemap: https://advocatesourabhrawat.in/sitemap.xml
+Sitemap: https://advocatesourabhrawat.in/server-sitemap.xml

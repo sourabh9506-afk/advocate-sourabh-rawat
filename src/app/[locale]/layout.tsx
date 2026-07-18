@@ -1,0 +1,79 @@
+import { Playfair_Display, Inter } from 'next/font/google';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
+import TopBar from '@/components/layout/TopBar';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
+import WhatsAppFloat from '@/components/layout/WhatsAppFloat';
+import { generateLegalServiceSchema } from '@/lib/schema';
+import '../globals.css';
+
+const playfair = Playfair_Display({ subsets: ['latin'], weight: ['400', '600', '700'], variable: '--font-playfair' });
+const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600'], variable: '--font-inter' });
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'hero' });
+  
+  const siteUrl = 'https://advocatesourabhrawat.in';
+  const path = `/${locale}`;
+
+  return {
+    metadataBase: new URL('https://advocatesourabhrawat.in'),
+    title: t('name'),
+    description: "Dedicated legal representation with 10+ years of practice across criminal, civil, and family courts in Lucknow. Advocate Sourabh Rawat provides direct access and result-focused advocacy.",
+    alternates: {
+      canonical: `${siteUrl}${path}`,
+      languages: {
+        'en-IN': `${siteUrl}/en`,
+        'hi-IN': `${siteUrl}/hi`,
+        'x-default': `${siteUrl}/en`,
+      }
+    },
+    openGraph: {
+      type: 'website',
+      locale: locale === 'hi' ? 'hi_IN' : 'en_IN',
+      url: `${siteUrl}${path}`,
+      siteName: 'Advocate Sourabh Rawat',
+      title: t('name'),
+      description: "Dedicated legal representation with 10+ years of practice across criminal, civil, and family courts in Lucknow. Advocate Sourabh Rawat provides direct access and result-focused advocacy.",
+      images: [{ url: '/images/og-image.jpg', width: 1200, height: 630 }]
+    }
+  };
+}
+
+export default async function LocaleLayout({
+  children,
+  params
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  const messages = await getMessages({ locale });
+  const legalServiceSchema = generateLegalServiceSchema(locale);
+
+  return (
+    <html lang={locale} className={`${playfair.variable} ${inter.variable}`}>
+      <body className="antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(legalServiceSchema) }}
+        />
+        <NextIntlClientProvider messages={messages}>
+          <TopBar />
+          <Navbar />
+          {children}
+          <Footer />
+          <WhatsAppFloat />
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
+}
