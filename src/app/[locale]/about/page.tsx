@@ -65,7 +65,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       />
 
       {/* Section A — Profile Hero */}
-      <section className="max-w-7xl mx-auto px-4 pt-32 pb-20">
+      <section className="max-w-7xl mx-auto px-4 pt-20 lg:pt-32 pb-12 lg:pb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <ScrollReveal>
             <div className="border-l-2 border-gold pl-4">

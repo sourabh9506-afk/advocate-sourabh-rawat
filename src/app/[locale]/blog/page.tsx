@@ -38,7 +38,7 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       
-      <div className="bg-navy text-white pt-32 pb-20 px-12 relative overflow-hidden">
+      <div className="bg-navy text-white pt-20 md:pt-32 pb-12 md:pb-20 px-4 md:px-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,150,58,0.1)_0%,transparent_70%)]" />
         <div className="max-w-6xl mx-auto relative z-10 text-center">
           <ScrollReveal>
@@ -51,7 +51,7 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
         </div>
       </div>
 
-      <section className="py-24 px-12 max-w-5xl mx-auto">
+      <section className="py-12 md:py-24 px-4 md:px-12 max-w-5xl mx-auto">
         {posts.length === 0 ? (
           <div className="text-center text-dark/60 py-12">
             <p>No blog posts found for this language yet.</p>

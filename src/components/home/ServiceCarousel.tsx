@@ -6,45 +6,25 @@ import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
-const slides = [
-  {
-    id: 1,
-    tag: 'Criminal Law',
-    title: 'Strong Criminal\nDefense When It\n<span class="gold">Matters Most</span>',
-    desc: 'Immediate legal representation for FIR, bail, anticipatory bail, and sessions court matters. Available for urgent situations across Lucknow.',
-    badges: ['FIR Defense', 'Bail Applications', 'Anticipatory Bail', 'High Court Appeals'],
-    image: '/images/carousel/criminal-law.webp'
-  },
-  {
-    id: 2,
-    tag: 'Civil Law',
-    title: 'Protecting Your\nProperty & Civil\n<span class="gold">Rights</span>',
-    desc: 'Expert representation in property disputes, civil injunctions, breach of contract, and recovery suits in District and High Court.',
-    badges: ['Property Disputes', 'Civil Injunctions', 'Recovery Suits', 'Contract Disputes'],
-    image: '/images/carousel/civil-law.webp'
-  },
-  {
-    id: 3,
-    tag: 'Family Law',
-    title: 'Sensitive & Confidential\nFamily Law\n<span class="gold">Resolutions</span>',
-    desc: 'Handling divorce, child custody, and domestic violence matters with the utmost confidentiality and care.',
-    badges: ['Divorce Cases', 'Child Custody', 'Maintenance', 'Domestic Violence'],
-    image: '/images/carousel/family-law.webp'
-  },
-  {
-    id: 4,
-    tag: 'Urgent Help',
-    title: 'Immediate Police\nStation Legal\n<span class="gold">Assistance</span>',
-    desc: 'On-site legal support during questioning, FIR filing, and preventing unlawful detention at any police station in Lucknow.',
-    badges: ['On-site Support', 'FIR Assistance', 'Statement Recording', 'Protection'],
-    image: '/images/carousel/urgent-help.webp'
-  }
+const slideImages = [
+  '/images/carousel/criminal-law.webp',
+  '/images/carousel/civil-law.webp',
+  '/images/carousel/family-law.webp',
+  '/images/carousel/urgent-help.webp',
 ];
 
 export default function ServiceCarousel() {
   const [cur, setCur] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
   const common = useTranslations('common');
+  const c = useTranslations('carousel');
+
+  const slides = [
+    { id: 1, tag: c('s1Tag'), title: c('s1Title'), gold: c('s1Gold'), desc: c('s1Desc'), badges: [c('s1b1'), c('s1b2'), c('s1b3'), c('s1b4')], image: slideImages[0] },
+    { id: 2, tag: c('s2Tag'), title: c('s2Title'), gold: c('s2Gold'), desc: c('s2Desc'), badges: [c('s2b1'), c('s2b2'), c('s2b3'), c('s2b4')], image: slideImages[1] },
+    { id: 3, tag: c('s3Tag'), title: c('s3Title'), gold: c('s3Gold'), desc: c('s3Desc'), badges: [c('s3b1'), c('s3b2'), c('s3b3'), c('s3b4')], image: slideImages[2] },
+    { id: 4, tag: c('s4Tag'), title: c('s4Title'), gold: c('s4Gold'), desc: c('s4Desc'), badges: [c('s4b1'), c('s4b2'), c('s4b3'), c('s4b4')], image: slideImages[3] },
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -99,7 +79,7 @@ export default function ServiceCarousel() {
                   <span className="w-3 h-3 rounded-full bg-gold inline-block mr-1"></span>
                   {slide.tag}
                 </div>
-                <h2 className="slide-title" dangerouslySetInnerHTML={{ __html: slide.title }} />
+                <h2 className="slide-title" style={{ whiteSpace: 'pre-line' }}>{slide.title}<span className="gold">{slide.gold}</span></h2>
                 <p className="slide-desc">{slide.desc}</p>
                 <div className="slide-tags">
                   {slide.badges.map(b => (

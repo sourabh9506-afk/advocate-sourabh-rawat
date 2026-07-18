@@ -14,10 +14,13 @@
   --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
 }
 
-/* Hindi locale: override with Devanagari fonts */
+/* Hindi locale: override with Devanagari fonts + reset letter-spacing */
 html[lang="hi"] {
   --font-sans: var(--font-sans-dev), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-serif-dev), ui-serif, Georgia, serif;
+}
+html[lang="hi"] * {
+  letter-spacing: 0 !important;
 }
 
 :root {
@@ -291,14 +294,14 @@ section{padding:96px 48px;max-width:1280px;margin:0 auto}
 .review-head .sec-line{margin:20px auto}
 .review-head .sec-sub{margin:0 auto}
 .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1280px;margin:56px auto 0 auto}
-.r-card{background:var(--cream);border:1px solid var(--dark-08);border-radius:8px;padding:32px;transition:transform 0.3s,border-color 0.3s;position:relative}
+.r-card{background:var(--cream);border:1px solid var(--dark-08);border-radius:8px;padding:32px;transition:transform 0.3s,border-color 0.3s;position:relative;height:100%;display:flex;flex-direction:column}
 .r-card:hover{transform:translateY(-4px);border-color:var(--gold-border)}
 .r-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold);transform:scaleX(0);transition:transform 0.3s;transform-origin:left}
 .r-card:hover::before{transform:scaleX(1)}
 .r-stars{display:flex;gap:3px;margin-bottom:16px}
 .r-stars svg{width:14px;height:14px;fill:var(--gold);color:var(--gold)}
 .r-quote{font-family:var(--font-serif),serif;font-size:48px;color:var(--gold);opacity:0.15;line-height:1;margin-bottom:-12px}
-.r-body{font-size:14.5px;color:var(--dark-70);line-height:1.75;margin-bottom:24px;font-style:italic}
+.r-body{font-size:14.5px;color:var(--dark-70);line-height:1.75;margin-bottom:24px;font-style:italic;flex-grow:1}
 .r-author{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--dark-08)}
 .r-avatar{width:42px;height:42px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif),serif;font-size:15px;font-weight:700;color:var(--gold);flex-shrink:0}
 .r-name{font-size:14px;font-weight:600;color:var(--navy)}
@@ -386,24 +389,29 @@ footer{background:var(--navy);color:rgba(255,255,255,0.6);padding:56px 48px 32px
   .hero{grid-template-columns:1fr}
   .hero-right{display:none}
 }
+
 @media(max-width:900px){
   .top-bar{padding:8px 20px;font-size:11px;gap:12px}
   .top-bar-left{gap:12px}
+
   nav{padding:0 20px;height:64px}
   .nav-links{display:none}
   .nav-toggle{display:flex}
+  /* mob-menu top must match nav height */
+  .mob-menu{top:64px}
   .mob-menu.open{display:flex}
-  .carousel-slide{padding:0 32px}
-  .slide-title{font-size:30px}
-  .carousel-dots{left:32px}
-  .carousel-arrows{right:32px}
 
-  section,.sec-full,#practice,#why,#faq,#reviews,#location,.cta-banner{padding: 64px 24px;}
-@media (max-width: 480px) { section,.sec-full,#practice,#why,#faq,#reviews,#location,.cta-banner{padding: 48px 16px;} }
+  .carousel-wrap{height:480px}
+  .carousel-slide{padding:0 24px}
+  .slide-title{font-size:28px}
+  .carousel-dots{left:24px}
+  .carousel-arrows{right:24px}
+
+  section,.sec-full,#practice,#why,#faq,#reviews,#location,.cta-banner{padding:64px 24px}
   footer{padding:40px 24px 24px}
 
   .hero{padding:48px 24px}
-  .hero-title{font-size:36px}
+  .hero-title{font-size:34px}
   .hero-stats{flex-wrap:wrap;gap:20px}
   .h-stat{border-right:none;padding:0;text-align:left}
 
@@ -412,14 +420,17 @@ footer{background:var(--navy);color:rgba(255,255,255,0.6);padding:56px 48px 32px
   .practice-grid{grid-template-columns:1fr}
 
   .why-grid{grid-template-columns:1fr}
-  .process-layout{grid-template-columns:1fr;gap:40px}
+  .process-layout{grid-template-columns:1fr;gap:32px}
+  /* un-stick fee-card and faq-sidebar on mobile */
+  .fee-card{position:relative;top:0}
+  .faq-sidebar{position:relative;top:0}
   .review-grid{grid-template-columns:1fr}
   .faq-layout{grid-template-columns:1fr;gap:40px}
   .loc-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
 
   .sec-title{font-size:28px}
-  .cta-banner-title{font-size:28px}
+  .cta-banner-title{font-size:26px}
 
   .trust-strip{flex-direction:column;padding:12px 20px}
   .trust-item{border-right:none;border-bottom:1px solid var(--dark-08);padding:12px 0;width:100%}
@@ -429,15 +440,51 @@ footer{background:var(--navy);color:rgba(255,255,255,0.6);padding:56px 48px 32px
   .wa-float{padding:14px;border-radius:50%}
 
   .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+
+  /* sub-page hero padding */
+  .subpage-hero{padding:88px 24px 56px !important}
 }
+
 @media(max-width:600px){
-  .top-bar{flex-direction:column;gap:8px;text-align:center;padding:12px 16px; font-size:12px}
-  .top-bar-left{flex-direction:column;gap:6px}
-  .carousel-wrap{height:620px}
-  .slide-title{font-size:26px}
-  .slide-desc{font-size:14px; margin-bottom: 24px;}
+  /* TopBar: single line, hide email + hours to prevent carousel being pushed below fold */
+  .top-bar{flex-direction:row;padding:8px 16px;font-size:12px;gap:0;justify-content:space-between}
+  .top-bar-left{gap:0}
+  .top-bar-left a:first-child{display:flex;align-items:center;gap:6px}
+  /* hide email and hours on mobile */
+  .top-bar-left a:not(:first-child){display:none}
+  .top-bar-left span{display:none}
+
+  .carousel-wrap{height:440px}
+  .slide-title{font-size:24px;line-height:1.2}
+  .slide-desc{font-size:13.5px;margin-bottom:20px}
+  .slide-tags{margin-bottom:20px}
   .hero-btns{flex-direction:column}
   .cta-banner-btns{flex-direction:column;align-items:center}
+  .cta-banner-title{font-size:24px}
+
+  /* sub-page hero padding */
+  .subpage-hero{padding:72px 16px 48px !important}
+}
+
+@media(max-width:480px){
+  section,.sec-full,#practice,#why,#faq,#reviews,#location,.cta-banner{padding:48px 16px}
+  .hero{padding:40px 16px}
+  .carousel-wrap{height:400px}
+  .slide-title{font-size:22px}
+  .hero-title{font-size:30px}
+  .sec-title{font-size:24px}
+  .hero-btns>a{width:100%;justify-content:center}
+  /* sub-page hero padding */
+  .subpage-hero{padding:64px 16px 40px !important}
+}
+
+/* very narrow phones — prevent logo + toggle overlap */
+@media(max-width:360px){
+  .logo-name{font-size:14px}
+  .logo-sub{display:none}
+  .logo-mark{width:36px;height:36px}
+  .logo-mark span{font-size:15px}
+  nav{padding:0 14px}
 }
 
 /* ─── TEAM SECTION ─── */
@@ -473,3 +520,23 @@ footer{background:var(--navy);color:rgba(255,255,255,0.6);padding:56px 48px 32px
 .max-w-2xl { max-width: 42rem !important; }
 
 .hover-fade:hover { opacity: 0.7; }
+
+/* ─── SUB-PAGE HERO (default desktop padding — overridden in media queries above) ─── */
+.subpage-hero { padding: 120px 48px 80px 48px; }
+
+/* ─── PRACTICE AREA PAGE ─── */
+.practice-area-body { padding: 96px 48px; }
+.practice-area-grid { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 360px; gap: 64px; align-items: start; }
+.practice-area-sidebar-card { background: var(--white); border: 1px solid var(--dark-08); border-radius: 8px; padding: 32px; position: sticky; top: 96px; box-shadow: 0 4px 24px rgba(27,42,74,0.06); }
+
+@media(max-width:900px){
+  .practice-area-body { padding: 64px 24px; }
+  .practice-area-grid { grid-template-columns: 1fr; gap: 40px; }
+  .practice-area-sidebar-card { position: relative; top: 0; }
+}
+@media(max-width:600px){
+  .practice-area-body { padding: 48px 16px; }
+}
+@media(max-width:480px){
+  .practice-area-body { padding: 40px 16px; }
+}

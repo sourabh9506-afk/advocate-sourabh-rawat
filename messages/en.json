@@ -203,13 +203,83 @@
       }
     }
   },
+  "trustStrip": {
+    "item1Bold": "Enrolled", "item1": "Bar Council of UP",
+    "item2Bold": "Quick Response", "item2": "Within 2 Hours",
+    "item3Bold": "500+ Clients", "item3": "Served",
+    "item4Bold": "Transparent", "item4": "Fees"
+  },
+  "ctaBanner": {
+    "title": "Need Immediate",
+    "titleGold": "Legal Assistance?",
+    "sub": "Reach out now. Early legal advice often shapes the outcome of your case.",
+    "whatsapp": "WhatsApp Now",
+    "call": "Call Directly"
+  },
+  "reviews": {
+    "label": "Client Reviews",
+    "title": "What Clients",
+    "titleGold": "Say"
+  },
+  "carousel": {
+    "s1Tag": "Criminal Law",
+    "s1Title": "Strong Criminal\nDefense When It\n",
+    "s1Gold": "Matters Most",
+    "s1Desc": "Immediate legal representation for FIR, bail, anticipatory bail, and sessions court matters. Available for urgent situations across Lucknow.",
+    "s1b1": "FIR Defense", "s1b2": "Bail Applications", "s1b3": "Anticipatory Bail", "s1b4": "High Court Appeals",
+    "s2Tag": "Civil Law",
+    "s2Title": "Protecting Your\nProperty & Civil\n",
+    "s2Gold": "Rights",
+    "s2Desc": "Expert representation in property disputes, civil injunctions, breach of contract, and recovery suits in District and High Court.",
+    "s2b1": "Property Disputes", "s2b2": "Civil Injunctions", "s2b3": "Recovery Suits", "s2b4": "Contract Disputes",
+    "s3Tag": "Family Law",
+    "s3Title": "Sensitive & Confidential\nFamily Law\n",
+    "s3Gold": "Resolutions",
+    "s3Desc": "Handling divorce, child custody, and domestic violence matters with the utmost confidentiality and care.",
+    "s3b1": "Divorce Cases", "s3b2": "Child Custody", "s3b3": "Maintenance", "s3b4": "Domestic Violence",
+    "s4Tag": "Urgent Help",
+    "s4Title": "Immediate Police\nStation Legal\n",
+    "s4Gold": "Assistance",
+    "s4Desc": "On-site legal support during questioning, FIR filing, and preventing unlawful detention at any police station in Lucknow.",
+    "s4b1": "On-site Support", "s4b2": "FIR Assistance", "s4b3": "Statement Recording", "s4b4": "Protection"
+  },
   "faq": {
-    "q1": "FIR ho jaaye toh kya karna chahiye?",
-    "a1": "Turant ek criminal lawyer se milein..."
+    "label": "Clarifications",
+    "title": "Common",
+    "titleGold": "Questions",
+    "sidebarTitle": "Still have questions?",
+    "sidebarSub": "Reach out directly. We typically respond within 2 hours during working hours.",
+    "callLabel": "Call Us",
+    "emailLabel": "Email Us",
+    "q1": "Do you provide free consultations?",
+    "a1": "Initial assessment over call or WhatsApp is free. However, a detailed strategic consultation (up to 45 mins) in the chamber or via scheduled call has a transparent fee of ₹5,000.",
+    "q2": "Which courts do you practice in?",
+    "a2": "I actively practice at the District & Sessions Court in Lucknow as well as the High Court of Judicature at Allahabad, Lucknow Bench.",
+    "q3": "Can you help if an FIR has been filed against me?",
+    "a3": "Yes, immediate legal assistance is available for FIR defense, including filing for anticipatory bail or regular bail in sessions court and High Court.",
+    "q4": "Do you handle civil and property disputes?",
+    "a4": "Yes, we handle civil litigation including property disputes, civil injunctions, breach of contract, and recovery suits.",
+    "q5": "How will I be updated about my case?",
+    "a5": "You have direct access to Advocate Sourabh. You will be updated directly via call or WhatsApp after every hearing, without having to chase assistants."
   },
   "process": {
+    "label": "How It Works",
+    "title": "Consultation",
+    "titleGold": "Process",
+    "sub": "Simple, confidential, and direct approach to legal representation.",
+    "step1Title": "Reach out",
+    "step1Desc": "WhatsApp or call with a brief description of your legal matter.",
+    "step2Title": "Initial assessment",
+    "step2Desc": "Advocate Sourabh reviews your matter and responds within 2 hours. A brief call or meeting is scheduled.",
+    "step3Title": "Strategic consultation",
+    "step3Desc": "Detailed discussion in chamber or via call to outline the legal strategy, timelines, and transparent fee structure.",
     "feeLabel": "BOOK A CONSULTATION",
-    "feeIntro": "Schedule a consultation at either chamber location or via WhatsApp."
+    "feeIntro": "Schedule a consultation at either chamber location or via WhatsApp.",
+    "fee1": "Direct access to Advocate Sourabh",
+    "fee2": "Honest assessment of case merits",
+    "fee3": "Clear roadmap for legal action",
+    "fee4": "Complete confidentiality maintained",
+    "feeCta": "Book Consultation"
   },
   "common": {
     "bookConsultation": "Book Consultation",

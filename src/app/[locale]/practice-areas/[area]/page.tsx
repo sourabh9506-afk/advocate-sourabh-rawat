@@ -69,7 +69,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       
-      <div className="sec-full" style={{ background: 'var(--navy)', color: 'var(--white)', padding: '120px 48px 80px 48px', position: 'relative', overflow: 'hidden' }}>
+      <div className="sec-full subpage-hero" style={{ background: 'var(--navy)', color: 'var(--white)', position: 'relative', overflow: 'hidden' }}>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,150,58,0.1)_0%,transparent_70%)]" />
         <div style={{ maxWidth: '1280px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
           <ScrollReveal>
@@ -80,8 +80,8 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
         </div>
       </div>
 
-      <section style={{ padding: '96px 48px' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 360px', gap: '64px', alignItems: 'start' }}>
+      <section className="practice-area-body">
+        <div className="practice-area-grid">
           <div>
             <ScrollReveal>
               <h2 className="sec-title" style={{ fontSize: '32px', marginBottom: '16px' }}>Overview</h2>
@@ -103,15 +103,15 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
           </div>
 
           <ScrollReveal delay={0.2}>
-            <div style={{ background: 'var(--white)', border: '1px solid var(--dark-08)', borderRadius: '8px', padding: '32px', position: 'sticky', top: '96px', boxShadow: '0 4px 24px rgba(27,42,74,0.06)' }}>
+            <div className="practice-area-sidebar-card">
               <h3 className="sec-title" style={{ fontSize: '24px', marginBottom: '16px' }}>Need Immediate Help?</h3>
               <p className="sec-sub" style={{ marginBottom: '32px', fontSize: '14px' }}>
                 Consult Advocate Sourabh Rawat directly for honest, result-oriented legal counsel.
               </p>
-              <a href={waLink} target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', background: 'var(--gold)', color: 'var(--white)', fontWeight: 700, padding: '14px 24px', borderRadius: '4px', textDecoration: 'none', marginBottom: '16px', transition: 'background 0.3s' }}>
+              <a href={waLink} target="_blank" rel="noreferrer" className="btn-gold w-full justify-center mb-4">
                 {common('whatsappNow')} <ArrowRight size={18} />
               </a>
-              <a href={`tel:${process.env.NEXT_PUBLIC_PHONE || '+919026349246'}`} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', background: 'transparent', border: '1px solid var(--dark-08)', color: 'var(--navy)', fontWeight: 700, padding: '14px 24px', borderRadius: '4px', textDecoration: 'none', transition: 'all 0.3s' }}>
+              <a href={`tel:${process.env.NEXT_PUBLIC_PHONE || '+919026349246'}`} className="btn-navy w-full justify-center">
                 {common('callDirectly')}
               </a>
             </div>

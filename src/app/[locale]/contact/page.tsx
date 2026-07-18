@@ -45,7 +45,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       
-      <div className="bg-navy text-white pt-32 pb-20 px-12 relative overflow-hidden">
+      <div className="bg-navy text-white pt-20 md:pt-32 pb-12 md:pb-20 px-4 md:px-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,150,58,0.1)_0%,transparent_70%)]" />
         <div className="max-w-6xl mx-auto relative z-10 text-center">
           <ScrollReveal>
@@ -58,7 +58,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         </div>
       </div>
 
-      <section className="py-24 px-12 max-w-6xl mx-auto">
+      <section className="py-12 md:py-24 px-4 md:px-12 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           
           <ScrollReveal>

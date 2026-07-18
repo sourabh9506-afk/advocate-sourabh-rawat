@@ -84,7 +84,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       
-      <div className="bg-navy text-white pt-32 pb-16 px-12 relative overflow-hidden">
+      <div className="bg-navy text-white pt-20 md:pt-32 pb-10 md:pb-16 px-4 md:px-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,150,58,0.1)_0%,transparent_70%)]" />
         <div className="max-w-4xl mx-auto relative z-10">
           <ScrollReveal>
@@ -100,7 +100,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-12 mt-12">
+      <div className="max-w-4xl mx-auto px-4 md:px-12 mt-8 md:mt-12">
         <ScrollReveal>
           <article className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-navy prose-a:text-gold prose-a:no-underline hover:prose-a:underline prose-strong:text-navy prose-p:text-dark/80 prose-li:text-dark/80">
             <ReactMarkdown>{post.content}</ReactMarkdown>
