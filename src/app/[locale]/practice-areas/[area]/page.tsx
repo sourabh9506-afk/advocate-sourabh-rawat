@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   }
   
   const t = await getTranslations({ locale, namespace: `areas.${area}` });
-  const siteUrl = 'https://advocatesourabhrawat.in';
+  const siteUrl = 'https://advocatelucknow.in';
   const path = `/${locale}/practice-areas/${area}`;
 
   return {
@@ -32,7 +32,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: t('title'),
       description: t('desc'),
       url: `${siteUrl}${path}`,
-      images: [{ url: '/images/og-image.jpg', width: 1200, height: 630 }]
+      images: [{
+        url: `/og?title=${encodeURIComponent(t('title'))}&subtitle=${encodeURIComponent('Advocate Sourabh Rawat · Lucknow')}`,
+        width: 1200,
+        height: 630,
+      }]
     }
   };
 }
@@ -49,9 +53,9 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
 
   // Schemas
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: `https://advocatesourabhrawat.in/${locale}` },
-    { name: 'Practice Areas', url: `https://advocatesourabhrawat.in/${locale}#practice` },
-    { name: t('title'), url: `https://advocatesourabhrawat.in/${locale}/practice-areas/${area}` }
+    { name: 'Home', url: `https://advocatelucknow.in/${locale}` },
+    { name: 'Practice Areas', url: `https://advocatelucknow.in/${locale}#practice` },
+    { name: t('title'), url: `https://advocatelucknow.in/${locale}/practice-areas/${area}` }
   ]);
 
   const waLink = `https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || '919026349246'}?text=${encodeURIComponent(`Namaste, I need help with ${t('title')}`)}`;

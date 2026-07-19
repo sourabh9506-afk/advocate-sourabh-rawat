@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const post = getPostBySlug(slug, locale);
   if (!post) return {};
   
-  const siteUrl = 'https://advocatesourabhrawat.in';
+  const siteUrl = 'https://advocatelucknow.in';
   const path = `/${locale}/blog/${slug}`;
 
   return {
@@ -35,7 +35,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       url: `${siteUrl}${path}`,
       publishedTime: post.date,
       authors: [post.author],
-      images: [{ url: '/images/og-image.jpg', width: 1200, height: 630 }]
+      images: [{
+        url: `/og?title=${encodeURIComponent(post.title)}&subtitle=${encodeURIComponent('Advocate Sourabh Rawat')}`,
+        width: 1200,
+        height: 630,
+      }]
     }
   };
 }
@@ -49,9 +53,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
   }
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: `https://advocatesourabhrawat.in/${locale}` },
-    { name: 'Legal Blog', url: `https://advocatesourabhrawat.in/${locale}/blog` },
-    { name: post.title, url: `https://advocatesourabhrawat.in/${locale}/blog/${slug}` }
+    { name: 'Home', url: `https://advocatelucknow.in/${locale}` },
+    { name: 'Legal Blog', url: `https://advocatelucknow.in/${locale}/blog` },
+    { name: post.title, url: `https://advocatelucknow.in/${locale}/blog/${slug}` }
   ]);
 
   const articleSchema = {
@@ -68,7 +72,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
       "name": "Advocate Sourabh Rawat",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://advocatesourabhrawat.in/images/og-image.jpg"
+        "url": "https://advocatelucknow.in/og?title=Advocate+Sourabh+Rawat"
       }
     }
   };

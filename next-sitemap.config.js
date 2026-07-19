@@ -1,10 +1,11 @@
 module.exports = {
-  siteUrl: 'https://advocatesourabhrawat.in',
+  siteUrl: 'https://advocatelucknow.in',
   generateRobotsTxt: true,
   generateIndexSitemap: true,
   alternateRefs: [
-    { href: 'https://advocatesourabhrawat.in/en', hreflang: 'en-IN' },
-    { href: 'https://advocatesourabhrawat.in/hi', hreflang: 'hi-IN' },
+    { href: 'https://advocatelucknow.in/en', hreflang: 'en-IN' },
+    { href: 'https://advocatelucknow.in/hi', hreflang: 'hi-IN' },
+    { href: 'https://advocatelucknow.in/en', hreflang: 'x-default' },
   ],
   priority: 0.7,
   changefreq: 'weekly',

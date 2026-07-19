@@ -19,11 +19,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'hero' });
   
-  const siteUrl = 'https://advocatesourabhrawat.in';
+  const siteUrl = 'https://advocatelucknow.in';
   const path = `/${locale}`;
 
   return {
-    metadataBase: new URL('https://advocatesourabhrawat.in'),
+    metadataBase: new URL('https://advocatelucknow.in'),
     title: t('name'),
     description: "Dedicated legal representation with 10+ years of practice across criminal, civil, and family courts in Lucknow. Advocate Sourabh Rawat provides direct access and result-focused advocacy.",
     alternates: {
@@ -41,8 +41,17 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: 'Advocate Sourabh Rawat',
       title: t('name'),
       description: "Dedicated legal representation with 10+ years of practice across criminal, civil, and family courts in Lucknow. Advocate Sourabh Rawat provides direct access and result-focused advocacy.",
-      images: [{ url: '/images/og-image.jpg', width: 1200, height: 630 }]
-    }
+      images: [{
+        url: '/og?title=Advocate+Sourabh+Rawat&subtitle=Criminal+%C2%B7+Civil+%C2%B7+Family+Law',
+        width: 1200,
+        height: 630,
+        alt: 'Advocate Sourabh Rawat — High Court Lucknow',
+      }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: ['/og?title=Advocate+Sourabh+Rawat&subtitle=Criminal+%C2%B7+Civil+%C2%B7+Family+Law'],
+    },
   };
 }
 

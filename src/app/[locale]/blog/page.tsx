@@ -6,7 +6,7 @@ import { ArrowRight, Calendar, User } from 'lucide-react';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const siteUrl = 'https://advocatesourabhrawat.in';
+  const siteUrl = 'https://advocatelucknow.in';
   
   return {
     title: 'Legal Blog & Insights | Advocate Sourabh Rawat',
@@ -27,8 +27,8 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
   const posts = getAllPosts(locale);
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: `https://advocatesourabhrawat.in/${locale}` },
-    { name: 'Legal Blog', url: `https://advocatesourabhrawat.in/${locale}/blog` }
+    { name: 'Home', url: `https://advocatelucknow.in/${locale}` },
+    { name: 'Legal Blog', url: `https://advocatelucknow.in/${locale}/blog` }
   ]);
 
   return (

@@ -3,9 +3,9 @@ export const generateLegalServiceSchema = (locale: string) => {
     "@context": "https://schema.org",
     "@type": "LegalService",
     "name": "Advocate Sourabh Rawat",
-    "image": "https://advocatesourabhrawat.in/images/og-image.jpg",
-    "@id": "https://advocatesourabhrawat.in",
-    "url": `https://advocatesourabhrawat.in/${locale}`,
+    "image": "https://advocatelucknow.in/og?title=Advocate+Sourabh+Rawat",
+    "@id": "https://advocatelucknow.in",
+    "url": `https://advocatelucknow.in/${locale}`,
     "telephone": "+919026349246",
     "address": {
       "@type": "PostalAddress",

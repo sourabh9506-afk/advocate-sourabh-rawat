@@ -6,7 +6,7 @@ import { generateBreadcrumbSchema } from '@/lib/schema';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const siteUrl = 'https://advocatesourabhrawat.in';
+  const siteUrl = 'https://advocatelucknow.in';
   const path = `/${locale}/contact`;
 
   return {
@@ -24,7 +24,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: 'Contact & Appointment | Advocate Sourabh Rawat',
       description: 'Book a legal consultation with Advocate Sourabh Rawat.',
       url: `${siteUrl}${path}`,
-      images: [{ url: '/images/og-image.jpg', width: 1200, height: 630 }]
+      images: [{
+        url: '/og?title=Book+a+Consultation&subtitle=Criminal+%C2%B7+Civil+%C2%B7+Family+Law',
+        width: 1200,
+        height: 630,
+      }]
     }
   };
 }
@@ -34,8 +38,8 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const t = await getTranslations({ locale, namespace: 'common' });
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: `https://advocatesourabhrawat.in/${locale}` },
-    { name: 'Contact', url: `https://advocatesourabhrawat.in/${locale}/contact` }
+    { name: 'Home', url: `https://advocatelucknow.in/${locale}` },
+    { name: 'Contact', url: `https://advocatelucknow.in/${locale}/contact` }
   ]);
 
   return (

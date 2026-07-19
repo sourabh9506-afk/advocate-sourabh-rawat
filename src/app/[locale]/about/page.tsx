@@ -8,7 +8,7 @@ import { generateBreadcrumbSchema } from '@/lib/schema';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'about' });
-  const siteUrl = 'https://advocatesourabhrawat.in';
+  const siteUrl = 'https://advocatelucknow.in';
   const path = `/${locale}/about`;
 
   return {
@@ -26,7 +26,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: t('meta_title'),
       description: t('meta_description'),
       url: `${siteUrl}${path}`,
-      images: [{ url: '/images/og-image.jpg', width: 1200, height: 630 }]
+      images: [{
+        url: '/og?title=About+Adv.+Sourabh+Rawat&subtitle=Enrolled+%E2%80%94+Bar+Council+of+UP',
+        width: 1200,
+        height: 630,
+      }]
     }
   };
 }
@@ -40,8 +44,8 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const courts = t.raw('courts') as string[];
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: `https://advocatesourabhrawat.in/${locale}` },
-    { name: t('name'), url: `https://advocatesourabhrawat.in/${locale}/about` }
+    { name: 'Home', url: `https://advocatelucknow.in/${locale}` },
+    { name: t('name'), url: `https://advocatelucknow.in/${locale}/about` }
   ]);
 
   const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER || '919026349246';

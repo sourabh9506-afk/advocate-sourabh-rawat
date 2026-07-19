@@ -1,0 +1,22 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "lawyerlucknow.in" }],
+      "destination": "https://advocatelucknow.in/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.lawyerlucknow.in" }],
+      "destination": "https://advocatelucknow.in/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.advocatelucknow.in" }],
+      "destination": "https://advocatelucknow.in/$1",
+      "permanent": true
+    }
+  ]
+}
