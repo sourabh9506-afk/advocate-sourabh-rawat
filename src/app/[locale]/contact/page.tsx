@@ -3,15 +3,17 @@ import AppointmentForm from '@/components/contact/AppointmentForm';
 import { MapPin, Phone, Mail, Navigation } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { generateBreadcrumbSchema } from '@/lib/schema';
+import { Link } from '@/i18n/routing';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'contact' });
   const siteUrl = 'https://advocatelucknow.in';
   const path = `/${locale}/contact`;
 
   return {
-    title: 'Contact & Appointment | Advocate Sourabh Rawat',
-    description: 'Book a legal consultation with Advocate Sourabh Rawat. Available for criminal, civil, and family matters in Lucknow.',
+    title: t('meta_title'),
+    description: t('meta_description'),
     alternates: {
       canonical: `${siteUrl}${path}`,
       languages: {
@@ -21,8 +23,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       }
     },
     openGraph: {
-      title: 'Contact & Appointment | Advocate Sourabh Rawat',
-      description: 'Book a legal consultation with Advocate Sourabh Rawat.',
+      title: t('meta_title'),
+      description: t('meta_description'),
       url: `${siteUrl}${path}`,
       images: [{
         url: 'https://advocatelucknow.in/images/og-image.jpg',
@@ -41,6 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'common' });
+  const tc = await getTranslations({ locale, namespace: 'contact' });
 
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Home', url: `https://advocatelucknow.in/${locale}` },
@@ -121,6 +124,12 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
+            <p className="text-sm text-dark/70 mb-4">
+              {tc('notSureText')}
+              <Link href="/practice-areas/criminal-law" className="text-gold hover:underline">
+                {tc('practiceAreasLink')}
+              </Link>
+            </p>
             <AppointmentForm />
           </ScrollReveal>
 

@@ -12,7 +12,9 @@
   "hero": {
     "badge": "Practicing Advocate · Lucknow",
     "name": "Advocate Sourabh Rawat",
-    "designation": "Criminal · Civil · Family · Other Matters",
+    "meta_title": "Advocate Sourabh Rawat | Criminal & Civil Lawyer in Lucknow",
+    "meta_description": "Advocate Sourabh Rawat practises criminal, civil, and family law at District Court and High Court Lucknow. Enrolled with Bar Council of Uttar Pradesh.",
+    "designation": "Criminal · Civil · Family Law · High Court Lucknow",
     "desc": "Dedicated legal representation with 10+ years of practice across criminal, civil, and family courts in Lucknow.",
     "ctaWhatsApp": "WhatsApp Consultation",
     "ctaCall": "Call Directly"
@@ -88,7 +90,7 @@
       },
       "civil": {
         "title": "Civil Law",
-        "desc": "Dispute resolution and property matters in lower courts and HC.",
+        "desc": "Dispute resolution and property matters in lower courts and HC, Lucknow.",
         "cards": [
           {
             "title": "Property Disputes",
@@ -127,7 +129,7 @@
       },
       "family": {
         "title": "Family Law",
-        "desc": "Divorce, child custody, and family disputes in Family Court.",
+        "desc": "Divorce, child custody, and family disputes in Family Court, Lucknow.",
         "cards": [
           {
             "title": "Divorce Proceedings",
@@ -292,9 +294,9 @@
   },
   "areas": {
     "criminal-law": {
-      "title": "Criminal Law Defense",
-      "desc": "Immediate legal representation for FIR, bail, anticipatory bail, and sessions court matters.",
-      "content": "Advocate Sourabh Rawat provides aggressive and strategic defense in all criminal matters. Whether you are facing false accusations or require urgent bail, our chambers ensure that your constitutional rights are protected at every stage of the legal process.",
+      "title": "Criminal Lawyer in Lucknow | Advocate Sourabh Rawat",
+      "desc": "Defence representation for FIR, bail, anticipatory bail, and sessions court matters at District Court and High Court Lucknow. Enrolled advocate, Bar Council of UP.",
+      "content": "Advocate Sourabh Rawat provides aggressive and strategic defense in all criminal matters. Whether you are facing false accusations or require urgent bail, our chambers ensure that your constitutional rights are protected at every stage of the legal process. Sourabh Rawat represents clients across District Court Lucknow and the High Court of Judicature at Allahabad, Lucknow Bench in all criminal proceedings.",
       "services": [
         "FIR Quashing under Section 482 CrPC",
         "Anticipatory and Regular Bail Applications",
@@ -304,9 +306,9 @@
       ]
     },
     "civil-law": {
-      "title": "Civil Law & Property Disputes",
-      "desc": "Protecting your property and civil rights through expert representation.",
-      "content": "Civil litigation requires patience, meticulous documentation, and strategic foresight. We handle complex property disputes, injunctions, and recovery suits across District Courts and the High Court, ensuring your assets and rights are secured.",
+      "title": "Civil Advocate Lucknow | Property Dispute Lawyer",
+      "desc": "Civil litigation and property dispute representation across District Court Lucknow and the High Court of Judicature at Allahabad, Lucknow Bench.",
+      "content": "Civil litigation requires patience, meticulous documentation, and strategic foresight. We handle complex property disputes, injunctions, and recovery suits across District Courts and the High Court, ensuring your assets and rights are secured. Civil matters are represented across District Court Lucknow and the High Court Lucknow Bench.",
       "services": [
         "Property and Land Disputes",
         "Civil Injunctions and Stay Orders",
@@ -316,9 +318,9 @@
       ]
     },
     "family-law": {
-      "title": "Family Law & Matrimonial Disputes",
-      "desc": "Sensitive and confidential resolutions for family matters.",
-      "content": "Family disputes are emotionally draining. We aim to resolve matrimonial conflicts through mediation and strategic litigation, always prioritizing confidentiality, child welfare, and fair settlements.",
+      "title": "Family Law Advocate Lucknow | Divorce & Matrimonial Lawyer",
+      "desc": "Representation in divorce, custody, and matrimonial disputes at District Court and High Court Lucknow. Confidential and sensitive legal counsel.",
+      "content": "Family disputes are emotionally draining. We aim to resolve matrimonial conflicts through mediation and strategic litigation, always prioritizing confidentiality, child welfare, and fair settlements. Family matters are handled at District Court Lucknow with sensitivity and confidentiality.",
       "services": [
         "Mutual Consent and Contested Divorce",
         "Child Custody and Visitation Rights",
@@ -328,9 +330,9 @@
       ]
     },
     "police-station": {
-      "title": "Police Station Matters",
-      "desc": "On-site legal support during questioning and FIR filing.",
-      "content": "The crucial moments during a police inquiry can determine the trajectory of your case. Advocate Sourabh Rawat provides immediate, on-site legal counsel to prevent unlawful detention and ensure proper statement recording.",
+      "title": "Bail Advocate Lucknow | Police Station Legal Help",
+      "desc": "On-site legal support during FIR filing, police questioning, and bail matters across Lucknow police stations and District Court.",
+      "content": "The crucial moments during a police inquiry can determine the trajectory of your case. Advocate Sourabh Rawat provides immediate, on-site legal counsel to prevent unlawful detention and ensure proper statement recording. Legal assistance is available across Lucknow police stations including Madiyaon and Kaiserbagh areas.",
       "services": [
         "On-site presence during Police Questioning",
         "Assistance in filing robust FIRs",
@@ -385,5 +387,11 @@
     "chamber2_address": "Near CHC Building, Gate 8, Kaiserbagh, Lucknow",
     "hours_weekday": "Mon–Fri: 10AM – 6PM",
     "hours_saturday": "Saturday: 10AM – 2PM"
+  },
+  "contact": {
+    "meta_title": "Contact Advocate Sourabh Rawat | Lucknow Law Chamber",
+    "meta_description": "Book a legal consultation with Advocate Sourabh Rawat at chambers in Madiyaon and Kaiserbagh, Lucknow. Available for criminal, civil, and family matters.",
+    "notSureText": "Not sure which service you need? View our ",
+    "practiceAreasLink": "Practice Areas"
   }
 }

@@ -4,6 +4,9 @@ import { Shield, Briefcase, MapPin, Clock, Scale, Building2, CircleCheck, ArrowR
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import CTABanner from '@/components/home/CTABanner';
 import { generateBreadcrumbSchema, generatePersonSchema } from '@/lib/schema';
+import { Link } from '@/i18n/routing';
+
+const areaSlugs = ['criminal-law', 'civil-law', 'family-law'];
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -155,7 +158,9 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                   {areas.map((area, idx) => (
                     <li key={idx} className="flex items-center gap-3">
                       <CircleCheck size={20} className="text-gold shrink-0" />
-                      <span className="text-dark text-sm">{area}</span>
+                      <Link href={`/practice-areas/${areaSlugs[idx]}`} className="text-gold text-sm hover:underline">
+                        {area}
+                      </Link>
                     </li>
                   ))}
                 </ul>

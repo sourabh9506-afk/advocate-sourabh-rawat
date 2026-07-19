@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   return {
     metadataBase: new URL('https://advocatelucknow.in'),
-    title: t('name'),
-    description: "Dedicated legal representation with 10+ years of practice across criminal, civil, and family courts in Lucknow. Advocate Sourabh Rawat provides direct access and result-focused advocacy.",
+    title: t('meta_title'),
+    description: t('meta_description'),
     alternates: {
       canonical: `${siteUrl}${path}`,
       languages: {
@@ -39,8 +39,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       locale: locale === 'hi' ? 'hi_IN' : 'en_IN',
       url: `${siteUrl}${path}`,
       siteName: 'Advocate Sourabh Rawat',
-      title: t('name'),
-      description: "Dedicated legal representation with 10+ years of practice across criminal, civil, and family courts in Lucknow. Advocate Sourabh Rawat provides direct access and result-focused advocacy.",
+      title: t('meta_title'),
+      description: t('meta_description'),
       images: [{
         url: 'https://advocatelucknow.in/images/og-image.jpg',
         width: 1200,

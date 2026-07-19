@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const path = `/${locale}/practice-areas/${area}`;
 
   return {
-    title: `${t('title')} | Advocate Sourabh Rawat`,
+    title: t('title'),
     description: t('desc'),
     alternates: {
       canonical: `${siteUrl}${path}`,
@@ -56,14 +56,18 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
   const t = await getTranslations({ locale, namespace: `areas.${area}` });
   const common = await getTranslations({ locale, namespace: 'common' });
 
+  // t('title') is the full SEO <title> (includes "| Advocate Sourabh Rawat"); heading is the
+  // clean keyword phrase for display use (H1, breadcrumb, WhatsApp text).
+  const heading = t('title').split(' | ')[0];
+
   // Schemas
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Home', url: `https://advocatelucknow.in/${locale}` },
     { name: 'Practice Areas', url: `https://advocatelucknow.in/${locale}#practice` },
-    { name: t('title'), url: `https://advocatelucknow.in/${locale}/practice-areas/${area}` }
+    { name: heading, url: `https://advocatelucknow.in/${locale}/practice-areas/${area}` }
   ]);
 
-  const waLink = `https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || '919026349246'}?text=${encodeURIComponent(`Namaste, I need help with ${t('title')}`)}`;
+  const waLink = `https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || '919026349246'}?text=${encodeURIComponent(`Namaste, I need help with ${heading}`)}`;
 
   // Convert translation list to an array properly
   // Next-intl doesn't return raw arrays easily unless we use rich formatting or specific keys, 
@@ -83,7 +87,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
         <div style={{ maxWidth: '1280px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
           <ScrollReveal>
             <p className="sec-label">Practice Area</p>
-            <h1 className="sec-title" style={{ color: 'var(--white)', fontSize: '48px', marginBottom: '16px' }}>{t('title')}</h1>
+            <h1 className="sec-title" style={{ color: 'var(--white)', fontSize: '48px', marginBottom: '16px' }}>{heading}</h1>
             <p className="sec-sub" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '18px', maxWidth: '700px' }}>{t('desc')}</p>
           </ScrollReveal>
         </div>
