@@ -52,6 +52,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: 'summary_large_image',
       images: ['https://advocatelucknow.in/images/og-image.jpg'],
     },
+    verification: {
+      google: 'uOjtJFJosK3pDPqucdhT-3BmSTi3SVhl0ugUNAgjWAw',
+    },
   };
 }
 
