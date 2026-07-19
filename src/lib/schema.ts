@@ -110,17 +110,17 @@ export const generateBreadcrumbSchema = (items: { name: string; url: string }[])
   };
 };
 
-export const generateFAQSchema = (faqs: { question: string; answer: string }[]) => {
+export function generateFAQSchema(items: { q: string; a: string }[]) {
   return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map(item => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
   };
-};
+}

@@ -1,8 +1,9 @@
 import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 import ScrollReveal from '@/components/shared/ScrollReveal';
+import FAQAccordion from '@/components/shared/FAQAccordion';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
-import { generateBreadcrumbSchema } from '@/lib/schema';
+import { generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import { Link } from '@/i18n/routing';
 
 const validAreas = ['criminal-law', 'civil-law', 'family-law', 'police-station'];
@@ -55,6 +56,8 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
 
   const t = await getTranslations({ locale, namespace: `areas.${area}` });
   const common = await getTranslations({ locale, namespace: 'common' });
+  const areaFaqs = await getTranslations({ locale, namespace: 'areaFaq' });
+  const faqItems = areaFaqs.raw(area) as { q: string; a: string }[];
 
   // t('title') is the full SEO <title> (includes "| Advocate Sourabh Rawat"); heading is the
   // clean keyword phrase for display use (H1, breadcrumb, WhatsApp text).
@@ -66,6 +69,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
     { name: 'Practice Areas', url: `https://advocatelucknow.in/${locale}#practice` },
     { name: heading, url: `https://advocatelucknow.in/${locale}/practice-areas/${area}` }
   ]);
+  const faqSchema = generateFAQSchema(faqItems);
 
   const waLink = `https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || '919026349246'}?text=${encodeURIComponent(`Namaste, I need help with ${heading}`)}`;
 
@@ -81,7 +85,11 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <div className="sec-full subpage-hero" style={{ background: 'var(--navy)', color: 'var(--white)', position: 'relative', overflow: 'hidden' }}>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,150,58,0.1)_0%,transparent_70%)]" />
         <div style={{ maxWidth: '1280px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
@@ -128,6 +136,22 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
                 {common('callDirectly')}
               </a>
             </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="bg-cream py-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <span className="text-gold text-sm uppercase tracking-wide">
+                {common('faqLabel')}
+              </span>
+              <h2 className="text-3xl font-serif text-navy mt-2">
+                {heading} — {common('faqHeading')}
+              </h2>
+            </div>
+            <FAQAccordion items={faqItems} />
           </ScrollReveal>
         </div>
       </section>
