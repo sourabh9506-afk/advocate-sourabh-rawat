@@ -58,6 +58,45 @@ export const generateLegalServiceSchema = (locale: string) => {
   };
 };
 
+export function generatePersonSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Sourabh Rawat',
+    jobTitle: 'Advocate',
+    description: 'Advocate enrolled with the Bar Council of Uttar Pradesh, practising criminal, civil, and family law at District Court and High Court Lucknow.',
+    url: 'https://advocatelucknow.in/en/about',
+    image: 'https://advocatelucknow.in/images/team/sourabh.webp',
+    telephone: '+919026349246',
+    email: 'Sourabh9506@gmail.com',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '616/188/A Semra Gaudhi, Thana Madiyaon',
+      addressLocality: 'Lucknow',
+      addressRegion: 'Uttar Pradesh',
+      addressCountry: 'IN',
+    },
+    worksFor: {
+      '@type': 'LegalService',
+      name: 'Advocate Sourabh Rawat',
+      url: 'https://advocatelucknow.in',
+    },
+    knowsAbout: ['Criminal Law', 'Civil Law', 'Family Law'],
+    memberOf: {
+      '@type': 'Organization',
+      name: 'Bar Council of Uttar Pradesh',
+    },
+    hasOccupation: {
+      '@type': 'Occupation',
+      name: 'Advocate',
+      occupationLocation: {
+        '@type': 'City',
+        name: 'Lucknow',
+      },
+    },
+  }
+}
+
 export const generateBreadcrumbSchema = (items: { name: string; url: string }[]) => {
   return {
     "@context": "https://schema.org",

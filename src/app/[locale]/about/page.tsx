@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { Shield, Briefcase, MapPin, Clock, Scale, Building2, CircleCheck, ArrowRight } from 'lucide-react';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import CTABanner from '@/components/home/CTABanner';
-import { generateBreadcrumbSchema } from '@/lib/schema';
+import { generateBreadcrumbSchema, generatePersonSchema } from '@/lib/schema';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -71,6 +71,12 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generatePersonSchema()),
+        }}
       />
 
       {/* Section A — Profile Hero */}
