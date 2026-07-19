@@ -1,5 +1,9 @@
+# *
 User-agent: *
 Allow: /
-Disallow: /api/
-Sitemap: https://advocatesourabhrawat.in/sitemap.xml
-Sitemap: https://advocatesourabhrawat.in/server-sitemap.xml
+
+# Host
+Host: https://advocatelucknow.in
+
+# Sitemaps
+Sitemap: https://advocatelucknow.in/sitemap.xml
