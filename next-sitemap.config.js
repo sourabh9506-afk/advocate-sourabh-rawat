@@ -1,21 +1,49 @@
+/** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: 'https://advocatelucknow.in',
   generateRobotsTxt: true,
-  generateIndexSitemap: true,
-  alternateRefs: [
-    { href: 'https://advocatelucknow.in/en', hreflang: 'en-IN' },
-    { href: 'https://advocatelucknow.in/hi', hreflang: 'hi-IN' },
-    { href: 'https://advocatelucknow.in/en', hreflang: 'x-default' },
-  ],
-  priority: 0.7,
-  changefreq: 'weekly',
-  transform: async (config, path) => {
-    if (path.includes('/blog/') && !path.endsWith('/blog')) {
-      return { loc: path, priority: 0.9, changefreq: 'monthly' }
-    }
-    if (path === '/en' || path === '/hi') {
-      return { loc: path, priority: 1.0, changefreq: 'weekly' }
-    }
-    return { loc: path, priority: 0.7, changefreq: 'weekly' }
-  }
+  generateIndexSitemap: false,
+  outDir: 'public',
+  additionalPaths: async (config) => {
+    const paths = [
+      '/en',
+      '/hi',
+      '/en/about',
+      '/hi/about',
+      '/en/contact',
+      '/hi/contact',
+      '/en/practice-areas/criminal-law',
+      '/hi/practice-areas/criminal-law',
+      '/en/practice-areas/civil-law',
+      '/hi/practice-areas/civil-law',
+      '/en/practice-areas/family-law',
+      '/hi/practice-areas/family-law',
+      '/en/practice-areas/police-station',
+      '/hi/practice-areas/police-station',
+    ]
+
+    return paths.map((path) => ({
+      loc: path,
+      changefreq: 'weekly',
+      priority:
+        path === '/en' || path === '/hi' ? 1.0
+        : path.includes('about') || path.includes('contact') ? 0.8
+        : path.includes('practice-areas') ? 0.8
+        : 0.7,
+      lastmod: new Date().toISOString(),
+      alternateRefs: [
+        {
+          href: `https://advocatelucknow.in${path.replace(/^\/(en|hi)/, '/en')}`,
+          hreflang: 'en-IN',
+        },
+        {
+          href: `https://advocatelucknow.in${path.replace(/^\/(en|hi)/, '/hi')}`,
+          hreflang: 'hi-IN',
+        },
+      ],
+    }))
+  },
+  robotsTxtOptions: {
+    policies: [{ userAgent: '*', allow: '/' }],
+  },
 }
