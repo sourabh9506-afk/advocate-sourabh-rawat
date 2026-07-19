@@ -36,11 +36,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       publishedTime: post.date,
       authors: [post.author],
       images: [{
-        url: `/og?title=${encodeURIComponent(post.title)}&subtitle=${encodeURIComponent('Advocate Sourabh Rawat')}`,
+        url: 'https://advocatelucknow.in/images/og-image.jpg',
         width: 1200,
         height: 630,
+        alt: 'Advocate Sourabh Rawat — High Court Lucknow',
       }]
-    }
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: ['https://advocatelucknow.in/images/og-image.jpg'],
+    },
   };
 }
 
@@ -72,7 +77,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
       "name": "Advocate Sourabh Rawat",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://advocatelucknow.in/og?title=Advocate+Sourabh+Rawat"
+        "url": "https://advocatelucknow.in/images/og-image.jpg"
       }
     }
   };

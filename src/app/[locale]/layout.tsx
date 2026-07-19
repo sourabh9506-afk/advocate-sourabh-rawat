@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: t('name'),
       description: "Dedicated legal representation with 10+ years of practice across criminal, civil, and family courts in Lucknow. Advocate Sourabh Rawat provides direct access and result-focused advocacy.",
       images: [{
-        url: '/og?title=Advocate+Sourabh+Rawat&subtitle=Criminal+%C2%B7+Civil+%C2%B7+Family+Law',
+        url: 'https://advocatelucknow.in/images/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Advocate Sourabh Rawat — High Court Lucknow',
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     twitter: {
       card: 'summary_large_image',
-      images: ['/og?title=Advocate+Sourabh+Rawat&subtitle=Criminal+%C2%B7+Civil+%C2%B7+Family+Law'],
+      images: ['https://advocatelucknow.in/images/og-image.jpg'],
     },
   };
 }

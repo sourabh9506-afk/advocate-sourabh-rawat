@@ -3,7 +3,7 @@ export const generateLegalServiceSchema = (locale: string) => {
     "@context": "https://schema.org",
     "@type": "LegalService",
     "name": "Advocate Sourabh Rawat",
-    "image": "https://advocatelucknow.in/og?title=Advocate+Sourabh+Rawat",
+    "image": "https://advocatelucknow.in/images/og-image.jpg",
     "@id": "https://advocatelucknow.in",
     "url": `https://advocatelucknow.in/${locale}`,
     "telephone": "+919026349246",

@@ -25,11 +25,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: 'Book a legal consultation with Advocate Sourabh Rawat.',
       url: `${siteUrl}${path}`,
       images: [{
-        url: '/og?title=Book+a+Consultation&subtitle=Criminal+%C2%B7+Civil+%C2%B7+Family+Law',
+        url: 'https://advocatelucknow.in/images/og-image.jpg',
         width: 1200,
         height: 630,
+        alt: 'Advocate Sourabh Rawat — High Court Lucknow',
       }]
-    }
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: ['https://advocatelucknow.in/images/og-image.jpg'],
+    },
   };
 }
 

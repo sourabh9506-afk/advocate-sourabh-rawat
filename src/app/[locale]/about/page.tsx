@@ -27,11 +27,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: t('meta_description'),
       url: `${siteUrl}${path}`,
       images: [{
-        url: '/og?title=About+Adv.+Sourabh+Rawat&subtitle=Enrolled+%E2%80%94+Bar+Council+of+UP',
+        url: 'https://advocatelucknow.in/images/og-image.jpg',
         width: 1200,
         height: 630,
+        alt: 'Advocate Sourabh Rawat — High Court Lucknow',
       }]
-    }
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: ['https://advocatelucknow.in/images/og-image.jpg'],
+    },
   };
 }
 

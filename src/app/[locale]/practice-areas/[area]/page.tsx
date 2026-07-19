@@ -33,11 +33,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: t('desc'),
       url: `${siteUrl}${path}`,
       images: [{
-        url: `/og?title=${encodeURIComponent(t('title'))}&subtitle=${encodeURIComponent('Advocate Sourabh Rawat · Lucknow')}`,
+        url: 'https://advocatelucknow.in/images/og-image.jpg',
         width: 1200,
         height: 630,
+        alt: 'Advocate Sourabh Rawat — High Court Lucknow',
       }]
-    }
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: ['https://advocatelucknow.in/images/og-image.jpg'],
+    },
   };
 }
 
