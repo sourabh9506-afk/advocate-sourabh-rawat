@@ -306,7 +306,36 @@
         "Defense in Sessions Court Trials",
         "High Court Criminal Appeals",
         "NDPS, POCSO, and Economic Offences"
-      ]
+      ],
+      "locationSection": {
+        "title": "Criminal Law Representation in Lucknow",
+        "kaiserbagh": {
+          "heading": "Kaiserbagh Court Complex",
+          "content": "The Kaiserbagh area houses key legal offices and is in close proximity to the High Court of Judicature at Allahabad, Lucknow Bench. Advocate Sourabh Rawat's chamber near CHC Building, Gate 8, Kaiserbagh provides accessible legal consultation for High Court criminal matters."
+        },
+        "madiyaon": {
+          "heading": "Madiyaon — District Court Representation",
+          "content": "For criminal matters at District Court Lucknow, the Madiyaon chamber at 616/188/A Semra Gaudhi is accessible for clients across north and central Lucknow. District Court Lucknow handles sessions trials, bail hearings, and magisterial proceedings."
+        }
+      },
+      "firQuashSection": {
+        "title": "FIR Quashing in Lucknow",
+        "content": "Under Section 528 BNSS (erstwhile Section 482 CrPC), the High Court of Judicature at Allahabad, Lucknow Bench has inherent jurisdiction to quash an FIR where the allegations are prima facie not made out or constitute an abuse of process. Applications for FIR quashing are filed before the High Court Lucknow Bench. Grounds commonly considered include: settlement between parties in matrimonial disputes, absence of cognizable offence, and mala fide registration.",
+        "steps": [
+          "Filing a criminal misc. writ petition before High Court Lucknow Bench",
+          "Seeking interim stay on arrest or investigation during pendency",
+          "Final hearing on merits of quashing application"
+        ],
+        "note": "Each case is assessed on its individual facts. The information above is general in nature and does not constitute legal advice."
+      },
+      "bailGuide": {
+        "title": "Bail Process in Lucknow Courts",
+        "content": "Bail in Lucknow is applied for before different courts depending on the stage and nature of the offence. For bailable offences, bail may be granted at the police station itself — commonly referred to as station bail. For non-bailable offences, a bail application is filed before the Chief Judicial Magistrate (CJM) or the Sessions Court, District Court Lucknow. If bail is rejected at the Sessions Court level, the accused may approach the High Court of Judicature at Allahabad, Lucknow Bench by filing a Criminal Misc. Bail Application. Where arrest is anticipated but has not yet taken place, anticipatory bail under Section 482 BNSS (erstwhile Section 438 CrPC) may be applied for before the Sessions Court or the High Court Lucknow Bench. Courts in Lucknow consider factors including the nature of the offence, criminal antecedents, likelihood of the accused absconding, and potential tampering with evidence while deciding bail applications. If a chargesheet is not filed by the police within 60 days (for offences punishable up to 7 years) or 90 days (for offences punishable with death, life imprisonment, or imprisonment exceeding 7 years), the accused becomes entitled to default bail under Section 187 BNSS."
+      },
+      "firGuide": {
+        "title": "How to File an FIR in Lucknow",
+        "content": "An FIR (First Information Report) is the formal written record prepared by police upon receiving information about a cognizable offence — governed under Section 173 of the Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS). In Lucknow, an FIR may be filed at the jurisdictional police station — the station within whose limits the offence occurred. Lucknow Commissionerate Police has multiple police stations across zones including Madiyaon, Kaiserbagh, Hazratganj, Gomti Nagar, and others. The complainant must approach the duty officer or Station House Officer (SHO) and provide details of the incident orally or in writing. If provided orally, the officer is legally required to reduce it to writing, read it back, and obtain the complainant's signature. A copy of the registered FIR must be provided to the complainant free of charge. If the police refuse to register an FIR, the complainant may approach the Superintendent of Police, Lucknow, or file a complaint under Section 175(3) BNSS before the Magistrate of First Class. For certain offences, UP Police also provides the facility to file an FIR through the UP Police citizen portal (uppolice.gov.in). A Zero FIR may be filed at any police station in Lucknow regardless of jurisdiction and transferred to the concerned station thereafter."
+      }
     },
     "civil-law": {
       "title": "Civil Advocate Lucknow | Property Dispute Lawyer",
@@ -318,7 +347,23 @@
         "Recovery Suits and Cheque Bounce (138 NI Act)",
         "Breach of Contract and Commercial Disputes",
         "Civil Writ Petitions in High Court"
-      ]
+      ],
+      "locationSection": {
+        "title": "Civil & Property Dispute Representation — Lucknow",
+        "content": "Civil suits and property disputes within Lucknow jurisdiction are filed before the District Court Lucknow (Civil Division) or the High Court Lucknow Bench depending on valuation and subject matter. The Madiyaon area of Lucknow, where one of the chambers is located, falls under the jurisdiction of Civil Judge (Senior Division), Lucknow.",
+        "areas": [
+          "Property disputes — Madiyaon, Aliganj, Gomti Nagar, and across Lucknow",
+          "Illegal possession and eviction matters — District Court Lucknow",
+          "Partition suits — Civil Court Lucknow",
+          "Injunction and stay order applications",
+          "Recovery suits before District Court Lucknow"
+        ],
+        "note": "Jurisdiction and forum depend on the nature and valuation of each specific matter."
+      },
+      "propertyGuide": {
+        "title": "Filing a Property Dispute Case in Lucknow",
+        "content": "Property disputes in Lucknow are primarily adjudicated before the Civil Court Lucknow — comprising the Court of Civil Judge (Junior Division) for suits valued up to ₹1 lakh, and the Court of Civil Judge (Senior Division) for higher-value matters. Appeals lie to the High Court of Judicature at Allahabad, Lucknow Bench. A civil suit for property disputes typically begins with the filing of a plaint setting out the cause of action, the relief sought, and the valuation of the suit. Common reliefs sought in property disputes include declaration of title, permanent injunction restraining interference with possession, mandatory injunction for restoration of possession, and partition of jointly-owned property. An application for a temporary injunction or stay order — seeking to maintain the status quo pending disposal of the suit — may be filed alongside the plaint and is heard at an early stage. Property disputes in areas such as Madiyaon, Aliganj, Gomti Nagar, Hazratganj, and Indira Nagar fall within the jurisdiction of District Court Lucknow. The limitation period for filing a civil suit for possession based on title is 12 years from the date the right to sue accrues, and for recovery of money it is generally 3 years."
+      }
     },
     "family-law": {
       "title": "Family Law Advocate Lucknow | Divorce & Matrimonial Lawyer",
@@ -330,7 +375,22 @@
         "Maintenance and Alimony Claims",
         "Domestic Violence (DV Act) Defense & Prosecution",
         "Restitution of Conjugal Rights"
-      ]
+      ],
+      "locationSection": {
+        "title": "Family Court Lucknow",
+        "content": "Family Court Lucknow, established under the Family Courts Act 1984, has exclusive jurisdiction over matrimonial disputes, divorce petitions, custody matters, and maintenance applications within Lucknow district. The court is located in the Civil Court complex, Lucknow. Advocate Sourabh Rawat represents clients in Family Court Lucknow proceedings including mutual consent divorce, contested divorce, and child custody hearings.",
+        "matters": [
+          "Mutual consent divorce petitions — Family Court Lucknow",
+          "Contested divorce under Hindu Marriage Act 1955",
+          "Child custody and visitation applications",
+          "Maintenance and alimony under Section 125 CrPC / BNSS",
+          "Domestic Violence Act proceedings"
+        ]
+      },
+      "divorceGuide": {
+        "title": "Divorce Procedure at Family Court Lucknow",
+        "content": "Divorce petitions in Lucknow are filed before the Family Court, Lucknow, established under the Family Courts Act, 1984, and located within the Civil Court complex. For Hindus, divorce is governed by the Hindu Marriage Act, 1955; for Muslims, the applicable personal law applies; and for inter-religious marriages, the Special Marriage Act, 1954 applies. Mutual consent divorce under Section 13-B of the Hindu Marriage Act requires both spouses to file a joint petition, have been living separately for at least one year, and appear for two separate hearings — the first motion and the second motion — with a statutory cooling-off period of six months in between, which may be waived by the Family Court Lucknow in appropriate circumstances. Contested divorce, filed on grounds such as cruelty, desertion, adultery, or mental disorder, involves filing a petition, service of notice on the respondent, filing of written statements, and trial on merits. Child custody, maintenance under Section 125 CrPC / BNSS, and domestic violence proceedings under the Protection of Women from Domestic Violence Act, 2005 are also dealt with by the Family Court Lucknow and related courts. Documents typically required include the marriage certificate, proof of address, identity proof, and photographs of both parties."
+      }
     },
     "police-station": {
       "title": "Bail Advocate Lucknow | Police Station Legal Help",
@@ -342,7 +402,11 @@
         "Protection against Unlawful Detention",
         "Legal guidance for Statement Recording",
         "Immediate crisis management and counsel"
-      ]
+      ],
+      "rightsGuide": {
+        "title": "Your Legal Rights During Police Questioning in Uttar Pradesh",
+        "content": "Under Indian law and the Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS), individuals subject to police questioning or arrest at police stations in Lucknow and across Uttar Pradesh have defined legal rights. Upon arrest, the police are required to inform the arrested person of the grounds of arrest and their right to be released on bail where applicable. An arrested person cannot be detained for more than 24 hours without being produced before a Magistrate — this is a fundamental right under Article 22 of the Constitution of India. The arrested person has the right to have one person — a friend, relative, or nominated person — informed of their arrest and the place of detention. Every arrested person has the right to consult a legal practitioner of their choice. Under the BNSS, a woman cannot be arrested after sunset and before sunrise except in exceptional circumstances and only with the written permission of a Judicial Magistrate of First Class. Women are not required to appear at a police station for questioning — statements may be recorded at their residence. In Lucknow, if rights are violated during arrest or questioning, a complaint may be made before the Magistrate or the Senior Superintendent of Police (SSP), Lucknow."
+      }
     }
   },
   "areaFaq": {

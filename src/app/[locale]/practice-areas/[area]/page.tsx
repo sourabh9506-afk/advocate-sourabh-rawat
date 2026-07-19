@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import FAQAccordion from '@/components/shared/FAQAccordion';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, MapPin } from 'lucide-react';
 import { generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import { Link } from '@/i18n/routing';
 
@@ -74,10 +74,34 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
   const waLink = `https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || '919026349246'}?text=${encodeURIComponent(`Namaste, I need help with ${heading}`)}`;
 
   // Convert translation list to an array properly
-  // Next-intl doesn't return raw arrays easily unless we use rich formatting or specific keys, 
+  // Next-intl doesn't return raw arrays easily unless we use rich formatting or specific keys,
   // but we can just map over a known length or use raw() if we defined it as an array.
   // In JSON, services is an array, we can use raw to get the array.
   const services = t.raw('services') as string[];
+
+  // Location-specific content: criminal-law gets two chamber cards + an FIR quashing
+  // explainer; family-law/civil-law get a single court-jurisdiction section.
+  type LocationCard = { heading: string; content: string };
+  type ListLocationSection = { title: string; content: string; matters?: string[]; areas?: string[]; note?: string };
+
+  const criminalLocation = area === 'criminal-law'
+    ? (t.raw('locationSection') as { title: string; kaiserbagh: LocationCard; madiyaon: LocationCard })
+    : null;
+  const firQuashSection = area === 'criminal-law'
+    ? (t.raw('firQuashSection') as { title: string; content: string; steps: string[]; note: string })
+    : null;
+  const listLocation = (area === 'family-law' || area === 'civil-law')
+    ? (t.raw('locationSection') as ListLocationSection)
+    : null;
+  const listLocationItems = listLocation?.matters ?? listLocation?.areas ?? [];
+
+  // Long-tail informational guides: always-visible prose, not accordions, for crawlability.
+  type SimpleGuide = { title: string; content: string };
+  const bailGuide = area === 'criminal-law' ? (t.raw('bailGuide') as SimpleGuide) : null;
+  const firGuide = area === 'criminal-law' ? (t.raw('firGuide') as SimpleGuide) : null;
+  const divorceGuide = area === 'family-law' ? (t.raw('divorceGuide') as SimpleGuide) : null;
+  const propertyGuide = area === 'civil-law' ? (t.raw('propertyGuide') as SimpleGuide) : null;
+  const rightsGuide = area === 'police-station' ? (t.raw('rightsGuide') as SimpleGuide) : null;
 
   return (
     <main className="bg-cream min-h-screen">
@@ -139,6 +163,134 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
           </ScrollReveal>
         </div>
       </section>
+
+      {criminalLocation && (
+        <section className="bg-white py-16">
+          <div className="max-w-4xl mx-auto px-4">
+            <ScrollReveal>
+              <h2 className="text-3xl font-serif text-navy text-center mb-12">{criminalLocation.title}</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {([criminalLocation.kaiserbagh, criminalLocation.madiyaon]).map((card, idx) => (
+                  <div key={idx} className="bg-navy rounded-lg p-8">
+                    <div className="flex items-center gap-3 mb-4">
+                      <MapPin size={22} className="text-gold flex-shrink-0" />
+                      <h3 className="text-xl font-serif text-gold">{card.heading}</h3>
+                    </div>
+                    <p className="text-cream/80 leading-relaxed">{card.content}</p>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
+
+      {firQuashSection && (
+        <section className="bg-cream py-16">
+          <div className="max-w-4xl mx-auto px-4">
+            <ScrollReveal>
+              <h3 className="text-2xl font-serif text-navy mb-4">{firQuashSection.title}</h3>
+              <p className="text-dark/80 leading-relaxed mb-8">{firQuashSection.content}</p>
+              <ol className="space-y-4 mb-8">
+                {firQuashSection.steps.map((step, idx) => (
+                  <li key={idx} className="flex items-start gap-4">
+                    <span className="text-gold font-serif text-2xl font-bold flex-shrink-0 w-8">{idx + 1}</span>
+                    <span className="text-dark/80 pt-1">{step}</span>
+                  </li>
+                ))}
+              </ol>
+              <p className="italic text-dark/60 text-sm">{firQuashSection.note}</p>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
+
+      {listLocation && (
+        <section className="bg-cream py-16">
+          <div className="max-w-4xl mx-auto px-4">
+            <ScrollReveal>
+              <h2 className="text-3xl font-serif text-navy mb-4">{listLocation.title}</h2>
+              <p className="text-dark/80 leading-relaxed mb-8">{listLocation.content}</p>
+              <ul className="space-y-4 mb-8">
+                {listLocationItems.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <CheckCircle2 size={20} className="text-gold flex-shrink-0 mt-1" />
+                    <span className="text-dark/80">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              {listLocation.note && (
+                <p className="italic text-dark/60 text-sm">{listLocation.note}</p>
+              )}
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
+
+      {bailGuide && (
+        <section className="bg-cream py-16">
+          <div className="max-w-4xl mx-auto px-4">
+            <ScrollReveal>
+              <div className="border-l-4 border-gold pl-6">
+                <h2 className="text-2xl font-serif text-navy mb-4">{bailGuide.title}</h2>
+                <p className="text-dark/80 text-base leading-relaxed">{bailGuide.content}</p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
+
+      {firGuide && (
+        <section className="bg-navy py-16">
+          <div className="max-w-4xl mx-auto px-4">
+            <ScrollReveal>
+              <div className="border-l-4 border-gold pl-6">
+                <h2 className="text-2xl font-serif text-cream mb-4">{firGuide.title}</h2>
+                <p className="text-cream/80 text-base leading-relaxed">{firGuide.content}</p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
+
+      {divorceGuide && (
+        <section className="bg-cream py-16">
+          <div className="max-w-4xl mx-auto px-4">
+            <ScrollReveal>
+              <div className="border-l-4 border-gold pl-6">
+                <h2 className="text-2xl font-serif text-navy mb-4">{divorceGuide.title}</h2>
+                <p className="text-dark/80 text-base leading-relaxed">{divorceGuide.content}</p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
+
+      {propertyGuide && (
+        <section className="bg-cream py-16">
+          <div className="max-w-4xl mx-auto px-4">
+            <ScrollReveal>
+              <div className="border-l-4 border-gold pl-6">
+                <h2 className="text-2xl font-serif text-navy mb-4">{propertyGuide.title}</h2>
+                <p className="text-dark/80 text-base leading-relaxed">{propertyGuide.content}</p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
+
+      {rightsGuide && (
+        <section className="bg-cream py-16">
+          <div className="max-w-4xl mx-auto px-4">
+            <ScrollReveal>
+              <div className="border-l-4 border-gold pl-6">
+                <h2 className="text-2xl font-serif text-navy mb-4">{rightsGuide.title}</h2>
+                <p className="text-dark/80 text-base leading-relaxed">{rightsGuide.content}</p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
 
       <section className="bg-cream py-20">
         <div className="max-w-4xl mx-auto px-4">
