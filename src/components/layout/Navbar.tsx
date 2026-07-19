@@ -25,13 +25,13 @@ export default function Navbar() {
   return (
     <>
       <nav id="navbar" className={scrolled ? 'scrolled' : ''}>
-        <div className="nav-logo">
+        <Link href="/" className="nav-logo" onClick={() => window.location.href = `/${locale}`}>
           <div className="logo-mark"><span>SR</span></div>
           <div className="logo-text">
             <span className="logo-name">Adv. Sourabh Rawat</span>
             <span className="logo-sub">High Court &middot; Lucknow</span>
           </div>
-        </div>
+        </Link>
         
         <div className="nav-links">
           <Link href="/">{t('home')}</Link>
