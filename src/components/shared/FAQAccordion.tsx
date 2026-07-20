@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-import { useTranslations } from 'next-intl';
 
 interface FAQItem {
   q: string;
@@ -16,15 +15,8 @@ interface FAQAccordionProps {
   label?: string;
 }
 
-const INITIAL_VISIBLE = 6;
-const SHOW_MORE_THRESHOLD = 8;
-
 export default function FAQAccordion({ items, title, label }: FAQAccordionProps) {
-  const common = useTranslations('common');
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [showAll, setShowAll] = useState(items.length <= SHOW_MORE_THRESHOLD);
-
-  const visibleItems = showAll ? items : items.slice(0, INITIAL_VISIBLE);
 
   return (
     <div className="max-w-3xl mx-auto">
@@ -36,7 +28,7 @@ export default function FAQAccordion({ items, title, label }: FAQAccordionProps)
       )}
 
       <div>
-        {visibleItems.map((item, idx) => {
+        {items.map((item, idx) => {
           const isOpen = openIndex === idx;
           return (
             <div key={idx} className="border-b border-gold/20 py-5">
@@ -71,17 +63,6 @@ export default function FAQAccordion({ items, title, label }: FAQAccordionProps)
         })}
       </div>
 
-      {!showAll && (
-        <div className="text-center mt-8">
-          <button
-            type="button"
-            onClick={() => setShowAll(true)}
-            className="text-gold text-sm font-semibold hover:underline cursor-pointer"
-          >
-            {common('showMore')}
-          </button>
-        </div>
-      )}
     </div>
   );
 }

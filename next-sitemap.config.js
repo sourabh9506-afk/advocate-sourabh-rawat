@@ -31,16 +31,6 @@ module.exports = {
         : path.includes('practice-areas') ? 0.8
         : 0.7,
       lastmod: new Date().toISOString(),
-      alternateRefs: [
-        {
-          href: `https://advocatelucknow.in${path.replace(/^\/(en|hi)/, '/en')}`,
-          hreflang: 'en-IN',
-        },
-        {
-          href: `https://advocatelucknow.in${path.replace(/^\/(en|hi)/, '/hi')}`,
-          hreflang: 'hi-IN',
-        },
-      ],
     }))
   },
   robotsTxtOptions: {

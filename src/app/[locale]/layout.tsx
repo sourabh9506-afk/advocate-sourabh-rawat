@@ -1,4 +1,5 @@
 import { Playfair_Display, Inter, Noto_Serif_Devanagari, Noto_Sans_Devanagari } from 'next/font/google';
+import Script from 'next/script';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -87,6 +88,18 @@ export default async function LocaleLayout({
           <Footer />
           <WhatsAppFloat />
         </NextIntlClientProvider>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-Z4NW39S9N5"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Z4NW39S9N5');
+          `}
+        </Script>
       </body>
     </html>
   );

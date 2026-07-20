@@ -38,7 +38,7 @@ export default function TeamSection() {
           <div className="team-principal">
             <div className="team-principal-img-wrap">
               <Image 
-                src="/images/team/sourabh.png" 
+                src="/images/team/sourabh.webp"
                 alt="Adv. Sourabh Rawat" 
                 className="team-principal-img"
                 width={220}

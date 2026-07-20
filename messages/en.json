@@ -482,7 +482,7 @@
     "courts_label": "Courts",
     "registration_label": "Registration",
     "practice_label": "Practice",
-    "areas": ["Criminal Law", "Civil Law", "Family Law"],
+    "areas": ["Criminal Law", "Civil Law", "Family Law", "Police Station Matters"],
     "courts": ["District Court, Lucknow", "High Court Lucknow Bench"],
     "location_label": "Location",
     "location": "Lucknow, Uttar Pradesh",
@@ -501,6 +501,13 @@
     "meta_title": "Contact Advocate Sourabh Rawat | Lucknow Law Chamber",
     "meta_description": "Book a legal consultation with Advocate Sourabh Rawat at chambers in Madiyaon and Kaiserbagh, Lucknow. Available for criminal, civil, and family matters.",
     "notSureText": "Not sure which service you need? View our ",
-    "practiceAreasLink": "Practice Areas"
+    "practiceAreasLink": "Practice Areas",
+    "get_in_touch": "Get In Touch",
+    "hero_desc": "Schedule a confidential consultation or reach out for immediate legal assistance.",
+    "contact_details": "Contact Details",
+    "phone_label": "Contact Number",
+    "email_label": "Email Address",
+    "chambers_heading": "Chamber Locations",
+    "chambers_intro": "Please schedule an appointment before visiting. Both chambers are open during practice hours."
   }
 }

@@ -6,7 +6,7 @@ import CTABanner from '@/components/home/CTABanner';
 import { generateBreadcrumbSchema, generatePersonSchema } from '@/lib/schema';
 import { Link } from '@/i18n/routing';
 
-const areaSlugs = ['criminal-law', 'civil-law', 'family-law'];
+const areaSlugs = ['criminal-law', 'civil-law', 'family-law', 'police-station'];
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -106,7 +106,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             <div className="flex flex-col items-center text-center">
               <div className="relative w-28 h-28 rounded-full ring-4 ring-gold overflow-hidden">
                 <Image
-                  src="/images/team/sourabh.png"
+                  src="/images/team/sourabh.webp"
                   alt={`${t('name')} — ${t('designation')}`}
                   fill
                   sizes="112px"

@@ -51,7 +51,7 @@ export default function HeroSection() {
         <div className="hero-card">
           <div className="hero-card-top">
             <div className="hero-avatar" style={{ padding: 0, overflow: 'hidden' }}>
-              <Image src="/images/team/sourabh.png" alt="Adv. Sourabh Rawat" width={220} height={220} priority quality={60} style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover', transform: 'scale(1.7)', transformOrigin: 'center 15%' }} />
+              <Image src="/images/team/sourabh.webp" alt="Adv. Sourabh Rawat" width={220} height={220} priority quality={60} style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover', transform: 'scale(1.7)', transformOrigin: 'center 15%' }} />
             </div>
             <div>
               <div className="hero-card-name">Adv. Sourabh Rawat</div>
