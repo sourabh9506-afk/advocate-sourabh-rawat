@@ -45,6 +45,13 @@ export const generateLegalServiceSchema = (locale: string) => {
         "name": "Uttar Pradesh"
       }
     },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "13",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Legal Services",

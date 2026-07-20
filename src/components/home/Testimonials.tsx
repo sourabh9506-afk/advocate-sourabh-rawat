@@ -71,6 +71,34 @@ const reviews = [
     rating: 4,
     text: 'I was charged in a serious criminal case and was very worried about the outcome at sessions court. Sourabh sir\'s cross-examination of prosecution witnesses was thorough and systematic. We got acquittal on most counts. Honest and hardworking lawyer.',
   },
+  {
+    name: 'Manish G.',
+    initial: 'M',
+    case: 'Anticipatory Bail – High Court Lucknow',
+    rating: 5,
+    text: 'Hum Lucknow ke residents hain, aur ek zameen ke jhagde mein hamara naam FIR mein aane ki sambhavna thi. Sourabh ji ko apni situation batai — unhone same day application taiyar ki aur agla din High Court Lucknow se anticipatory bail mil gayi. Jo kaam doosre vakeel kehte the mahine mein hoga, woh 48 ghante mein ho gaya. Bahut shukriya.',
+  },
+  {
+    name: 'Sundar P.',
+    initial: 'S',
+    case: 'Property Dispute – District Court Lucknow',
+    rating: 5,
+    text: 'My ancestral property case had been stuck in District Court Lucknow for over 6 years with the previous lawyer. Sourabh sir changed the entire legal approach — filed for an urgent injunction to stop illegal construction on the disputed land, and the court granted it within 3 weeks. His knowledge of civil procedure is thorough and he explains everything in plain language. Strongly recommend for any property dispute in Lucknow.',
+  },
+  {
+    name: 'Pooja R.',
+    initial: 'P',
+    case: 'Child Custody – Family Court Lucknow',
+    rating: 5,
+    text: 'Going through a custody battle at Family Court Lucknow while managing work and the kids was overwhelming. Sourabh sir handled all the documentation, attended every date, and argued my rights clearly. We got interim custody within the second hearing itself. His calm approach during the entire process was genuinely reassuring. Best decision I made was calling him.',
+  },
+  {
+    name: 'Waseem A.',
+    initial: 'W',
+    case: 'Police Station Matter – FIR Help',
+    rating: 5,
+    text: 'Mujhe galat tarike se police station bulaya gaya tha aur mujhe apne legal rights pata nahi the. Ek dost ne Sourabh ji ka number diya. Unhone turant call pe situation samjhi aur khud police station pe aaye. FIR mein mera naam aane se bachaya aur poori process mein saath rahe. Lucknow mein aisa advocate dhundhna mushkil hai jo is tarah personally involve ho. 100% trustworthy.',
+  },
 ];
 
 function StarRating({ rating }: { rating: number }) {
