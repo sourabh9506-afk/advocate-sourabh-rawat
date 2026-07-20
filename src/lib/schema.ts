@@ -52,6 +52,12 @@ export const generateLegalServiceSchema = (locale: string) => {
       "bestRating": "5",
       "worstRating": "1"
     },
+    // Add directory profile URLs below after creating listings on Justdial, Vakilno1, Lawrato:
+    "sameAs": [
+      // "https://www.justdial.com/Lucknow/...",
+      // "https://vakilno1.com/...",
+      // "https://lawrato.com/..."
+    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Legal Services",

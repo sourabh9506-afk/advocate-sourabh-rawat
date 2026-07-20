@@ -57,6 +57,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
   const t = await getTranslations({ locale, namespace: `areas.${area}` });
   const common = await getTranslations({ locale, namespace: 'common' });
   const areaFaqs = await getTranslations({ locale, namespace: 'areaFaq' });
+  const paCats = await getTranslations({ locale, namespace: 'practiceAreas' });
   const faqItems = areaFaqs.raw(area) as { q: string; a: string }[];
 
   // t('title') is the full SEO <title> (includes "| Advocate Sourabh Rawat"); heading is the
@@ -90,9 +91,22 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
   const firQuashSection = area === 'criminal-law'
     ? (t.raw('firQuashSection') as { title: string; content: string; steps: string[]; note: string })
     : null;
-  const listLocation = (area === 'family-law' || area === 'civil-law')
+  const listLocation = (area === 'family-law' || area === 'civil-law' || area === 'police-station')
     ? (t.raw('locationSection') as ListLocationSection)
     : null;
+
+  const categoryKeyMap: Record<string, string> = {
+    'criminal-law': 'criminal',
+    'civil-law': 'civil',
+    'family-law': 'family',
+    'police-station': 'police',
+  };
+  const relatedAreas = validAreas
+    .filter(a => a !== area)
+    .map(a => ({
+      slug: a,
+      title: paCats(`categories.${categoryKeyMap[a]}.title`),
+    }));
   const listLocationItems = listLocation?.matters ?? listLocation?.areas ?? [];
 
   // Long-tail informational guides: always-visible prose, not accordions, for crawlability.
@@ -305,6 +319,25 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
             </div>
             <FAQAccordion items={faqItems} />
           </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="bg-white py-10 border-t border-dark-10">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <p className="text-sm text-dark-50 uppercase tracking-wide mb-5">
+            {locale === 'hi' ? 'अन्य कानूनी सेवाएं' : 'Other Legal Services'}
+          </p>
+          <div className="flex flex-wrap gap-3 justify-center">
+            {relatedAreas.map(({ slug, title }) => (
+              <Link
+                key={slug}
+                href={`/practice-areas/${slug}`}
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-gold/50 text-navy font-medium text-sm rounded hover:bg-gold hover:text-white hover:border-gold transition-all"
+              >
+                {title} <ArrowRight size={14} />
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
     </main>
