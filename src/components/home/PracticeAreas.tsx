@@ -15,6 +15,31 @@ const categorySlug: Record<string, string> = {
   police: 'police-station'
 };
 
+// Sub-item cards (by category + index, matching messages.practiceAreas.categories order)
+// link to their specific service page where one exists; otherwise they fall back to the
+// parent practice-area hub.
+const cardServiceSlug: Record<string, Record<number, string>> = {
+  criminal: {
+    0: 'bail-lawyer-in-lucknow',
+    1: 'anticipatory-bail-lawyer-lucknow',
+    2: 'fir-quashing-lawyer-lucknow',
+    // 3: Sessions Court Trial — stays on criminal-law hub
+  },
+  civil: {
+    0: 'property-dispute-lawyer-lucknow',
+    // 1: Civil Injunctions, 2: Recovery Suits, 3: High Court Civil Writs — stay on civil-law hub
+  },
+  family: {
+    0: 'divorce-lawyer-in-lucknow',
+    1: 'child-custody-lawyer-lucknow',
+    2: 'maintenance-lawyer-lucknow',
+    3: 'domestic-violence-lawyer-lucknow',
+  },
+  police: {
+    // no dedicated service pages yet — all cards stay on police-station hub
+  },
+};
+
 type SubCard = {
   titleKey: string;
   descKey: string;
@@ -172,7 +197,11 @@ function CategoryBlock({ cat, t }: { cat: Category; t: any }) {
           {cat.cards.map((card, j) => (
             <div key={j} className="min-w-0 max-md:flex-[0_0_100%]">
               <Link
-                href={`/practice-areas/${categorySlug[cat.key]}`}
+                href={
+                  cardServiceSlug[cat.key]?.[j]
+                    ? `/services/${cardServiceSlug[cat.key][j]}`
+                    : `/practice-areas/${categorySlug[cat.key]}`
+                }
                 className={`cat-card relative overflow-hidden h-full flex flex-col rounded-lg border border-gold/40 p-6 pt-5 border-t-3 border-t-transparent cursor-pointer transition-all duration-200 hover:-translate-y-1.5 hover:ring-2 hover:ring-gold/40 hover:shadow-lg ${cat.hoverBorderClass}`}
                 onMouseMove={(e) => {
                   const rect = e.currentTarget.getBoundingClientRect();

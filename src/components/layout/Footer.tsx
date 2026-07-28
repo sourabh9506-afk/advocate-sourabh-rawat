@@ -2,6 +2,17 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { BUSINESS } from '@/lib/business';
 
+const footerServices: { slug: string; label: string }[] = [
+  { slug: 'bail-lawyer-in-lucknow', label: 'Bail Lawyer' },
+  { slug: 'anticipatory-bail-lawyer-lucknow', label: 'Anticipatory Bail' },
+  { slug: 'fir-quashing-lawyer-lucknow', label: 'FIR Quashing' },
+  { slug: 'divorce-lawyer-in-lucknow', label: 'Divorce Lawyer' },
+  { slug: '498a-defence-lawyer-lucknow', label: '498A Defence' },
+  { slug: 'property-dispute-lawyer-lucknow', label: 'Property Disputes' },
+  { slug: 'child-custody-lawyer-lucknow', label: 'Child Custody' },
+  { slug: 'maintenance-lawyer-lucknow', label: 'Maintenance Cases' },
+];
+
 export default function Footer() {
   const t = useTranslations('nav');
   const [madiyaon, kaiserbagh] = BUSINESS.locations;
@@ -23,6 +34,12 @@ export default function Footer() {
           <Link href="/practice-areas/civil-law">Civil Law</Link>
           <Link href="/practice-areas/family-law">Family Law</Link>
           <Link href="/practice-areas/police-station">Police Station</Link>
+        </div>
+        <div className="f-col">
+          <div className="f-col-title">Services</div>
+          {footerServices.map((service) => (
+            <Link key={service.slug} href={`/services/${service.slug}`}>{service.label}</Link>
+          ))}
         </div>
         <div className="f-col">
           <div className="f-col-title">Quick Links</div>

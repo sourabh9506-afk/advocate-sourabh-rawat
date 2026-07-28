@@ -7,8 +7,17 @@ import { generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import { Link } from '@/i18n/routing';
 import { BUSINESS } from '@/lib/business';
 import LegalDisclaimer from '@/components/shared/LegalDisclaimer';
+import { getServiceBySlug } from '@/lib/services';
 
 const validAreas = ['criminal-law', 'civil-law', 'family-law', 'police-station'];
+
+// Detailed service pages linked from each practice-area hub.
+const hubServiceSlugs: Record<string, string[]> = {
+  'criminal-law': ['bail-lawyer-in-lucknow', 'anticipatory-bail-lawyer-lucknow', 'fir-quashing-lawyer-lucknow', 'cheque-bounce-lawyer-lucknow'],
+  'family-law': ['divorce-lawyer-in-lucknow', 'mutual-consent-divorce-lucknow', '498a-defence-lawyer-lucknow', 'child-custody-lawyer-lucknow', 'maintenance-lawyer-lucknow', 'domestic-violence-lawyer-lucknow', 'court-marriage-lucknow'],
+  'civil-law': ['property-dispute-lawyer-lucknow'],
+  'police-station': [],
+};
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string, area: string }> }) {
   const { locale, area } = await params;
@@ -111,6 +120,10 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
     }));
   const listLocationItems = listLocation?.matters ?? listLocation?.areas ?? [];
 
+  const detailedServices = (hubServiceSlugs[area] ?? [])
+    .map((slug) => getServiceBySlug(slug, 'en'))
+    .filter((service): service is NonNullable<typeof service> => service !== null);
+
   // Long-tail informational guides: always-visible prose, not accordions, for crawlability.
   type SimpleGuide = { title: string; content: string };
   const bailGuide = area === 'criminal-law' ? (t.raw('bailGuide') as SimpleGuide) : null;
@@ -179,6 +192,34 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
           </ScrollReveal>
         </div>
       </section>
+
+      {detailedServices.length > 0 && (
+        <section className="bg-cream py-16 border-t border-dark-10">
+          <div className="max-w-6xl mx-auto px-4">
+            <ScrollReveal>
+              <div className="text-center mb-10">
+                <span className="text-gold text-sm uppercase tracking-wide">Detailed Service Pages</span>
+                <h2 className="text-3xl font-serif text-navy mt-2">{heading} — Specific Matters</h2>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {detailedServices.map((service) => (
+                  <Link
+                    key={service.slug}
+                    href={`/services/${service.slug}`}
+                    className="bg-white border border-dark/10 rounded-lg p-6 flex flex-col h-full transition-all hover:shadow-lg hover:-translate-y-1"
+                  >
+                    <h3 className="font-serif text-lg font-bold text-navy mb-2">{service.h1}</h3>
+                    <p className="text-dark/70 text-sm leading-relaxed mb-4 flex-grow">{service.description}</p>
+                    <span className="inline-flex items-center gap-2 text-gold font-semibold text-sm">
+                      {common('readMore')} <ArrowRight size={14} />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
 
       {criminalLocation && (
         <section className="bg-white py-16">
