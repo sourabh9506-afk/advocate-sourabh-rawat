@@ -1,6 +1,6 @@
 ---
 title: "Court Marriage in Lucknow | Special Marriage Act Process"
-description: "Court marriage under the Special Marriage Act in Lucknow — Section 5 notice, 30-day period, documents, witnesses and solemnization before the Marriage Officer."
+description: "Court marriage under the Special Marriage Act in Lucknow — Section 5 notice, 30-day period, documents and solemnization before the Marriage Officer."
 h1: "Court Marriage in Lucknow"
 updated: "2026-07-28"
 related: ["divorce-lawyer-in-lucknow", "mutual-consent-divorce-lucknow"]
