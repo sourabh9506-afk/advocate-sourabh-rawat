@@ -1,37 +1,71 @@
+const fs = require('fs')
+const path = require('path')
+
+const LOCALES = ['en', 'hi']
+const PRACTICE_AREAS = ['criminal-law', 'civil-law', 'family-law', 'police-station']
+
+// Mirrors src/lib/routes.ts (kept in plain JS here since next-sitemap.config.js
+// runs in plain Node, not through the Next.js/TS toolchain). Both read the same
+// content/blog directory, so the two can't drift apart in practice.
+function getBlogSlugs() {
+  const contentDir = path.join(process.cwd(), 'content', 'blog')
+  if (!fs.existsSync(contentDir)) return []
+
+  const slugs = new Set()
+  for (const file of fs.readdirSync(contentDir)) {
+    if (!file.endsWith('.md')) continue
+    const segments = file.replace(/\.md$/, '').split('.')
+    if (segments.length > 1) segments.pop()
+    slugs.add(segments.join('.'))
+  }
+  return Array.from(slugs)
+}
+
+const PUBLIC_PATHS = [
+  '/',
+  '/about',
+  '/contact',
+  '/blog',
+  ...PRACTICE_AREAS.map((area) => `/practice-areas/${area}`),
+  ...getBlogSlugs().map((slug) => `/blog/${slug}`),
+]
+
+function priorityFor(publicPath) {
+  if (publicPath === '/') return 1.0
+  if (publicPath === '/about' || publicPath === '/contact') return 0.8
+  if (publicPath.startsWith('/practice-areas/')) return 0.8
+  return 0.7
+}
+
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: 'https://advocatelucknow.in',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   outDir: 'public',
-  additionalPaths: async (config) => {
-    const paths = [
-      '/en',
-      '/hi',
-      '/en/about',
-      '/hi/about',
-      '/en/contact',
-      '/hi/contact',
-      '/en/practice-areas/criminal-law',
-      '/hi/practice-areas/criminal-law',
-      '/en/practice-areas/civil-law',
-      '/hi/practice-areas/civil-law',
-      '/en/practice-areas/family-law',
-      '/hi/practice-areas/family-law',
-      '/en/practice-areas/police-station',
-      '/hi/practice-areas/police-station',
-    ]
+  additionalPaths: async () => {
+    const lastmod = new Date().toISOString()
 
-    return paths.map((path) => ({
-      loc: path,
-      changefreq: 'weekly',
-      priority:
-        path === '/en' || path === '/hi' ? 1.0
-        : path.includes('about') || path.includes('contact') ? 0.8
-        : path.includes('practice-areas') ? 0.8
-        : 0.7,
-      lastmod: new Date().toISOString(),
-    }))
+    return PUBLIC_PATHS.flatMap((publicPath) =>
+      LOCALES.map((locale) => ({
+        loc: `/${locale}${publicPath === '/' ? '' : publicPath}`,
+        changefreq: 'weekly',
+        priority: priorityFor(publicPath),
+        lastmod,
+        alternateRefs: [
+          ...LOCALES.map((altLocale) => ({
+            href: `https://advocatelucknow.in/${altLocale}${publicPath === '/' ? '' : publicPath}`,
+            hreflang: altLocale === 'en' ? 'en-IN' : 'hi-IN',
+            hrefIsAbsolute: true,
+          })),
+          {
+            href: `https://advocatelucknow.in/en${publicPath === '/' ? '' : publicPath}`,
+            hreflang: 'x-default',
+            hrefIsAbsolute: true,
+          },
+        ],
+      }))
+    )
   },
   robotsTxtOptions: {
     policies: [{ userAgent: '*', allow: '/' }],

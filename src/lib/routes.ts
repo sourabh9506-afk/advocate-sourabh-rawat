@@ -1,0 +1,29 @@
+import fs from 'fs';
+import path from 'path';
+
+const contentDir = path.join(process.cwd(), 'content', 'blog');
+
+function getBlogSlugs(): string[] {
+  if (!fs.existsSync(contentDir)) return [];
+
+  const slugs = new Set<string>();
+  for (const file of fs.readdirSync(contentDir)) {
+    if (!file.endsWith('.md')) continue;
+    // Filename format: slug.locale.md (e.g. bail-process-in-india.en.md)
+    const segments = file.replace(/\.md$/, '').split('.');
+    if (segments.length > 1) segments.pop();
+    slugs.add(segments.join('.'));
+  }
+  return Array.from(slugs);
+}
+
+const PRACTICE_AREAS = ['criminal-law', 'civil-law', 'family-law', 'police-station'];
+
+export const PUBLIC_PATHS: string[] = [
+  '/',
+  '/about',
+  '/contact',
+  '/blog',
+  ...PRACTICE_AREAS.map((area) => `/practice-areas/${area}`),
+  ...getBlogSlugs().map((slug) => `/blog/${slug}`),
+];
