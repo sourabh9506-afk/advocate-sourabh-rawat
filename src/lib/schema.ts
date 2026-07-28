@@ -153,3 +153,14 @@ export function generateFAQSchema(items: { q: string; a: string }[]) {
     })),
   };
 }
+
+export function generateServiceSchema(name: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name,
+    provider: { '@id': 'https://advocatelucknow.in' },
+    areaServed: 'Lucknow',
+    serviceType: name,
+  };
+}

@@ -1,9 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
-const contentDir = path.join(process.cwd(), 'content', 'blog');
-
-function getBlogSlugs(): string[] {
+function getSlugsFromDir(dirName: string): string[] {
+  const contentDir = path.join(process.cwd(), 'content', dirName);
   if (!fs.existsSync(contentDir)) return [];
 
   const slugs = new Set<string>();
@@ -24,6 +23,8 @@ export const PUBLIC_PATHS: string[] = [
   '/about',
   '/contact',
   '/blog',
+  '/services',
   ...PRACTICE_AREAS.map((area) => `/practice-areas/${area}`),
-  ...getBlogSlugs().map((slug) => `/blog/${slug}`),
+  ...getSlugsFromDir('blog').map((slug) => `/blog/${slug}`),
+  ...getSlugsFromDir('services').map((slug) => `/services/${slug}`),
 ];

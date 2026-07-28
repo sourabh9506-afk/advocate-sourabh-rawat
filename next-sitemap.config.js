@@ -6,9 +6,9 @@ const PRACTICE_AREAS = ['criminal-law', 'civil-law', 'family-law', 'police-stati
 
 // Mirrors src/lib/routes.ts (kept in plain JS here since next-sitemap.config.js
 // runs in plain Node, not through the Next.js/TS toolchain). Both read the same
-// content/blog directory, so the two can't drift apart in practice.
-function getBlogSlugs() {
-  const contentDir = path.join(process.cwd(), 'content', 'blog')
+// content/ directories, so the two can't drift apart in practice.
+function getSlugsFromDir(dirName) {
+  const contentDir = path.join(process.cwd(), 'content', dirName)
   if (!fs.existsSync(contentDir)) return []
 
   const slugs = new Set()
@@ -26,14 +26,17 @@ const PUBLIC_PATHS = [
   '/about',
   '/contact',
   '/blog',
+  '/services',
   ...PRACTICE_AREAS.map((area) => `/practice-areas/${area}`),
-  ...getBlogSlugs().map((slug) => `/blog/${slug}`),
+  ...getSlugsFromDir('blog').map((slug) => `/blog/${slug}`),
+  ...getSlugsFromDir('services').map((slug) => `/services/${slug}`),
 ]
 
 function priorityFor(publicPath) {
   if (publicPath === '/') return 1.0
   if (publicPath === '/about' || publicPath === '/contact') return 0.8
   if (publicPath.startsWith('/practice-areas/')) return 0.8
+  if (publicPath.startsWith('/services/')) return 0.85
   return 0.7
 }
 
