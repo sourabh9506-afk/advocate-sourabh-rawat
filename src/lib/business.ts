@@ -10,6 +10,11 @@ export const BUSINESS = {
     weekday: 'Mon–Fri: 10AM – 6PM',
     saturday: 'Sat: 10AM – 2PM',
   },
+  // Third-party profile URLs for schema.org `sameAs`. Add more as they become
+  // available (Justdial, Vakilno1, Lawrato, LinkedIn, etc.).
+  sameAs: [
+    'https://share.google/pZkTxYt32RCd44TK0',
+  ],
   locations: [
     {
       id: 'madiyaon',

@@ -69,8 +69,8 @@ export const generateLegalServiceSchema = (locale: string) => {
       }
     },
     "founder": { "@id": "https://advocatelucknow.in/#person" },
-    // TODO: add sameAs URLs once available — GBP profile URL, Justdial, Vakilno1, Lawrato, LinkedIn
-    "sameAs": [],
+    // TODO: add more sameAs URLs once available — Justdial, Vakilno1, Lawrato, LinkedIn
+    "sameAs": [...BUSINESS.sameAs],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Legal Services",
@@ -121,8 +121,8 @@ export function generatePersonSchema() {
         name: 'Lucknow',
       },
     },
-    // TODO: add sameAs URLs once available — GBP profile URL, Justdial, Vakilno1, Lawrato, LinkedIn
-    sameAs: [],
+    // TODO: add more sameAs URLs once available — Justdial, Vakilno1, Lawrato, LinkedIn
+    sameAs: [...BUSINESS.sameAs],
   }
 }
 
