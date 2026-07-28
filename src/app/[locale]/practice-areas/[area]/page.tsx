@@ -6,6 +6,7 @@ import { ArrowRight, CheckCircle2, MapPin } from 'lucide-react';
 import { generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import { Link } from '@/i18n/routing';
 import { BUSINESS } from '@/lib/business';
+import LegalDisclaimer from '@/components/shared/LegalDisclaimer';
 
 const validAreas = ['criminal-law', 'civil-law', 'family-law', 'police-station'];
 
@@ -341,6 +342,8 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
           </div>
         </div>
       </section>
+
+      <LegalDisclaimer />
     </main>
   );
 }

@@ -5,6 +5,7 @@ import { getTranslations } from 'next-intl/server';
 import { generateBreadcrumbSchema } from '@/lib/schema';
 import { Link } from '@/i18n/routing';
 import { BUSINESS } from '@/lib/business';
+import LegalDisclaimer from '@/components/shared/LegalDisclaimer';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -181,6 +182,8 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
         </div>
       </section>
+
+      <LegalDisclaimer />
     </main>
   );
 }

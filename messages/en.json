@@ -534,5 +534,8 @@
     "email_label": "Email Address",
     "chambers_heading": "Chamber Locations",
     "chambers_intro": "Please schedule an appointment before visiting. Both chambers are open during practice hours."
+  },
+  "disclaimer": {
+    "body": "This page is for general information only and does not constitute legal advice or solicitation. Outcomes depend on the facts of each case. As per the rules of the Bar Council of India, this website does not advertise or solicit work."
   }
 }

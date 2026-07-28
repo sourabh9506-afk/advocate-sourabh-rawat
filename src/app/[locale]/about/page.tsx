@@ -6,6 +6,7 @@ import CTABanner from '@/components/home/CTABanner';
 import { generateBreadcrumbSchema, generatePersonSchema } from '@/lib/schema';
 import { Link } from '@/i18n/routing';
 import { BUSINESS } from '@/lib/business';
+import LegalDisclaimer from '@/components/shared/LegalDisclaimer';
 
 const areaSlugs = ['criminal-law', 'civil-law', 'family-law', 'police-station'];
 
@@ -252,6 +253,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       </section>
 
       <CTABanner />
+      <LegalDisclaimer />
     </main>
   );
 }

@@ -9,6 +9,7 @@ import Testimonials from '@/components/home/Testimonials';
 import FAQSection from '@/components/home/FAQSection';
 import LocationSection from '@/components/home/LocationSection';
 import CTABanner from '@/components/home/CTABanner';
+import LegalDisclaimer from '@/components/shared/LegalDisclaimer';
 
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       <FAQSection />
       <LocationSection />
       <CTABanner />
+      <LegalDisclaimer />
     </main>
   );
 }
