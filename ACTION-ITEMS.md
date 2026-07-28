@@ -13,7 +13,7 @@ file updated as new items come up in later phases.
 - **What:** Point the second domain at the main site as a permanent (301) redirect. Never a separate/duplicate site.
 - **Where:** Vercel → your project → **Settings → Domains → Add** `lawyerlucknow.in` → choose **"Redirect to advocatelucknow.in"** → make sure it's set to **Permanent (308/301)**.
 - **Why:** Consolidates SEO value onto one domain; avoids a duplicate-content penalty.
-- **Status:** [ ] not done
+- **Status:** [x] done — confirmed in Vercel: 308 Permanent Redirect, `lawyerlucknow.in` → `advocatelucknow.in`, attached to Production
 
 ## 2. 🔴 Provide Bar Council enrollment YEAR
 - **What:** The exact year Adv. Sourabh Rawat was enrolled with the Bar Council of Uttar Pradesh (e.g. "2014"). You approved showing the year (not the number) in Phase 1, but never gave me the year, so nothing is displayed yet.
@@ -114,6 +114,60 @@ file updated as new items come up in later phases.
 - **Where they go:** The chamber pages (`src/app/[locale]/locations/[slug]/page.tsx`) have a `{/* TODO photo */}` placeholder comment marking exactly where to add them once available — just send me the image files and I'll wire them in.
 - **Why:** Real photos are one of the strongest trust signals for a Google Business Profile landing page and reduce bounce from search visitors checking if the chamber is legitimate.
 - **Status:** [ ] not done — optional, whenever available
+
+## 13. 🔴 Google Business Profile setup (highest ROI — do first, ongoing)
+- **What:** Off-site work described in `06-PHASE6-offsite-checklist.md` — none of it is code, all of it is browser/app work on your Google Business Profile.
+- **One-time setup:**
+  - [ ] Primary category **Lawyer**; secondary categories Criminal justice attorney, Divorce lawyer, Family law attorney, Civil law attorney, Legal services.
+  - [ ] Confirm one profile only (already decided — Website field → homepage, per item 6 above). Do NOT create a second profile for the second chamber.
+  - [ ] Address text must exactly match `src/lib/business.ts` (see item 7 above) — same task, same source of truth.
+  - [ ] Fill Services list mirroring the 12 service-page names, hours, a factual 750-char description (no superlatives — tell Claude if you want a draft), opening date.
+  - [ ] Upload 10+ real photos: signboard, chamber exterior/interior, advocate at his desk (no court-interior photos). This is the same photo task as item 12 above, just published to GBP instead of (or in addition to) the site.
+  - [ ] Seed Q&A: post and answer 5 real client questions yourself (appointment process, documents needed, which courts, Hindi consult available, both chambers).
+  - [ ] Get the short review-request link (Profile → Ask for reviews) and save it.
+- **Status:** [ ] not done
+
+## 14. 🔴 Review pipeline (ongoing, monthly — the biggest lever for "best lawyer" searches)
+- **What:** After each matter concludes, send this WhatsApp message (BCI-safe, already drafted): *"Namaste, aapke case mein saath kaam karke achha laga. Agar aap chahein to apna anubhav Google par share kar sakte hain — isse doosre logon ko sahi jaankari milti hai: {link}. Koi dabav nahin hai. Dhanyavaad."*
+- **Rules:** Never offer anything in return. Never ask only happy clients (no review-gating). Never write reviews yourself or via family — fake reviews violate Google policy, consumer law, and BCI rules.
+- **Reply to every review within 48h**, neutrally, without discussing case details (e.g. "Dhanyavaad. Aapka feedback mahatvapurn hai." — vary the wording each time).
+- **Target:** 2–4 genuine reviews/month, steady pace, not bursts.
+- **Status:** [ ] ongoing, starts whenever the next matter concludes
+
+## 15. ⚪ Weekly GBP "Update" post
+- **What:** Once a week, post a GBP Update linking one guide or service page already live on the site, with a 2-line factual summary.
+- **Where you give it:** If you want Claude to draft the 2-line summary for a specific page, just name the page.
+- **Status:** [ ] ongoing
+
+## 16. ⚪ Citations & directories (claim/create with EXACT same NAP)
+- **What:** Create or claim listings on: Justdial, Sulekha, LawRato (also answer free Q&A there weekly), Lawzana, Rest The Case, Lead India, PathLegal, other Vakil-type directories that surface for your keywords, Bing Places, Apple Business Connect, LinkedIn (personal, fully filled), Bar association directory (if available).
+- **Track in a sheet:** Name / URL / login / date / status.
+- **After each listing goes live:** send Claude the URL — it gets added to `sameAs` in `src/lib/schema.ts` (this is the one code touch from this task, already tracked as item 3 above — same list, same destination).
+- **Status:** [ ] not done — do progressively
+
+## 17. ⚪ Search Console monthly routine (20 minutes/month)
+- **What:**
+  - [ ] Pages report → anything stuck "Discovered/Crawled – currently not indexed" for 4+ weeks → tell Claude, it needs internal links from stronger pages (a GBP post linking it counts as the external mention).
+  - [ ] Performance → Queries → sort by impressions → queries with impressions but position >10 and no dedicated page → send Claude the query list to decide which page to strengthen or add.
+  - [ ] Request indexing manually for every newly shipped URL (both locales) — same mechanic as items 4, 8, 9, 11 above.
+- **Status:** [ ] ongoing, monthly
+
+## 18. ⚪ Tracking baseline (set up once, review monthly)
+- **What:**
+  - [ ] Set up keyword tracking (manual or any rank tool, Lucknow location set) for: advocate in lucknow, lawyer in lucknow, criminal lawyer in lucknow, best criminal lawyer in lucknow, bail lawyer lucknow, anticipatory bail lucknow, divorce lawyer in lucknow, लखनऊ में वकील, तलाक के वकील लखनऊ, लखनऊ में जमानत के वकील.
+  - [ ] Check GBP Insights monthly: calls + direction requests (the real KPI, more than rankings).
+- **Realistic timeline:** map-pack movement 4–8 weeks after reviews+citations start; organic long-tail (services/guides) 2–4 months; head terms 6+ months.
+- **Status:** [ ] not done
+
+## 19. ⚪ Permanent rules — things to never do (will burn the domain)
+- Fake, incentivized, or family reviews.
+- A second live site or doorway pages on `lawyerlucknow.in` — it must stay a dumb 301 (already true per item 1 above; keep it that way).
+- Locality-spam pages (e.g. gomti-nagar-lawyer, alambagh-lawyer…).
+- Buying backlink packages or Fiverr-type links.
+- Re-adding `aggregateRating` schema (already removed for policy reasons — see `progress.md` Phase 6 notes).
+- Superlatives anywhere, including the GBP description and directory bios (BCI applies there too).
+- Publishing AI-drafted guides without the advocate actually reviewing them — he is professionally responsible for every word.
+- **Status:** standing rule, no action needed unless you're about to break one — flag it to Claude if in doubt.
 
 ---
 

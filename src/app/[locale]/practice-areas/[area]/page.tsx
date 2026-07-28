@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import FAQAccordion from '@/components/shared/FAQAccordion';
 import { ArrowRight, CheckCircle2, MapPin } from 'lucide-react';
@@ -24,7 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   if (!validAreas.includes(area)) {
     return {};
   }
-  
+  setRequestLocale(locale);
+
   const t = await getTranslations({ locale, namespace: `areas.${area}` });
   const siteUrl = 'https://advocatelucknow.in';
   const path = `/${locale}/practice-areas/${area}`;
@@ -60,10 +61,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function PracticeAreaPage({ params }: { params: Promise<{ locale: string, area: string }> }) {
   const { locale, area } = await params;
-  
+
   if (!validAreas.includes(area)) {
     notFound();
   }
+  setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: `areas.${area}` });
   const common = await getTranslations({ locale, namespace: 'common' });

@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import FAQAccordion from '@/components/shared/FAQAccordion';
 import LegalDisclaimer from '@/components/shared/LegalDisclaimer';
@@ -29,6 +29,7 @@ interface LocationContent {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
   if (!LOCATION_SLUGS.includes(slug)) return {};
+  setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: `locations.${slug}` });
   const path = `/${locale}/locations/${slug}`;
@@ -56,6 +57,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function LocationPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const location = getLocation(slug);
   if (!location) notFound();
 

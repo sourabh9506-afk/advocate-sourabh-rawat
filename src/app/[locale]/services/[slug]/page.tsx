@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getServiceBySlug, getAllServiceSlugs, hasEnglishFallback } from '@/lib/services';
 import { generateBreadcrumbSchema, generateFAQSchema, generateServiceSchema } from '@/lib/schema';
 import { BUSINESS } from '@/lib/business';
@@ -28,6 +28,7 @@ function resolveService(locale: string, slug: string) {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const { service } = resolveService(locale, slug);
   if (!service) return {};
 
@@ -65,6 +66,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function ServicePage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const { service, isFallback } = resolveService(locale, slug);
 
   if (!service) {

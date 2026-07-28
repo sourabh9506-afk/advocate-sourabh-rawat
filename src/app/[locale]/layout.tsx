@@ -1,7 +1,7 @@
 import { Playfair_Display, Inter, Noto_Serif_Devanagari, Noto_Sans_Devanagari } from 'next/font/google';
 import Script from 'next/script';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import TopBar from '@/components/layout/TopBar';
@@ -18,6 +18,7 @@ const notoSansDev = Noto_Sans_Devanagari({ subsets: ['devanagari'], weight: ['40
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'hero' });
   
   const siteUrl = 'https://advocatelucknow.in';
@@ -70,6 +71,7 @@ export default async function LocaleLayout({
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
+  setRequestLocale(locale);
 
   const messages = await getMessages({ locale });
   const legalServiceSchema = generateLegalServiceSchema(locale);

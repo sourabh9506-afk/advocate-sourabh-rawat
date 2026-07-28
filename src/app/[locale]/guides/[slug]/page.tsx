@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getGuideBySlug, getAllGuideSlugs, hasEnglishFallback, extractHeadings } from '@/lib/guides';
 import { getServiceBySlug } from '@/lib/services';
 import { generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
@@ -34,6 +34,7 @@ function resolveGuide(locale: string, slug: string) {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const { guide } = resolveGuide(locale, slug);
   if (!guide) return {};
 
@@ -73,6 +74,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function GuidePage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const { guide, isFallback } = resolveGuide(locale, slug);
 
   if (!guide) {
