@@ -8,7 +8,8 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['lucide-react']
   },
   images: {
-    qualities: [40, 60, 75]
+    qualities: [40, 60, 75],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920]
   }
 };
 

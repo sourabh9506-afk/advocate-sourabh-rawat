@@ -63,13 +63,15 @@ export default function ServiceCarousel() {
           {slides.map((slide, index) => (
             <div key={slide.id} className="carousel-slide">
               <div className="slide-bg">
-                <Image 
-                  src={slide.image} 
-                  alt={slide.tag} 
-                  fill 
+                <Image
+                  src={slide.image}
+                  alt={slide.tag}
+                  fill
                   priority={index === 0}
+                  fetchPriority={index === 0 ? 'high' : undefined}
+                  loading={index === 0 ? undefined : 'lazy'}
                   quality={40}
-                  className="slide-bg-img" 
+                  className="slide-bg-img"
                   sizes="100vw"
                 />
                 <div className="slide-bg-overlay"></div>
