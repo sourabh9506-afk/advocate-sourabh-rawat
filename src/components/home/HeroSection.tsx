@@ -16,11 +16,9 @@ export default function HeroSection() {
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <h1 className="hero-title">
-            Advocate<br/><span className="gold">Sourabh Rawat</span>
+            <span className="block">Advocate<br/><span className="gold">Sourabh Rawat</span></span>
+            <span className="hero-sub block">{t('h1Descriptor')}</span>
           </h1>
-        </ScrollReveal>
-        <ScrollReveal delay={0.1}>
-          <p className="hero-sub">{t('designation')}</p>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
           <p className="hero-desc" dangerouslySetInnerHTML={{ __html: t.raw('desc') || 'Dedicated legal representation with <strong>10+ years of practice</strong> across criminal, civil, and family courts in Lucknow. Direct access &mdash; no middlemen, no runaround.' }} />

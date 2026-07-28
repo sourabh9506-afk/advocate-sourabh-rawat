@@ -79,7 +79,7 @@ export default function ServiceCarousel() {
                   <span className="w-3 h-3 rounded-full bg-gold inline-block mr-1"></span>
                   {slide.tag}
                 </div>
-                <h2 className="slide-title" style={{ whiteSpace: 'pre-line' }}>{slide.title}<span className="gold">{slide.gold}</span></h2>
+                <p className="slide-title" style={{ whiteSpace: 'pre-line' }}>{slide.title}<span className="gold">{slide.gold}</span></p>
                 <p className="slide-desc">{slide.desc}</p>
                 <div className="slide-tags">
                   {slide.badges.map(b => (

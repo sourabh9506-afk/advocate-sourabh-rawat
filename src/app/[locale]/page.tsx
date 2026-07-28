@@ -14,8 +14,8 @@ import CTABanner from '@/components/home/CTABanner';
 export default function Home() {
   return (
     <main>
-      <ServiceCarousel />
       <HeroSection />
+      <ServiceCarousel />
       <TrustStrip />
       <PracticeAreas />
       <WhyChoose />
