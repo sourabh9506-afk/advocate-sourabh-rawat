@@ -3,6 +3,7 @@ const path = require('path')
 
 const LOCALES = ['en', 'hi']
 const PRACTICE_AREAS = ['criminal-law', 'civil-law', 'family-law', 'police-station']
+const LOCATIONS = ['madiyaon-chamber', 'kaiserbagh-chamber', 'district-court-lucknow', 'high-court-lucknow-bench']
 
 // Mirrors src/lib/routes.ts (kept in plain JS here since next-sitemap.config.js
 // runs in plain Node, not through the Next.js/TS toolchain). Both read the same
@@ -25,10 +26,11 @@ const PUBLIC_PATHS = [
   '/',
   '/about',
   '/contact',
-  '/blog',
+  '/guides',
   '/services',
   ...PRACTICE_AREAS.map((area) => `/practice-areas/${area}`),
-  ...getSlugsFromDir('blog').map((slug) => `/blog/${slug}`),
+  ...LOCATIONS.map((slug) => `/locations/${slug}`),
+  ...getSlugsFromDir('guides').map((slug) => `/guides/${slug}`),
   ...getSlugsFromDir('services').map((slug) => `/services/${slug}`),
 ]
 
@@ -37,6 +39,8 @@ function priorityFor(publicPath) {
   if (publicPath === '/about' || publicPath === '/contact') return 0.8
   if (publicPath.startsWith('/practice-areas/')) return 0.8
   if (publicPath.startsWith('/services/')) return 0.85
+  if (publicPath.startsWith('/locations/')) return 0.8
+  if (publicPath.startsWith('/guides/')) return 0.75
   return 0.7
 }
 

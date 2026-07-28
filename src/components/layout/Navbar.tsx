@@ -40,6 +40,7 @@ export default function Navbar() {
           <Link href="/#process">{t('consultation')}</Link>
           <Link href="/#reviews">{t('reviews')}</Link>
           <Link href="/#faq">FAQ</Link>
+          <Link href="/guides">{t('blog')}</Link>
           <Link href="/#location">{t('contact')}</Link>
           <Link href="/#process" className="nav-cta">{t('bookNow')}</Link>
           <button onClick={toggleLocale} className="lang-switch" aria-label="Switch language">
@@ -71,6 +72,7 @@ export default function Navbar() {
         <Link href="/#process" onClick={() => setIsOpen(false)}>{t('consultation')}</Link>
         <Link href="/#reviews" onClick={() => setIsOpen(false)}>{t('reviews')}</Link>
         <Link href="/#faq" onClick={() => setIsOpen(false)}>FAQ</Link>
+        <Link href="/guides" onClick={() => setIsOpen(false)}>{t('blog')}</Link>
         <Link href="/#location" onClick={() => setIsOpen(false)}>{t('contact')}</Link>
         <Link href="/#process" className="mob-cta" onClick={() => setIsOpen(false)}>{t('bookNow')}</Link>
         <button onClick={() => { toggleLocale(); setIsOpen(false); }} className="lang-switch" style={{ alignSelf: 'center', marginTop: '8px' }}>

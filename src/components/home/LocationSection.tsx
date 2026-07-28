@@ -1,9 +1,12 @@
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
 import ScrollReveal from '../shared/ScrollReveal';
 import { BUSINESS } from '@/lib/business';
+import { Link } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
 
 export default function LocationSection() {
   const [madiyaon, kaiserbagh] = BUSINESS.locations;
+  const a = useTranslations('areasServed');
 
   return (
     <section id="location" className="sec-full">
@@ -38,6 +41,9 @@ export default function LocationSection() {
                     <div className="loc-row-val">{madiyaon.streetAddress}<br/>{madiyaon.locality}</div>
                   </div>
                 </a>
+                <Link href="/locations/madiyaon-chamber" className="inline-flex items-center gap-1.5 text-gold font-semibold text-sm mt-3 hover:gap-2.5 transition-all">
+                  {a('madiyaonLink')} <ArrowRight size={14} />
+                </Link>
               </div>
             </div>
           </ScrollReveal>
@@ -64,12 +70,24 @@ export default function LocationSection() {
                     <div className="loc-row-val">{kaiserbagh.streetAddress}<br/>{kaiserbagh.locality}</div>
                   </div>
                 </a>
+                <Link href="/locations/kaiserbagh-chamber" className="inline-flex items-center gap-1.5 text-gold font-semibold text-sm mt-3 hover:gap-2.5 transition-all">
+                  {a('kaiserbaghLink')} <ArrowRight size={14} />
+                </Link>
               </div>
             </div>
           </ScrollReveal>
         </div>
 
-        <div className="w-full flex justify-center" style={{ marginTop: '100px', paddingTop: '40px', borderTop: '1px solid rgba(0,0,0,0.06)' }}>
+        <ScrollReveal delay={0.2} direction="up" className="w-full">
+          <div className="max-w-4xl mx-auto text-center" style={{ marginTop: '72px' }}>
+            <h3 className="font-serif text-2xl font-bold text-navy mb-3">{a('title')}</h3>
+            <p className="text-dark/75 text-sm leading-relaxed">
+              {a('intro')} <span className="text-navy font-medium">{a('localities')}</span> {a('outro')}
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <div className="w-full flex justify-center" style={{ marginTop: '72px', paddingTop: '40px', borderTop: '1px solid rgba(0,0,0,0.06)' }}>
           <ScrollReveal delay={0.3} direction="up" className="w-full max-w-4xl">
             <div className="flex flex-wrap justify-center gap-6 md:gap-12 bg-white p-6 md:p-8 rounded-2xl border border-solid border-[#2b2b2b14] shadow-[0_8px_32px_rgba(0,0,0,0.03)]">
             <div className="loc-row">

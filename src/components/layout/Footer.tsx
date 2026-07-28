@@ -47,6 +47,7 @@ export default function Footer() {
           <Link href="/#process">{t('consultation')}</Link>
           <Link href="/#reviews">{t('reviews')}</Link>
           <Link href="/#faq">FAQ</Link>
+          <Link href="/guides">{t('blog')}</Link>
           <Link href="/#location">{t('contact')}</Link>
         </div>
         <div className="f-col">

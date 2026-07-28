@@ -164,3 +164,37 @@ export function generateServiceSchema(name: string) {
     serviceType: name,
   };
 }
+
+/**
+ * Chamber-landing schema: the same LegalService entity (shared @id) scoped to one
+ * physical chamber, carrying that chamber's PostalAddress + GeoCoordinates + map URL.
+ * Do NOT use this for court pages — a court is not the advocate's location.
+ */
+export function generateChamberSchema(locationId: 'madiyaon' | 'kaiserbagh', pageUrl: string) {
+  const loc = BUSINESS.locations.find((l) => l.id === locationId) ?? BUSINESS.locations[0];
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LegalService',
+    '@id': 'https://advocatelucknow.in',
+    name: BUSINESS.name,
+    url: pageUrl,
+    telephone: BUSINESS.phone.tel,
+    image: 'https://advocatelucknow.in/images/og-image.jpg',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: loc.streetAddress,
+      addressLocality: loc.locality,
+      addressRegion: loc.region,
+      postalCode: loc.postalCode,
+      addressCountry: loc.country,
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: loc.lat,
+      longitude: loc.lng,
+    },
+    hasMap: loc.mapsUrl,
+    areaServed: { '@type': 'City', name: 'Lucknow' },
+  };
+}

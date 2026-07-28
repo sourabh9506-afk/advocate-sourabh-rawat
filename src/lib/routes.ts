@@ -17,14 +17,16 @@ function getSlugsFromDir(dirName: string): string[] {
 }
 
 const PRACTICE_AREAS = ['criminal-law', 'civil-law', 'family-law', 'police-station'];
+const LOCATIONS = ['madiyaon-chamber', 'kaiserbagh-chamber', 'district-court-lucknow', 'high-court-lucknow-bench'];
 
 export const PUBLIC_PATHS: string[] = [
   '/',
   '/about',
   '/contact',
-  '/blog',
+  '/guides',
   '/services',
   ...PRACTICE_AREAS.map((area) => `/practice-areas/${area}`),
-  ...getSlugsFromDir('blog').map((slug) => `/blog/${slug}`),
+  ...LOCATIONS.map((slug) => `/locations/${slug}`),
+  ...getSlugsFromDir('guides').map((slug) => `/guides/${slug}`),
   ...getSlugsFromDir('services').map((slug) => `/services/${slug}`),
 ];

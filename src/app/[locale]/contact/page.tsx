@@ -1,6 +1,6 @@
 import ScrollReveal from '@/components/shared/ScrollReveal';
 import AppointmentForm from '@/components/contact/AppointmentForm';
-import { MapPin, Phone, Mail, Clock, ArrowRight } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, ArrowRight, Navigation } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { generateBreadcrumbSchema } from '@/lib/schema';
 import { Link } from '@/i18n/routing';
@@ -47,17 +47,26 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const tc = await getTranslations({ locale, namespace: 'contact' });
   const ta = await getTranslations({ locale, namespace: 'about' });
 
+  const siteUrl = 'https://advocatelucknow.in';
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: `https://advocatelucknow.in/${locale}` },
-    { name: tc('meta_title'), url: `https://advocatelucknow.in/${locale}/contact` }
+    { name: 'Home', url: `${siteUrl}/${locale}` },
+    { name: tc('meta_title'), url: `${siteUrl}/${locale}/contact` }
   ]);
+
+  const contactPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: tc('meta_title'),
+    url: `${siteUrl}/${locale}/contact`,
+    about: { '@id': siteUrl },
+  };
 
   const [madiyaon, kaiserbagh] = BUSINESS.locations;
   const waNumber = BUSINESS.phone.wa;
 
   const chambers = [
-    { label: ta('chamber1_label'), address: ta('chamber1_address'), mapQuery: `${madiyaon.lat},${madiyaon.lng}` },
-    { label: ta('chamber2_label'), address: ta('chamber2_address'), mapQuery: `${kaiserbagh.lat},${kaiserbagh.lng}` },
+    { label: ta('chamber1_label'), address: ta('chamber1_address'), mapQuery: `${madiyaon.lat},${madiyaon.lng}`, slug: 'madiyaon-chamber' },
+    { label: ta('chamber2_label'), address: ta('chamber2_address'), mapQuery: `${kaiserbagh.lat},${kaiserbagh.lng}`, slug: 'kaiserbagh-chamber' },
   ];
 
   return (
@@ -65,6 +74,10 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
       />
 
       <div className="bg-navy text-white pt-20 md:pt-32 pb-12 md:pb-20 px-4 md:px-12 relative overflow-hidden">
@@ -153,11 +166,28 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                           title={chamber.label}
                         />
 
+                        <div className="grid grid-cols-2 gap-2 mt-3">
+                          <a
+                            href={`https://maps.google.com/maps?q=${chamber.mapQuery}`}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center justify-center gap-1.5 bg-white/10 text-cream font-semibold text-xs py-2.5 rounded-lg hover:bg-white/20 transition-colors"
+                          >
+                            <Navigation size={13} className="text-gold" /> {tc('getDirections')}
+                          </a>
+                          <Link
+                            href={`/locations/${chamber.slug}`}
+                            className="inline-flex items-center justify-center gap-1.5 bg-white/10 text-cream font-semibold text-xs py-2.5 rounded-lg hover:bg-white/20 transition-colors"
+                          >
+                            {tc('viewChamberDetails')}
+                          </Link>
+                        </div>
+
                         <a
                           href={waLink}
                           target="_blank"
                           rel="noreferrer"
-                          className="mt-3 w-full inline-flex items-center justify-center gap-2 bg-gold text-navy font-bold text-xs py-2.5 rounded-lg hover:bg-gold/90 transition-colors"
+                          className="mt-2 w-full inline-flex items-center justify-center gap-2 bg-gold text-navy font-bold text-xs py-2.5 rounded-lg hover:bg-gold/90 transition-colors"
                         >
                           WhatsApp <ArrowRight size={14} />
                         </a>

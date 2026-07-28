@@ -66,18 +66,18 @@
           },
           {
             "title": "Anticipatory Bail",
-            "desc": "Pre-arrest bail protection under Section 438 CrPC. Filed immediately when arrest is apprehended.",
+            "desc": "Pre-arrest bail protection under Section 482 BNSS (earlier Section 438 CrPC). Filed immediately when arrest is apprehended.",
             "tags": [
-              "Sec. 438 CrPC",
+              "Sec. 482 BNSS",
               "Pre-Arrest"
             ]
           },
           {
             "title": "FIR Defense & Quashing",
-            "desc": "Legal defense against false FIRs. High Court petitions for quashing of FIR under Section 482 CrPC.",
+            "desc": "Legal defense against false FIRs. High Court petitions for quashing of FIR under Section 528 BNSS (earlier Section 482 CrPC).",
             "tags": [
               "False FIR",
-              "Sec. 482 HC"
+              "Sec. 528 HC"
             ]
           },
           {
@@ -151,9 +151,9 @@
           },
           {
             "title": "Maintenance Claims",
-            "desc": "Maintenance applications under Section 125 CrPC and Hindu Marriage Act. Interim and final maintenance secured.",
+            "desc": "Maintenance applications under Section 144 BNSS (earlier Section 125 CrPC) and Hindu Marriage Act. Interim and final maintenance secured.",
             "tags": [
-              "Sec. 125 CrPC",
+              "Sec. 144 BNSS",
               "HMA"
             ]
           },
@@ -181,10 +181,10 @@
           },
           {
             "title": "FIR Registration Help",
-            "desc": "Assisting complainants in getting FIR registered at police station. Escalation to Magistrate if police refuses registration.",
+            "desc": "Assisting complainants in getting FIR registered at police station. Escalation to Magistrate under Section 175(3) BNSS (earlier Section 156(3) CrPC) if police refuses registration.",
             "tags": [
               "FIR Filing",
-              "Sec. 156(3)"
+              "Sec. 175(3) BNSS"
             ]
           },
           {
@@ -192,7 +192,7 @@
             "desc": "Legal presence during police questioning and statement recording. Preventing coerced or incorrect statements.",
             "tags": [
               "Statement",
-              "Section 161"
+              "Sec. 180 BNSS"
             ]
           },
           {
@@ -256,11 +256,11 @@
     "emailLabel": "Email Us",
     "items": [
       { "q": "What is the first step if an FIR is filed against me?", "a": "Under Indian law, the first step is typically to obtain a certified copy of the FIR, as it is a public document available from the police station or the state police website. Legal counsel can then review the allegations and, where custody is a risk, prepare a bail application. Responding through a lawyer rather than directly to the investigating officer is the typical practice at this stage." },
-      { "q": "How is anticipatory bail different from regular bail?", "a": "Anticipatory bail is protection sought under Section 438 CrPC before an arrest, typically when a person apprehends arrest in a non-bailable offence. Regular bail, by contrast, is applied for after arrest or during trial before the court holding jurisdiction. The two remedies apply at different stages of a criminal proceeding." },
+      { "q": "How is anticipatory bail different from regular bail?", "a": "Anticipatory bail is protection sought under Section 482 BNSS (earlier Section 438 CrPC) before an arrest, typically when a person apprehends arrest in a non-bailable offence. Regular bail, by contrast, is applied for after arrest or during trial before the court holding jurisdiction. The two remedies apply at different stages of a criminal proceeding." },
       { "q": "What documents are required for mutual consent divorce?", "a": "Mutual consent divorce under the Hindu Marriage Act typically requires the marriage certificate, proof of residence, income and asset details of both parties, and a settlement agreement covering maintenance and custody where applicable. Both spouses file a joint petition affirming their consent. Courts generally require a minimum period of separation before proceedings can be initiated." },
       { "q": "How long does a property dispute case usually take?", "a": "Duration depends on factors such as the complexity of title records, the number of parties involved, and the court's caseload. Straightforward possession or partition matters typically conclude within one to three years, while disputes involving multiple appeals can take considerably longer. Timelines remain case-specific." },
-      { "q": "Can police enter my house without a warrant?", "a": "Under the CrPC, police generally require a warrant to enter and search a private residence, except in defined circumstances such as a cognizable offence in progress, hot pursuit of a suspect, or a reasonable apprehension that evidence may be destroyed. These exceptions are set out in law and subject to procedural safeguards. Entry outside these exceptions is not standard procedure." },
-      { "q": "What is the difference between an FIR and a police complaint?", "a": "An FIR is registered under Section 154 CrPC specifically for cognizable offences and sets the criminal justice process in motion. A police complaint may instead relate to a non-cognizable offence and typically does not, by itself, authorise investigation without magistrate approval. The two documents follow different procedural pathways." },
+      { "q": "Can police enter my house without a warrant?", "a": "Under the BNSS (earlier the CrPC), police generally require a warrant to enter and search a private residence, except in defined circumstances such as a cognizable offence in progress, hot pursuit of a suspect, or a reasonable apprehension that evidence may be destroyed. These exceptions are set out in law and subject to procedural safeguards. Entry outside these exceptions is not standard procedure." },
+      { "q": "What is the difference between an FIR and a police complaint?", "a": "An FIR is registered under Section 173 BNSS (earlier Section 154 CrPC) specifically for cognizable offences and sets the criminal justice process in motion. A police complaint may instead relate to a non-cognizable offence and typically does not, by itself, authorise investigation without magistrate approval. The two documents follow different procedural pathways." },
       { "q": "How is child custody decided in Indian courts?", "a": "Courts primarily consider the welfare and overall interest of the child, taking into account factors such as the child's age, emotional bond with each parent, and stability of the home environment. Custody matters are typically governed by the Hindu Minority and Guardianship Act or the Guardians and Wards Act, depending on the case. Arrangements can be sole, joint, or visitation-based." },
       { "q": "Is a lawyer necessary during police station questioning?", "a": "Under Article 22 of the Constitution, a person has the right to consult a legal practitioner of their choice, and this extends to the period of police questioning. The law does not mandate a lawyer's physical presence in every instance, but legal representation is a recognised safeguard against procedural irregularities. Applicable rules can vary with the offence and stage of investigation." },
       { "q": "What courts does Advocate Sourabh Rawat practise in?", "a": "Advocate Sourabh Rawat practises at the District & Sessions Court in Lucknow and the High Court of Judicature at Allahabad, Lucknow Bench. His practice covers criminal, civil, and family law matters before these courts." }
@@ -303,7 +303,7 @@
       "desc": "FIR defense, regular & anticipatory bail, and Section 528 BNSS quashing — District Court & High Court Lucknow Bench. Direct consultation with the advocate.",
       "content": "Advocate Sourabh Rawat provides structured and strategic defense in all criminal matters. Whether you are facing false accusations or require urgent bail, our chambers ensure that your constitutional rights are protected at every stage of the legal process. Sourabh Rawat represents clients across District Court Lucknow and the High Court of Judicature at Allahabad, Lucknow Bench in all criminal proceedings.",
       "services": [
-        "FIR Quashing under Section 482 CrPC",
+        "FIR Quashing under Section 528 BNSS (earlier Section 482 CrPC)",
         "Anticipatory and Regular Bail Applications",
         "Defense in Sessions Court Trials",
         "High Court Criminal Appeals",
@@ -385,13 +385,13 @@
           "Mutual consent divorce petitions — Family Court Lucknow",
           "Contested divorce under Hindu Marriage Act 1955",
           "Child custody and visitation applications",
-          "Maintenance and alimony under Section 125 CrPC / BNSS",
+          "Maintenance and alimony under Section 144 BNSS (earlier Section 125 CrPC)",
           "Domestic Violence Act proceedings"
         ]
       },
       "divorceGuide": {
         "title": "Divorce Procedure at Family Court Lucknow",
-        "content": "Divorce petitions in Lucknow are filed before the Family Court, Lucknow, established under the Family Courts Act, 1984, and located within the Civil Court complex. For Hindus, divorce is governed by the Hindu Marriage Act, 1955; for Muslims, the applicable personal law applies; and for inter-religious marriages, the Special Marriage Act, 1954 applies. Mutual consent divorce under Section 13-B of the Hindu Marriage Act requires both spouses to file a joint petition, have been living separately for at least one year, and appear for two separate hearings — the first motion and the second motion — with a statutory cooling-off period of six months in between, which may be waived by the Family Court Lucknow in appropriate circumstances. Contested divorce, filed on grounds such as cruelty, desertion, adultery, or mental disorder, involves filing a petition, service of notice on the respondent, filing of written statements, and trial on merits. Child custody, maintenance under Section 125 CrPC / BNSS, and domestic violence proceedings under the Protection of Women from Domestic Violence Act, 2005 are also dealt with by the Family Court Lucknow and related courts. Documents typically required include the marriage certificate, proof of address, identity proof, and photographs of both parties."
+        "content": "Divorce petitions in Lucknow are filed before the Family Court, Lucknow, established under the Family Courts Act, 1984, and located within the Civil Court complex. For Hindus, divorce is governed by the Hindu Marriage Act, 1955; for Muslims, the applicable personal law applies; and for inter-religious marriages, the Special Marriage Act, 1954 applies. Mutual consent divorce under Section 13-B of the Hindu Marriage Act requires both spouses to file a joint petition, have been living separately for at least one year, and appear for two separate hearings — the first motion and the second motion — with a statutory cooling-off period of six months in between, which may be waived by the Family Court Lucknow in appropriate circumstances. Contested divorce, filed on grounds such as cruelty, desertion, adultery, or mental disorder, involves filing a petition, service of notice on the respondent, filing of written statements, and trial on merits. Child custody, maintenance under Section 144 BNSS (earlier Section 125 CrPC), and domestic violence proceedings under the Protection of Women from Domestic Violence Act, 2005 are also dealt with by the Family Court Lucknow and related courts. Documents typically required include the marriage certificate, proof of address, identity proof, and photographs of both parties."
       }
     },
     "police-station": {
@@ -424,12 +424,12 @@
   },
   "areaFaq": {
     "criminal-law": [
-      { "q": "What is the difference between bailable and non-bailable offences?", "a": "Bailable offences allow bail to be granted as a matter of right by the police or the court, while non-bailable offences require a judicial application and the exercise of court discretion. Classification is determined under the First Schedule of the CrPC based on the severity of the offence. This distinction affects how quickly a person can secure release after arrest." },
-      { "q": "Can an FIR be quashed by the High Court?", "a": "An FIR can be quashed by the High Court under Section 482 CrPC if it is found to be frivolous, malicious, or if the allegations, even taken at face value, do not disclose a cognizable offence. Quashing petitions are filed directly before the High Court and decided on the specific facts of each case. This remedy is typically sought in cases of alleged false implication." },
+      { "q": "What is the difference between bailable and non-bailable offences?", "a": "Bailable offences allow bail to be granted as a matter of right by the police or the court, while non-bailable offences require a judicial application and the exercise of court discretion. Classification is determined under the First Schedule of the BNSS (earlier the CrPC) based on the severity of the offence. This distinction affects how quickly a person can secure release after arrest." },
+      { "q": "Can an FIR be quashed by the High Court?", "a": "An FIR can be quashed by the High Court under Section 528 BNSS (earlier Section 482 CrPC) if it is found to be frivolous, malicious, or if the allegations, even taken at face value, do not disclose a cognizable offence. Quashing petitions are filed directly before the High Court and decided on the specific facts of each case. This remedy is typically sought in cases of alleged false implication." },
       { "q": "What happens after arrest during a criminal investigation?", "a": "The accused must typically be produced before a magistrate within 24 hours, excluding travel time, as mandated under Article 22 of the Constitution. The magistrate may then authorise police custody or judicial custody depending on the requirements of the investigation. Bail applications can be filed at this stage before the appropriate court." },
-      { "q": "What is the procedure for a sessions court trial?", "a": "A sessions court trial typically involves framing of charges, recording of prosecution and defence evidence, cross-examination of witnesses, final arguments, and judgment. The process follows the procedure laid out under the CrPC for warrant trials. Duration varies with the number of witnesses and the complexity of the case." },
+      { "q": "What is the procedure for a sessions court trial?", "a": "A sessions court trial typically involves framing of charges, recording of prosecution and defence evidence, cross-examination of witnesses, final arguments, and judgment. The process follows the procedure laid out under the BNSS (earlier the CrPC) for warrant trials. Duration varies with the number of witnesses and the complexity of the case." },
       { "q": "What are NDPS Act cases and how are they different?", "a": "Cases under the Narcotic Drugs and Psychotropic Substances Act carry stringent bail provisions under Section 37, which requires the court to be satisfied that the accused is unlikely to commit an offence while on bail. These cases generally involve a higher threshold for securing bail compared to ordinary criminal matters. Sentencing is also typically more severe for offences involving commercial quantities." },
-      { "q": "Can a criminal case be settled through compromise?", "a": "Certain offences are compoundable under Section 320 CrPC, meaning the complainant and accused can reach a settlement with court permission, resulting in the case being closed. Serious or non-compoundable offences cannot be resolved this way even if both parties agree. Whether compounding is available depends on the specific offence charged." },
+      { "q": "Can a criminal case be settled through compromise?", "a": "Certain offences are compoundable under the BNSS (earlier Section 320 CrPC), meaning the complainant and accused can reach a settlement with court permission, resulting in the case being closed. Serious or non-compoundable offences cannot be resolved this way even if both parties agree. Whether compounding is available depends on the specific offence charged." },
       { "q": "What is the role of a criminal appeal in the High Court?", "a": "A criminal appeal allows a convicted person to challenge a trial court's judgment before the High Court on questions of fact or law. The appellate court reviews the evidence and legal reasoning of the lower court and may confirm, modify, or set aside the conviction or sentence. Appeals are typically filed within the limitation period prescribed under the CrPC." },
       { "q": "What is the difference between POCSO cases and general criminal cases?", "a": "Cases under the Protection of Children from Sexual Offences Act follow a specialised procedure, including trial before designated POCSO courts, child-friendly examination processes, and time-bound trial provisions. These procedural safeguards differ from those applicable in general criminal trials. Bail provisions under POCSO are also generally more stringent." },
       { "q": "What is the process for regular bail in Sessions Court?", "a": "An application for regular bail is typically filed before the Sessions Court after arrest, supported by grounds such as the nature of the allegations, cooperation with investigation, and absence of flight risk. The court examines the case diary and hears both the defence and the prosecution before deciding. Conditions such as sureties or reporting requirements may be attached if bail is granted." },
@@ -440,14 +440,14 @@
     ],
     "family-law": [
       { "q": "What is the difference between mutual consent and contested divorce?", "a": "Mutual consent divorce is filed jointly by both spouses who agree to end the marriage and settle issues such as maintenance and custody by consent. Contested divorce is filed by one spouse on statutory grounds such as cruelty or desertion, with the other party permitted to oppose the petition. The two processes differ significantly in procedure and typical timelines." },
-      { "q": "How is maintenance calculated under Indian law?", "a": "Maintenance under Section 125 CrPC or the Hindu Marriage Act is typically assessed based on factors such as the income and earning capacity of both spouses, the standard of living during the marriage, and the needs of any dependent children. Courts have discretion in determining the amount, and no fixed formula applies uniformly. Both interim and final maintenance can be awarded at different stages of proceedings." },
+      { "q": "How is maintenance calculated under Indian law?", "a": "Maintenance under Section 144 BNSS (earlier Section 125 CrPC) or the Hindu Marriage Act is typically assessed based on factors such as the income and earning capacity of both spouses, the standard of living during the marriage, and the needs of any dependent children. Courts have discretion in determining the amount, and no fixed formula applies uniformly. Both interim and final maintenance can be awarded at different stages of proceedings." },
       { "q": "What is required to file for restitution of conjugal rights?", "a": "A petition under Section 9 of the Hindu Marriage Act is filed when one spouse has withdrawn from the other's company without reasonable cause. The petitioner must show that cohabitation has ceased and that no valid justification exists for the withdrawal. Courts may pass a decree directing resumption of cohabitation if the claim is established." },
       { "q": "What protections does the Domestic Violence Act provide?", "a": "The Protection of Women from Domestic Violence Act, 2005 provides for protection orders, residence orders, and monetary relief for women facing physical, emotional, sexual, or economic abuse within a domestic relationship. Applications are typically filed before a Magistrate under this Act. Interim orders can also be sought while proceedings are pending." },
       { "q": "How is custody different from guardianship?", "a": "Custody generally refers to the day-to-day care and physical possession of a child, while guardianship under the Guardians and Wards Act encompasses broader legal responsibility for the child's welfare, property, and decision-making. A person can be a guardian without having physical custody. Courts typically address both aspects when determining arrangements involving minors." },
       { "q": "Can a divorce be granted without the other spouse's consent?", "a": "A contested divorce can be granted without the other spouse's consent if the petitioner establishes statutory grounds such as cruelty, desertion, or adultery under the applicable personal law. The court examines evidence presented by both sides before deciding whether these grounds are made out. This process typically takes longer than a mutual consent divorce." },
       { "q": "What is the minimum separation period for mutual consent divorce?", "a": "Under the Hindu Marriage Act, couples seeking mutual consent divorce typically need to show they have lived separately for at least one year before filing. Courts may waive the standard cooling-off period between the first and second motions in certain circumstances, as clarified by judicial precedent. Requirements can vary based on the personal law applicable to the parties." },
       { "q": "Are family court proceedings confidential?", "a": "Family court proceedings, particularly those involving matrimonial disputes and child custody, are generally conducted with a degree of privacy, and courts may restrict public access to sensitive details. This is intended to protect the interests of the parties and any children involved. Specific confidentiality protocols can vary by court and case type." },
-      { "q": "What documents are needed to file for child maintenance?", "a": "An application for child maintenance typically requires proof of the child's birth and relationship to the parents, income details of both parents, and evidence of the child's educational or medical expenses. The application can be filed under Section 125 CrPC or the Hindu Adoption and Maintenance Act, depending on the circumstances. Courts assess the needs of the child alongside the paying parent's capacity." },
+      { "q": "What documents are needed to file for child maintenance?", "a": "An application for child maintenance typically requires proof of the child's birth and relationship to the parents, income details of both parents, and evidence of the child's educational or medical expenses. The application can be filed under Section 144 BNSS (earlier Section 125 CrPC) or the Hindu Adoption and Maintenance Act, depending on the circumstances. Courts assess the needs of the child alongside the paying parent's capacity." },
       { "q": "How long does divorce take at Family Court Lucknow?", "a": "Mutual consent divorce at Family Court Lucknow can typically be concluded within six months to one year, including the statutory waiting period between the first and second motions — which the court may waive in appropriate cases. Contested divorce proceedings generally take longer, commonly one to three years depending on the issues in dispute and the court's schedule. These timelines are estimates and actual duration is case-specific." },
       { "q": "Can interim maintenance be granted at the first or second hearing?", "a": "An application for interim maintenance, filed alongside the main petition, is heard by the court at an early stage after notice is served on the opposite party. Courts may grant interim maintenance after brief arguments from both sides — this can sometimes occur within the first few hearings depending on the disclosed income of both parties and the needs of the applicant. Interim maintenance is intended to provide financial support during the pendency of proceedings." },
       { "q": "Can a wife living in Lucknow file for divorce if the husband is in another city?", "a": "Under Indian law, a divorce petition may be filed before the Family Court at the place where the parties last resided together, where the wife currently resides, or where the marriage was solemnised. A wife residing in Lucknow may file her petition before Family Court Lucknow even if the respondent husband resides elsewhere, subject to proper jurisdiction being established. The court then arranges service of notice on the respondent." }
@@ -466,10 +466,10 @@
     ],
     "police-station": [
       { "q": "What rights does a person have immediately after arrest?", "a": "Under Article 22 of the Constitution, a person arrested has the right to be informed of the grounds of arrest, the right to consult a legal practitioner of their choice, and the right to be produced before a magistrate within 24 hours. These safeguards apply regardless of the offence alleged. Detention beyond this period without magisterial authorisation is not permitted under law." },
-      { "q": "What happens if police refuse to register an FIR?", "a": "If police refuse to register an FIR for a cognizable offence, the complainant can approach the Superintendent of Police under Section 154(3) CrPC or apply before a Magistrate under Section 156(3) CrPC directing registration. These are the statutory remedies available when registration is denied. Only a cognizable offence needs to be disclosed at the registration stage." },
-      { "q": "How long can police detain a person without formal arrest?", "a": "Police may question a person during a preliminary inquiry, but formal detention without arrest and production before a magistrate is not permitted beyond a reasonable period under the CrPC. Once arrested, production before a magistrate is required within 24 hours, excluding travel time. Prolonged detention outside this procedure would not be in accordance with law." },
-      { "q": "What is Section 41 CrPC and when can police arrest without a warrant?", "a": "Section 41 CrPC allows police to arrest without a warrant in specific circumstances, such as when a cognizable offence has been committed in their presence or there is credible information and reasonable suspicion of involvement in a cognizable offence. The provision also requires police to record reasons for the arrest. Arrests outside these defined circumstances typically require a warrant." },
-      { "q": "Can a statement recorded by police be used as evidence in court?", "a": "A statement made to police during investigation under Section 161 CrPC is generally not admissible as substantive evidence and cannot be used to convict a person, though it may be used to contradict a witness during trial. Confessions made to police officers are separately inadmissible under the Indian Evidence Act, subject to limited exceptions. Statements recorded before a magistrate under Section 164 CrPC carry different evidentiary value." },
+      { "q": "What happens if police refuse to register an FIR?", "a": "If police refuse to register an FIR for a cognizable offence, the complainant can approach the Superintendent of Police under Section 173(4) BNSS (earlier Section 154(3) CrPC) or apply before a Magistrate under Section 175(3) BNSS (earlier Section 156(3) CrPC) directing registration. These are the statutory remedies available when registration is denied. Only a cognizable offence needs to be disclosed at the registration stage." },
+      { "q": "How long can police detain a person without formal arrest?", "a": "Police may question a person during a preliminary inquiry, but formal detention without arrest and production before a magistrate is not permitted beyond a reasonable period under the BNSS (earlier the CrPC). Once arrested, production before a magistrate is required within 24 hours, excluding travel time. Prolonged detention outside this procedure would not be in accordance with law." },
+      { "q": "What is Section 35 BNSS (earlier Section 41 CrPC) and when can police arrest without a warrant?", "a": "Section 35 BNSS (earlier Section 41 CrPC) allows police to arrest without a warrant in specific circumstances, such as when a cognizable offence has been committed in their presence or there is credible information and reasonable suspicion of involvement in a cognizable offence. The provision also requires police to record reasons for the arrest. Arrests outside these defined circumstances typically require a warrant." },
+      { "q": "Can a statement recorded by police be used as evidence in court?", "a": "A statement made to police during investigation under Section 180 BNSS (earlier Section 161 CrPC) is generally not admissible as substantive evidence and cannot be used to convict a person, though it may be used to contradict a witness during trial. Confessions made to police officers are separately inadmissible under the Bharatiya Sakshya Adhiniyam (earlier the Indian Evidence Act), subject to limited exceptions. Statements recorded before a magistrate under Section 183 BNSS (earlier Section 164 CrPC) carry different evidentiary value." },
       { "q": "What immediate steps are available in an emergency police matter?", "a": "In an emergency police matter, such as apprehension of unlawful detention or an urgent FIR situation, contacting a legal practitioner promptly and documenting the details of the incident are typical first steps. Emergency legal assistance can also be sought to help ensure procedural safeguards are followed at the police station. Availability of immediate assistance can vary with the specific circumstances." },
       { "q": "What should I do if I receive a police notice (Section 41A) in Lucknow?", "a": "A notice under Section 41A CrPC (now Section 35 BNSS) requires a person to appear before the police for questioning without a formal arrest. Appearing as directed is advisable, and bringing a lawyer is legally permissible. Non-compliance without reasonable cause may give the police grounds to proceed with arrest. Consulting a lawyer before attending or responding to such a notice is strongly recommended." },
       { "q": "How do I get a family member released from police custody in Lucknow?", "a": "If a family member has been arrested at a Lucknow police station, a lawyer can file a bail application before the competent court — typically the Chief Judicial Magistrate (CJM) or Sessions Court, Lucknow, depending on the offence. If the detention appears illegal or bail is unavailable, a writ of habeas corpus may be filed before the High Court Lucknow Bench seeking immediate production and release. Acting promptly is critical as procedural timelines apply." },
@@ -533,7 +533,127 @@
     "phone_label": "Contact Number",
     "email_label": "Email Address",
     "chambers_heading": "Chamber Locations",
-    "chambers_intro": "Please schedule an appointment before visiting. Both chambers are open during practice hours."
+    "chambers_intro": "Please schedule an appointment before visiting. Both chambers are open during practice hours.",
+    "getDirections": "Get Directions",
+    "viewChamberDetails": "View Chamber Details"
+  },
+  "areasServed": {
+    "title": "Areas We Serve in Lucknow",
+    "intro": "From our chambers in Madiyaon and Kaiserbagh, we assist clients across Lucknow, including:",
+    "localities": "Hazratganj, Gomti Nagar, Indira Nagar, Aliganj, Jankipuram, Alambagh, Chowk, Aminabad, Mahanagar, Vikas Nagar, Kaiserbagh, and Madiyaon",
+    "outro": "and all areas under the Lucknow Police Commissionerate.",
+    "madiyaonLink": "Madiyaon Chamber",
+    "kaiserbaghLink": "Kaiserbagh Chamber"
+  },
+  "locations": {
+    "labels": {
+      "getDirections": "Get Directions",
+      "address": "Address",
+      "phone": "Phone",
+      "hours": "Hours",
+      "areasServedTitle": "Conveniently Located For",
+      "relatedServicesTitle": "Legal Services Handled Here",
+      "courtNote": "This is an informational page by a practising advocate. For official information, please visit the court's own website.",
+      "faqHeading": "Frequently Asked Questions"
+    },
+    "madiyaon-chamber": {
+      "metaTitle": "Advocate Chamber in Madiyaon, Lucknow | Sourabh Rawat",
+      "metaDescription": "Advocate Sourabh Rawat's chamber in Madiyaon, Lucknow — near Primary School, Thana Madiyaon. Consultation by appointment for District Court matters.",
+      "h1": "Advocate Chamber — Madiyaon, Lucknow",
+      "intro": "Advocate Sourabh Rawat's Madiyaon chamber serves clients across north and central Lucknow. Consultations are available by appointment for criminal, civil, and family matters, as well as urgent police-station assistance.",
+      "sections": [
+        {
+          "heading": "How to Reach the Madiyaon Chamber",
+          "content": "The chamber is located at 616/188/A Semra Gaudhi, near the Primary School, within the Thana Madiyaon area of Lucknow. The embedded map below shows the exact location, and the \"Get Directions\" link opens turn-by-turn navigation in Google Maps. Visitors are requested to fix an appointment before arriving, so that adequate time can be set aside to discuss the matter."
+        },
+        {
+          "heading": "Matters Commonly Discussed Here",
+          "content": "The Madiyaon chamber is convenient for District Court Lucknow matters and for police-station assistance in north Lucknow. Clients typically discuss bail applications, anticipatory bail, criminal defence, property disputes, and family matters at this location. The Madiyaon police station falls within this area, and urgent police-station matters for the surrounding zones are taken up on a priority basis."
+        }
+      ],
+      "areasServed": "This chamber is convenient for residents of Jankipuram, Aliganj, Vikas Nagar, Vikas Khand, and the surrounding north Lucknow neighbourhoods.",
+      "faqs": [
+        { "q": "Do I need an appointment to visit the Madiyaon chamber?", "a": "Yes, visits are by appointment. You can fix a time over WhatsApp or a phone call, which ensures the advocate is available and adequate time is set aside to discuss your matter." },
+        { "q": "What documents should I bring to the first consultation?", "a": "Bring any documents relevant to your matter — for example, a copy of the FIR, court notices, agreements, or property papers. If you are unsure what applies, a brief WhatsApp message describing the matter helps identify what to carry." },
+        { "q": "Can I consult on WhatsApp or by phone before visiting in person?", "a": "Yes. An initial discussion over WhatsApp or a call is often the quickest first step. If an in-person meeting is needed, an appointment at the chamber can be scheduled after that." },
+        { "q": "Which courts does the advocate appear in?", "a": "Advocate Sourabh Rawat appears before the District Court Lucknow, the Family Court Lucknow, and the High Court of Judicature at Allahabad, Lucknow Bench." }
+      ]
+    },
+    "kaiserbagh-chamber": {
+      "metaTitle": "Advocate Chamber in Kaiserbagh, Lucknow | Sourabh Rawat",
+      "metaDescription": "Advocate Sourabh Rawat's chamber in Kaiserbagh, Lucknow — near CHC Building, Gate No. 8, close to the District & Family Court. By appointment.",
+      "h1": "Advocate Chamber — Kaiserbagh, Lucknow",
+      "intro": "Advocate Sourabh Rawat's Kaiserbagh chamber is located close to the District and Family Court complex at Qaiserbagh. It is convenient for court matters in central Lucknow and for High Court Lucknow Bench work.",
+      "sections": [
+        {
+          "heading": "How to Reach the Kaiserbagh Chamber",
+          "content": "The chamber is located near the CHC Building, Gate No. 8, Kaiserbagh, Lucknow. The embedded map below shows the exact location, and the \"Get Directions\" link opens navigation in Google Maps. As with the Madiyaon chamber, visits are by appointment so that time can be set aside for a proper discussion of the matter."
+        },
+        {
+          "heading": "Matters Commonly Discussed Here",
+          "content": "The Kaiserbagh chamber is within reach of the District Court and Family Court complex at Qaiserbagh, making it convenient for matters listed there — criminal trials, bail, civil suits, divorce, maintenance, and custody. It is also convenient for High Court Lucknow Bench matters such as FIR quashing and anticipatory bail, and for clients based in central Lucknow."
+        }
+      ],
+      "areasServed": "This chamber is convenient for residents of Hazratganj, Aminabad, Chowk, and the surrounding central Lucknow neighbourhoods.",
+      "faqs": [
+        { "q": "Do I need an appointment to visit the Kaiserbagh chamber?", "a": "Yes, visits are by appointment. You can fix a time over WhatsApp or a phone call so that the advocate is available and can give your matter adequate time." },
+        { "q": "What documents should I bring to the first consultation?", "a": "Bring any documents relevant to your matter — for example, a copy of the FIR, court notices, agreements, or property papers. A short WhatsApp message describing the matter beforehand helps identify what to carry." },
+        { "q": "Can I consult on WhatsApp or by phone before visiting in person?", "a": "Yes. An initial discussion over WhatsApp or a call is often the quickest first step, and an in-person appointment at the chamber can follow if needed." },
+        { "q": "Is this chamber near the courts?", "a": "Yes. The Kaiserbagh chamber is close to the District Court and Family Court complex at Qaiserbagh, which is convenient for clients whose matters are listed there." }
+      ]
+    },
+    "district-court-lucknow": {
+      "metaTitle": "Advocate at District Court Lucknow | Sourabh Rawat",
+      "metaDescription": "Advocate Sourabh Rawat practises at District Court Lucknow (Qaiserbagh) — bail, sessions trials, civil suits and family matters. Direct consultation.",
+      "h1": "Advocate Practising at District Court, Lucknow",
+      "intro": "Advocate Sourabh Rawat regularly appears before the District & Sessions Court, Lucknow, located at the Qaiserbagh court complex. This page explains what the court handles and how the advocate assists litigants there.",
+      "sections": [
+        {
+          "heading": "What the District Court Lucknow Handles",
+          "content": "The District & Sessions Court, Lucknow, at the Qaiserbagh complex, handles a wide range of matters — sessions trials in serious criminal cases, bail applications (under Sections 480 and 483 BNSS, earlier Sections 437 and 439 CrPC), civil suits, and execution proceedings. The Family Court, which deals with divorce, maintenance, and custody, sits within the same complex, so many litigants attend Qaiserbagh for both criminal/civil and matrimonial matters."
+        },
+        {
+          "heading": "Typical First Steps for a Litigant",
+          "content": "A litigant usually begins by identifying the specific court and stage their case is at within the complex. Engaging an advocate involves signing a vakalatnama — the document authorising the advocate to appear on your behalf. From there, the advocate handles filing in the appropriate section, appearances, and the conduct of the matter. Case status can generally be checked through the eCourts services portal and mobile app."
+        },
+        {
+          "heading": "Matters the Advocate Appears In",
+          "content": "At District Court Lucknow, Advocate Sourabh Rawat appears in bail applications, sessions trials, civil suits, and family matters. Each of these has a dedicated page explaining the procedure in more detail, linked below. The Kaiserbagh chamber is close to the Qaiserbagh complex, which is convenient for clients whose matters are listed at the District Court."
+        }
+      ],
+      "faqs": [
+        { "q": "Where is the District Court Lucknow located?", "a": "The District & Sessions Court, Lucknow, is located at the Qaiserbagh court complex. The Family Court, dealing with matrimonial matters, sits within the same complex." },
+        { "q": "How can I check my case status at District Court Lucknow?", "a": "Case status can generally be checked online through the eCourts services portal and its mobile app, using details such as the case number or party name. Your advocate can also provide updates on hearing dates and the stage of the matter." },
+        { "q": "What is a vakalatnama?", "a": "A vakalatnama is the document by which a litigant authorises an advocate to appear and act on their behalf in a case. It is signed at the time of engaging the advocate and filed in the court record." },
+        { "q": "Can urgent bail matters be moved at the District Court?", "a": "Yes. Bail applications, including urgent ones, are filed before the Magistrate or Sessions Court at the complex and listed according to the court's process. The specific timing depends on the offence, the court's schedule, and how the urgency is presented." }
+      ]
+    },
+    "high-court-lucknow-bench": {
+      "metaTitle": "Advocate at High Court Lucknow Bench | Sourabh Rawat",
+      "metaDescription": "Advocate Sourabh Rawat appears before the High Court Lucknow Bench — FIR quashing (Sec 528 BNSS), anticipatory bail, criminal appeals and writ petitions.",
+      "h1": "Advocate at the High Court of Judicature at Allahabad, Lucknow Bench",
+      "intro": "Advocate Sourabh Rawat appears before the High Court of Judicature at Allahabad, Lucknow Bench. This page explains which matters go to the High Court and how a case reaches it from the District Court.",
+      "sections": [
+        {
+          "heading": "About the High Court Lucknow Bench",
+          "content": "The full and correct name of the court is the High Court of Judicature at Allahabad, Lucknow Bench. The Lucknow Bench building is located in Gomti Nagar (Vibhuti Khand). It hears matters arising from the districts within its territorial jurisdiction in the Awadh region of Uttar Pradesh."
+        },
+        {
+          "heading": "Which Matters Go to the High Court",
+          "content": "A range of matters are filed before or reach the High Court Lucknow Bench: bail applications after rejection at the Sessions Court (Section 483 BNSS, earlier Section 439 CrPC), anticipatory bail (Section 482 BNSS, earlier Section 438 CrPC), petitions to quash an FIR (Section 528 BNSS, earlier Section 482 CrPC), criminal appeals, writ petitions, and civil appellate work. The advocate handles quashing, anticipatory bail, and regular bail matters at this level, each explained in more detail on the pages linked below."
+        },
+        {
+          "heading": "How a Case Reaches the High Court",
+          "content": "Many matters reach the High Court after an earlier stage at the District Court — for example, a bail application may be filed before the High Court Lucknow Bench after the Sessions Court has declined bail. Other matters, such as FIR quashing petitions and certain writ petitions, are filed directly before the High Court. Both the Madiyaon and Kaiserbagh chambers are available for consultation on High Court matters."
+        }
+      ],
+      "faqs": [
+        { "q": "What is the difference between the Lucknow Bench and the Allahabad principal seat?", "a": "The High Court of Judicature at Allahabad has its principal seat at Prayagraj (Allahabad) and a permanent bench at Lucknow. The Lucknow Bench hears matters arising from the districts within its territorial jurisdiction, while other districts fall under the principal seat." },
+        { "q": "When should I approach the High Court for bail?", "a": "The High Court Lucknow Bench is commonly approached for bail after a bail application has been rejected by the Sessions Court, or directly for anticipatory bail in appropriate cases. The right forum depends on the stage and facts of the matter." },
+        { "q": "What is a writ petition?", "a": "A writ petition is an application filed directly before the High Court, typically under Article 226 of the Constitution, seeking relief against government action or protection of legal rights. It is a distinct remedy from an ordinary civil suit and is heard by the High Court." },
+        { "q": "Does the advocate handle both District Court and High Court matters?", "a": "Yes. Advocate Sourabh Rawat appears before the District Court Lucknow, the Family Court Lucknow, and the High Court of Judicature at Allahabad, Lucknow Bench." }
+      ]
+    }
   },
   "disclaimer": {
     "body": "This page is for general information only and does not constitute legal advice or solicitation. Outcomes depend on the facts of each case. As per the rules of the Bar Council of India, this website does not advertise or solicit work."
