@@ -143,7 +143,7 @@
           },
           {
             "title": "Child Custody",
-            "desc": "Guardianship and custody cases under Hindu Minority Act and Guardians & Wards Act. Child's best interest priority.",
+            "desc": "Guardianship and custody cases under Hindu Minority Act and Guardians & Wards Act. Child's welfare given priority.",
             "tags": [
               "Custody",
               "Guardianship"
@@ -261,7 +261,7 @@
       { "q": "How long does a property dispute case usually take?", "a": "Duration depends on factors such as the complexity of title records, the number of parties involved, and the court's caseload. Straightforward possession or partition matters typically conclude within one to three years, while disputes involving multiple appeals can take considerably longer. Timelines remain case-specific." },
       { "q": "Can police enter my house without a warrant?", "a": "Under the CrPC, police generally require a warrant to enter and search a private residence, except in defined circumstances such as a cognizable offence in progress, hot pursuit of a suspect, or a reasonable apprehension that evidence may be destroyed. These exceptions are set out in law and subject to procedural safeguards. Entry outside these exceptions is not standard procedure." },
       { "q": "What is the difference between an FIR and a police complaint?", "a": "An FIR is registered under Section 154 CrPC specifically for cognizable offences and sets the criminal justice process in motion. A police complaint may instead relate to a non-cognizable offence and typically does not, by itself, authorise investigation without magistrate approval. The two documents follow different procedural pathways." },
-      { "q": "How is child custody decided in Indian courts?", "a": "Courts primarily consider the welfare and best interest of the child, taking into account factors such as the child's age, emotional bond with each parent, and stability of the home environment. Custody matters are typically governed by the Hindu Minority and Guardianship Act or the Guardians and Wards Act, depending on the case. Arrangements can be sole, joint, or visitation-based." },
+      { "q": "How is child custody decided in Indian courts?", "a": "Courts primarily consider the welfare and overall interest of the child, taking into account factors such as the child's age, emotional bond with each parent, and stability of the home environment. Custody matters are typically governed by the Hindu Minority and Guardianship Act or the Guardians and Wards Act, depending on the case. Arrangements can be sole, joint, or visitation-based." },
       { "q": "Is a lawyer necessary during police station questioning?", "a": "Under Article 22 of the Constitution, a person has the right to consult a legal practitioner of their choice, and this extends to the period of police questioning. The law does not mandate a lawyer's physical presence in every instance, but legal representation is a recognised safeguard against procedural irregularities. Applicable rules can vary with the offence and stage of investigation." },
       { "q": "What courts does Advocate Sourabh Rawat practise in?", "a": "Advocate Sourabh Rawat practises at the District & Sessions Court in Lucknow and the High Court of Judicature at Allahabad, Lucknow Bench. His practice covers criminal, civil, and family law matters before these courts." }
     ]
