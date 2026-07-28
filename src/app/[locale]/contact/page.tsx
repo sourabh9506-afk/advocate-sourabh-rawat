@@ -4,6 +4,7 @@ import { MapPin, Phone, Mail, Clock, ArrowRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { generateBreadcrumbSchema } from '@/lib/schema';
 import { Link } from '@/i18n/routing';
+import { BUSINESS } from '@/lib/business';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -50,11 +51,12 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
     { name: tc('meta_title'), url: `https://advocatelucknow.in/${locale}/contact` }
   ]);
 
-  const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER || '919026349246';
+  const [madiyaon, kaiserbagh] = BUSINESS.locations;
+  const waNumber = BUSINESS.phone.wa;
 
   const chambers = [
-    { label: ta('chamber1_label'), address: ta('chamber1_address'), mapQuery: '26.9234755,80.9281100' },
-    { label: ta('chamber2_label'), address: ta('chamber2_address'), mapQuery: '26.9124,80.9515' },
+    { label: ta('chamber1_label'), address: ta('chamber1_address'), mapQuery: `${madiyaon.lat},${madiyaon.lng}` },
+    { label: ta('chamber2_label'), address: ta('chamber2_address'), mapQuery: `${kaiserbagh.lat},${kaiserbagh.lng}` },
   ];
 
   return (
@@ -95,8 +97,8 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                     </div>
                     <div>
                       <div className="text-navy font-semibold text-sm mb-1">{tc('phone_label')}</div>
-                      <a href="tel:+919026349246" className="text-dark/70 text-sm hover:text-navy transition-colors">
-                        +91 90263 49246
+                      <a href={`tel:${BUSINESS.phone.tel}`} className="text-dark/70 text-sm hover:text-navy transition-colors">
+                        {BUSINESS.phone.display}
                       </a>
                     </div>
                   </div>
@@ -107,8 +109,8 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                     </div>
                     <div>
                       <div className="text-navy font-semibold text-sm mb-1">{tc('email_label')}</div>
-                      <a href="mailto:Sourabh9506@gmail.com" className="text-dark/70 text-sm hover:text-navy transition-colors">
-                        Sourabh9506@gmail.com
+                      <a href={`mailto:${BUSINESS.email}`} className="text-dark/70 text-sm hover:text-navy transition-colors">
+                        {BUSINESS.email}
                       </a>
                     </div>
                   </div>

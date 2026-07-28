@@ -6,6 +6,7 @@ import * as z from 'zod';
 import { generateWhatsAppLink } from '@/lib/whatsapp';
 import { Send } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { BUSINESS } from '@/lib/business';
 
 const schema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -24,8 +25,7 @@ export default function AppointmentForm() {
   });
 
   const onSubmit = (data: FormData) => {
-    const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER || '919026349246';
-    const waLink = generateWhatsAppLink(waNumber, data);
+    const waLink = generateWhatsAppLink(BUSINESS.phone.wa, data);
     window.open(waLink, '_blank');
   };
 

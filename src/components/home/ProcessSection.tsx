@@ -1,10 +1,11 @@
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import ScrollReveal from '../shared/ScrollReveal';
+import { BUSINESS } from '@/lib/business';
 
 export default function ProcessSection() {
   const t = useTranslations('process');
-  const waLink = `https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || '919026349246'}?text=${encodeURIComponent('Namaste Advocate Sourabh ji, mujhe legal consultation chahiye.')}`;
+  const waLink = `https://wa.me/${BUSINESS.phone.wa}?text=${encodeURIComponent('Namaste Advocate Sourabh ji, mujhe legal consultation chahiye.')}`;
 
   return (
     <section id="process">

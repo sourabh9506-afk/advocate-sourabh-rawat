@@ -1,10 +1,10 @@
 import { useTranslations } from 'next-intl';
+import { BUSINESS } from '@/lib/business';
 
 export default function WhatsAppFloat() {
   const t = useTranslations('common');
-  const phoneNumber = process.env.NEXT_PUBLIC_WA_NUMBER || '919026349246';
   const text = 'Namaste Advocate Sourabh ji, mujhe legal help chahiye.';
-  const href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+  const href = `https://wa.me/${BUSINESS.phone.wa}?text=${encodeURIComponent(text)}`;
 
   return (
     <a href={href} className="wa-float" aria-label="Contact on WhatsApp" target="_blank" rel="noopener noreferrer">

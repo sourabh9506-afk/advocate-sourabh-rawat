@@ -1,7 +1,10 @@
 import { MapPin, Phone, Mail } from 'lucide-react';
 import ScrollReveal from '../shared/ScrollReveal';
+import { BUSINESS } from '@/lib/business';
 
 export default function LocationSection() {
+  const [madiyaon, kaiserbagh] = BUSINESS.locations;
+
   return (
     <section id="location" className="sec-full">
       <div className="max-w-[1280px] mx-auto">
@@ -11,54 +14,54 @@ export default function LocationSection() {
           <div className="sec-line"></div>
           <p className="sec-sub">We operate from two primary chambers in Lucknow for your convenience.</p>
         </ScrollReveal>
-        
+
         <div className="loc-grid" style={{ alignItems: 'flex-start' }}>
           <ScrollReveal delay={0.1}>
             <div className="flex flex-col gap-6">
-              <a href="https://maps.google.com/maps?q=26.9234755,80.9281100" target="_blank" rel="noreferrer" className="map-box" style={{ height: '300px', display: 'block', position: 'relative' }}>
+              <a href={madiyaon.mapsUrl} target="_blank" rel="noreferrer" className="map-box" style={{ height: '300px', display: 'block', position: 'relative' }}>
                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 10 }}></div>
-                <iframe 
+                <iframe
                   title="Chamber 1 Location on Google Maps"
-                  src="https://maps.google.com/maps?q=26.9234755,80.9281100&z=15&output=embed"  
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  allowFullScreen 
+                  src={`${madiyaon.mapsUrl}&z=15&output=embed`}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
                   loading="lazy">
                 </iframe>
               </a>
               <div className="loc-details" style={{ margin: 0 }}>
-                <a href="https://maps.google.com/maps?q=26.9234755,80.9281100" target="_blank" rel="noreferrer" className="loc-row hover-fade" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', transition: 'opacity 0.2s' }}>
+                <a href={madiyaon.mapsUrl} target="_blank" rel="noreferrer" className="loc-row hover-fade" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', transition: 'opacity 0.2s' }}>
                   <div className="loc-icon li-gold"><MapPin size={18} /></div>
                   <div>
-                    <div className="loc-row-title">Chamber 1</div>
-                    <div className="loc-row-val">616/188/A Semra Gaudhi, Near Primary School<br/>Thana Madiyaon, Lucknow</div>
+                    <div className="loc-row-title">{madiyaon.label}</div>
+                    <div className="loc-row-val">{madiyaon.streetAddress}<br/>{madiyaon.locality}</div>
                   </div>
                 </a>
               </div>
             </div>
           </ScrollReveal>
-          
+
           <ScrollReveal delay={0.2} direction="right">
             <div className="flex flex-col gap-6">
-              <a href="https://maps.google.com/maps?q=26.8565612,80.9319489" target="_blank" rel="noreferrer" className="map-box" style={{ height: '300px', display: 'block', position: 'relative' }}>
+              <a href={kaiserbagh.mapsUrl} target="_blank" rel="noreferrer" className="map-box" style={{ height: '300px', display: 'block', position: 'relative' }}>
                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 10 }}></div>
-                <iframe 
+                <iframe
                   title="Chamber 2 Location on Google Maps"
-                  src="https://maps.google.com/maps?q=26.8565612,80.9319489&z=15&output=embed"  
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  allowFullScreen 
+                  src={`${kaiserbagh.mapsUrl}&z=15&output=embed`}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
                   loading="lazy">
                 </iframe>
               </a>
               <div className="loc-details" style={{ margin: 0 }}>
-                <a href="https://maps.google.com/maps?q=26.8565612,80.9319489" target="_blank" rel="noreferrer" className="loc-row hover-fade" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', transition: 'opacity 0.2s' }}>
+                <a href={kaiserbagh.mapsUrl} target="_blank" rel="noreferrer" className="loc-row hover-fade" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', transition: 'opacity 0.2s' }}>
                   <div className="loc-icon li-gold"><MapPin size={18} /></div>
                   <div>
-                    <div className="loc-row-title">Chamber 2</div>
-                    <div className="loc-row-val">Near CHC Building, Gate No. 8<br/>Kaiserbagh, Lucknow</div>
+                    <div className="loc-row-title">{kaiserbagh.label}</div>
+                    <div className="loc-row-val">{kaiserbagh.streetAddress}<br/>{kaiserbagh.locality}</div>
                   </div>
                 </a>
               </div>
@@ -73,14 +76,14 @@ export default function LocationSection() {
               <div className="loc-icon li-blue"><Phone size={18} /></div>
               <div>
                 <div className="loc-row-title">Contact Number</div>
-                <a href="tel:+919026349246" className="loc-row-val" style={{ textDecoration: 'none', color: 'inherit' }}>+91 90263 49246</a>
+                <a href={`tel:${BUSINESS.phone.tel}`} className="loc-row-val" style={{ textDecoration: 'none', color: 'inherit' }}>{BUSINESS.phone.display}</a>
               </div>
             </div>
             <div className="loc-row">
               <div className="loc-icon li-navy"><Mail size={18} /></div>
               <div>
                 <div className="loc-row-title">Email Address</div>
-                <a href="mailto:Sourabh9506@gmail.com" className="loc-row-val" style={{ textDecoration: 'none', color: 'inherit' }}>Sourabh9506@gmail.com</a>
+                <a href={`mailto:${BUSINESS.email}`} className="loc-row-val" style={{ textDecoration: 'none', color: 'inherit' }}>{BUSINESS.email}</a>
               </div>
             </div>
           </div>

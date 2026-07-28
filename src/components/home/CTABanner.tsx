@@ -2,10 +2,11 @@
 import { Phone } from 'lucide-react';
 import ScrollReveal from '../shared/ScrollReveal';
 import { useTranslations } from 'next-intl';
+import { BUSINESS } from '@/lib/business';
 
 export default function CTABanner() {
   const t = useTranslations('ctaBanner');
-  const waLink = `https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || '919026349246'}`;
+  const waLink = `https://wa.me/${BUSINESS.phone.wa}`;
 
   return (
     <div className="cta-banner">
@@ -20,7 +21,7 @@ export default function CTABanner() {
             </svg>
             {t('whatsapp')}
           </a>
-          <a href={`tel:${process.env.NEXT_PUBLIC_PHONE || '+919026349246'}`} className="btn-navy">
+          <a href={`tel:${BUSINESS.phone.tel}`} className="btn-navy">
             <Phone size={18} />
             {t('call')}
           </a>

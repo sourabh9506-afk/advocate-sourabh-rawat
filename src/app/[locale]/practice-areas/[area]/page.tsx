@@ -5,6 +5,7 @@ import FAQAccordion from '@/components/shared/FAQAccordion';
 import { ArrowRight, CheckCircle2, MapPin } from 'lucide-react';
 import { generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import { Link } from '@/i18n/routing';
+import { BUSINESS } from '@/lib/business';
 
 const validAreas = ['criminal-law', 'civil-law', 'family-law', 'police-station'];
 
@@ -72,7 +73,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
   ]);
   const faqSchema = generateFAQSchema(faqItems);
 
-  const waLink = `https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || '919026349246'}?text=${encodeURIComponent(`Namaste, I need help with ${heading}`)}`;
+  const waLink = `https://wa.me/${BUSINESS.phone.wa}?text=${encodeURIComponent(`Namaste, I need help with ${heading}`)}`;
 
   // Convert translation list to an array properly
   // Next-intl doesn't return raw arrays easily unless we use rich formatting or specific keys,
@@ -165,12 +166,12 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
             <div className="practice-area-sidebar-card">
               <h3 className="sec-title" style={{ fontSize: '24px', marginBottom: '16px' }}>Need Immediate Help?</h3>
               <p className="sec-sub" style={{ marginBottom: '32px', fontSize: '14px' }}>
-                Consult Advocate Sourabh Rawat directly for honest, result-oriented legal counsel.
+                Consult Advocate Sourabh Rawat directly for honest legal counsel.
               </p>
               <a href={waLink} target="_blank" rel="noreferrer" className="btn-gold w-full justify-center mb-4">
                 {common('whatsappNow')} <ArrowRight size={18} />
               </a>
-              <a href={`tel:${process.env.NEXT_PUBLIC_PHONE || '+919026349246'}`} className="btn-navy w-full justify-center">
+              <a href={`tel:${BUSINESS.phone.tel}`} className="btn-navy w-full justify-center">
                 {common('callDirectly')}
               </a>
             </div>

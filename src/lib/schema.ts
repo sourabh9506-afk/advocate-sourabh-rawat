@@ -1,25 +1,48 @@
+import { BUSINESS } from './business';
+
 export const generateLegalServiceSchema = (locale: string) => {
-  return {
-    "@context": "https://schema.org",
-    "@type": "LegalService",
-    "name": "Advocate Sourabh Rawat",
-    "image": "https://advocatelucknow.in/images/og-image.jpg",
-    "@id": "https://advocatelucknow.in",
-    "url": `https://advocatelucknow.in/${locale}`,
-    "telephone": "+919026349246",
+  const [madiyaon, kaiserbagh] = BUSINESS.locations;
+
+  const toPlace = (loc: typeof BUSINESS.locations[number]) => ({
+    "@type": "Place",
+    "name": loc.label,
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "616/188/A Semra Gaudhi, Near Primary School, Thana Madiyaon",
-      "addressLocality": "Lucknow",
-      "addressRegion": "Uttar Pradesh",
-      "postalCode": "226021",
-      "addressCountry": "IN"
+      "streetAddress": loc.streetAddress,
+      "addressLocality": loc.locality,
+      "addressRegion": loc.region,
+      "postalCode": loc.postalCode,
+      "addressCountry": loc.country
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 26.9234755,
-      "longitude": 80.9281100
+      "latitude": loc.lat,
+      "longitude": loc.lng
+    }
+  });
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": BUSINESS.name,
+    "image": "https://advocatelucknow.in/images/og-image.jpg",
+    "@id": "https://advocatelucknow.in",
+    "url": `https://advocatelucknow.in/${locale}`,
+    "telephone": BUSINESS.phone.tel,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": madiyaon.streetAddress,
+      "addressLocality": madiyaon.locality,
+      "addressRegion": madiyaon.region,
+      "postalCode": madiyaon.postalCode,
+      "addressCountry": madiyaon.country
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": madiyaon.lat,
+      "longitude": madiyaon.lng
+    },
+    "location": [toPlace(madiyaon), toPlace(kaiserbagh)],
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -45,19 +68,9 @@ export const generateLegalServiceSchema = (locale: string) => {
         "name": "Uttar Pradesh"
       }
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "13",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    // Add directory profile URLs below after creating listings on Justdial, Vakilno1, Lawrato:
-    "sameAs": [
-      // "https://www.justdial.com/Lucknow/...",
-      // "https://vakilno1.com/...",
-      // "https://lawrato.com/..."
-    ],
+    "founder": { "@id": "https://advocatelucknow.in/#person" },
+    // TODO: add sameAs URLs once available — GBP profile URL, Justdial, Vakilno1, Lawrato, LinkedIn
+    "sameAs": [],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Legal Services",
@@ -75,23 +88,24 @@ export function generatePersonSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
+    '@id': 'https://advocatelucknow.in/#person',
     name: 'Sourabh Rawat',
     jobTitle: 'Advocate',
     description: 'Advocate enrolled with the Bar Council of Uttar Pradesh, practising criminal, civil, and family law at District Court and High Court Lucknow.',
     url: 'https://advocatelucknow.in/en/about',
     image: 'https://advocatelucknow.in/images/team/sourabh.webp',
-    telephone: '+919026349246',
-    email: 'Sourabh9506@gmail.com',
+    telephone: BUSINESS.phone.tel,
+    email: BUSINESS.email,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '616/188/A Semra Gaudhi, Thana Madiyaon',
-      addressLocality: 'Lucknow',
-      addressRegion: 'Uttar Pradesh',
-      addressCountry: 'IN',
+      streetAddress: BUSINESS.locations[0].streetAddress,
+      addressLocality: BUSINESS.locations[0].locality,
+      addressRegion: BUSINESS.locations[0].region,
+      addressCountry: BUSINESS.locations[0].country,
     },
     worksFor: {
       '@type': 'LegalService',
-      name: 'Advocate Sourabh Rawat',
+      name: BUSINESS.name,
       url: 'https://advocatelucknow.in',
     },
     knowsAbout: ['Criminal Law', 'Civil Law', 'Family Law'],
@@ -107,6 +121,8 @@ export function generatePersonSchema() {
         name: 'Lucknow',
       },
     },
+    // TODO: add sameAs URLs once available — GBP profile URL, Justdial, Vakilno1, Lawrato, LinkedIn
+    sameAs: [],
   }
 }
 

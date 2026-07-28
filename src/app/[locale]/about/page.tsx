@@ -5,6 +5,7 @@ import ScrollReveal from '@/components/shared/ScrollReveal';
 import CTABanner from '@/components/home/CTABanner';
 import { generateBreadcrumbSchema, generatePersonSchema } from '@/lib/schema';
 import { Link } from '@/i18n/routing';
+import { BUSINESS } from '@/lib/business';
 
 const areaSlugs = ['criminal-law', 'civil-law', 'family-law', 'police-station'];
 
@@ -56,10 +57,11 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
     { name: t('name'), url: `https://advocatelucknow.in/${locale}/about` }
   ]);
 
-  const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER || '919026349246';
+  const [madiyaon, kaiserbagh] = BUSINESS.locations;
+  const waNumber = BUSINESS.phone.wa;
   const chambers = [
-    { label: t('chamber1_label'), address: t('chamber1_address'), mapQuery: '26.9124,80.9515' },
-    { label: t('chamber2_label'), address: t('chamber2_address'), mapQuery: '26.8467,80.9462' }
+    { label: t('chamber1_label'), address: t('chamber1_address'), mapQuery: `${madiyaon.lat},${madiyaon.lng}` },
+    { label: t('chamber2_label'), address: t('chamber2_address'), mapQuery: `${kaiserbagh.lat},${kaiserbagh.lng}` }
   ];
 
   const infoRows = [

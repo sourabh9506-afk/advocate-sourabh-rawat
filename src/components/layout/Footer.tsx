@@ -1,9 +1,11 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import { BUSINESS } from '@/lib/business';
 
 export default function Footer() {
   const t = useTranslations('nav');
-  
+  const [madiyaon, kaiserbagh] = BUSINESS.locations;
+
   return (
     <footer>
       <div className="footer-grid">
@@ -11,8 +13,8 @@ export default function Footer() {
           <div className="f-brand-name">Adv. Sourabh Rawat</div>
           <div className="f-brand-sub">Advocate &middot; High Court Lucknow</div>
           <p className="f-brand-desc">
-            Dedicated legal representation in criminal, civil, and family matters across Lucknow. 
-            Direct, honest, and result-focused advocacy for over 10 years.
+            Dedicated legal representation in criminal, civil, and family matters across Lucknow.
+            Direct, honest advocacy for over 10 years.
           </p>
         </div>
         <div className="f-col">
@@ -32,15 +34,15 @@ export default function Footer() {
         </div>
         <div className="f-col">
           <div className="f-col-title">Contact</div>
-          <p><a href="tel:+919026349246" style={{ color: 'inherit', textDecoration: 'none' }}>+91 90263 49246</a></p>
-          <p><a href="mailto:Sourabh9506@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>Sourabh9506@gmail.com</a></p>
+          <p><a href={`tel:${BUSINESS.phone.tel}`} style={{ color: 'inherit', textDecoration: 'none' }}>{BUSINESS.phone.display}</a></p>
+          <p><a href={`mailto:${BUSINESS.email}`} style={{ color: 'inherit', textDecoration: 'none' }}>{BUSINESS.email}</a></p>
           <p style={{ lineHeight: '1.6' }}>
-            <strong>Chamber 1:</strong> 616/188/A Semra Gaudhi, Thana Madiyaon<br/>
-            <strong>Chamber 2:</strong> Near CHC Building, Gate 8, Kaiserbagh
+            <strong>{madiyaon.label}:</strong> {madiyaon.streetAddress}<br/>
+            <strong>{kaiserbagh.label}:</strong> {kaiserbagh.streetAddress}
           </p>
           <p style={{ marginTop: '8px', color: 'rgba(201,150,58,0.5)', fontSize: '12px' }}>
-            Mon&ndash;Fri: 10AM &ndash; 6PM<br/>
-            Sat: 10AM &ndash; 2PM
+            {BUSINESS.hours.weekday}<br/>
+            {BUSINESS.hours.saturday}
           </p>
         </div>
       </div>
