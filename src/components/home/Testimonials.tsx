@@ -197,7 +197,7 @@ export default function Testimonials() {
             &#8592;
           </button>
 
-          <div style={{ display: 'flex', gap: '8px' }}>
+          <div className="r-dots-row" style={{ display: 'flex', gap: '0px', alignItems: 'center' }}>
             {reviews.map((_, i) => (
               <button
                 key={i}
@@ -232,12 +232,18 @@ export default function Testimonials() {
           transition: all 0.2s; display: flex; align-items: center; justify-content: center;
         }
         .r-nav-btn:hover { background: var(--gold); color: var(--white); }
+        /* The dot stays visually 8px, but padding + background-clip:content-box
+           grows the tap target to 24x24 (WCAG 2.5.8 minimum) without changing
+           how it looks. Sizing the visible dot itself would be too large. */
         .r-dot {
           width: 8px; height: 8px; border-radius: 50%;
           background: var(--dark-20); border: none; cursor: pointer;
-          transition: all 0.25s; padding: 0;
+          transition: background 0.25s, width 0.25s; padding: 8px;
+          background-clip: content-box; box-sizing: content-box;
         }
-        .r-dot.active { background: var(--gold); width: 24px; border-radius: 4px; }
+        .r-dot.active { background: var(--gold); width: 24px; border-radius: 4px; background-clip: content-box; }
+        /* Negative margin keeps the visual spacing identical to before. */
+        .r-dots-row { margin: 0 -8px; }
       `}</style>
     </section>
   );

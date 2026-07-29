@@ -216,7 +216,7 @@ function CategoryBlock({ cat, t }: { cat: Category; t: any }) {
                 <p className="text-[13px] text-dark/85 leading-[1.65] mb-4">{t(`categories.${cat.key}.cards.${card.descKey}.desc`)}</p>
                 <div className="mt-auto">
                   {card.tags.map((tag, k) => (
-                    <span key={k} className="text-[10.5px] bg-cream text-dark/65 px-2.5 py-1 rounded mr-1.5 mb-1.5 inline-block">{tag}</span>
+                    <span key={k} className="text-[12px] bg-cream text-dark/65 px-2.5 py-1 rounded mr-1.5 mb-1.5 inline-block">{tag}</span>
                   ))}
                 </div>
               </Link>
