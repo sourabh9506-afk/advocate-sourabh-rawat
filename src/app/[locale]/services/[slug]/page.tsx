@@ -103,8 +103,8 @@ export default async function ServicePage({ params }: { params: Promise<{ locale
               <span className="text-white/80">{service.h1}</span>
             </div>
             <p className="sec-label">Service</p>
-            <h1 className="sec-title" style={{ color: 'var(--white)', fontSize: '48px', marginBottom: '16px' }}>{service.h1}</h1>
-            <p className="sec-sub" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '18px', maxWidth: '700px' }}>{service.description}</p>
+            <h1 className="sec-title subpage-h1" style={{ color: 'var(--white)', marginBottom: '16px' }}>{service.h1}</h1>
+            <p className="sec-sub subpage-lede" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '700px' }}>{service.description}</p>
           </ScrollReveal>
         </div>
       </div>
@@ -127,8 +127,8 @@ export default async function ServicePage({ params }: { params: Promise<{ locale
 
           <ScrollReveal delay={0.2}>
             <div className="practice-area-sidebar-card">
-              <h3 className="sec-title" style={{ fontSize: '24px', marginBottom: '16px' }}>Consult on This Matter</h3>
-              <p className="sec-sub" style={{ marginBottom: '32px', fontSize: '14px' }}>
+              <h3 className="sec-title card-h3" style={{ marginBottom: '16px' }}>Consult on This Matter</h3>
+              <p className="sec-sub card-text" style={{ marginBottom: '32px' }}>
                 Direct consultation with Advocate Sourabh Rawat. Fee discussed transparently before engagement.
               </p>
               <a href={waLink} target="_blank" rel="noreferrer" className="btn-gold w-full justify-center mb-4">

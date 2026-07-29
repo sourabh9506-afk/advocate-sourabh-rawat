@@ -510,7 +510,9 @@ footer{background:var(--navy);color:rgba(255,255,255,0.6);padding:56px 48px 32px
 .team-principal-content .team-name{font-family:var(--font-serif),serif;font-size:32px;font-weight:700;color:var(--navy);margin-bottom:8px}
 .team-principal-content .team-role{font-size:14px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:20px}
 .team-principal-content .team-desc{font-size:16px;color:var(--dark-45);line-height:1.7}
-@media (max-width: 768px) {
+/* Aligned to the site-wide 900px collapse point — at 768px the two team
+   cards stayed side-by-side while every other grid had already stacked. */
+@media (max-width: 900px) {
   #team{padding:64px 24px 0 24px}
   .team-grid{grid-template-columns:1fr}
   .team-principal{padding:28px; max-width:100%}
@@ -525,6 +527,23 @@ footer{background:var(--navy);color:rgba(255,255,255,0.6);padding:56px 48px 32px
 
 /* ─── SUB-PAGE HERO (default desktop padding — overridden in media queries above) ─── */
 .subpage-hero { padding: 120px 48px 80px 48px; }
+
+/* ─── FLUID TYPE SCALE ───────────────────────────────────────────────
+   Used by the dynamic templates (services / guides / practice-areas /
+   locations). These replace hardcoded inline `fontSize` values, which
+   won a specificity fight against the media queries above and left
+   sub-page headings at desktop size on phones.
+   Always set these via className — never inline — or the bug returns. */
+.subpage-h1    { font-size: clamp(26px, 6vw, 48px); line-height: 1.15; }
+.subpage-h1-sm { font-size: clamp(24px, 5.2vw, 40px); line-height: 1.15; }
+.subpage-lede  { font-size: clamp(15px, 2.2vw, 18px); }
+.body-h2       { font-size: clamp(22px, 4vw, 32px); }
+.body-h3       { font-size: clamp(19px, 3.2vw, 28px); }
+.card-h3       { font-size: clamp(18px, 2.6vw, 24px); }
+.card-h3-sm    { font-size: clamp(16px, 2.2vw, 20px); }
+.card-label    { font-size: clamp(15px, 2vw, 18px); }
+.card-text     { font-size: clamp(13.5px, 1.8vw, 14px); }
+.list-item-txt { font-size: clamp(15px, 2vw, 16px); }
 
 /* ─── PRACTICE AREA PAGE ─── */
 .practice-area-body { padding: 96px 48px; }

@@ -123,7 +123,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               <span className="text-white/80">{guide.h1}</span>
             </div>
             <p className="sec-label">Legal Guide</p>
-            <h1 className="sec-title" style={{ color: 'var(--white)', fontSize: '48px', marginBottom: '16px' }}>{guide.h1}</h1>
+            <h1 className="sec-title subpage-h1" style={{ color: 'var(--white)', marginBottom: '16px' }}>{guide.h1}</h1>
             <p className="text-sm text-white/60">
               Last reviewed: {guide.updated} · Reviewed by {guide.reviewedBy}, Advocate, High Court Lucknow Bench
             </p>
@@ -160,7 +160,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             <div className="practice-area-sidebar-card">
               {toc.length > 0 && (
                 <div className="mb-8">
-                  <h3 className="sec-title" style={{ fontSize: '18px', marginBottom: '12px' }}>In This Guide</h3>
+                  <h3 className="sec-title card-label" style={{ marginBottom: '12px' }}>In This Guide</h3>
                   <nav className="flex flex-col gap-2">
                     {toc.map((item) => (
                       <a
@@ -175,8 +175,8 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
                 </div>
               )}
               <div className="border-t border-dark/10 pt-6">
-                <h3 className="sec-title" style={{ fontSize: '20px', marginBottom: '12px' }}>Need Help With This?</h3>
-                <p className="sec-sub" style={{ marginBottom: '20px', fontSize: '14px' }}>
+                <h3 className="sec-title card-h3-sm" style={{ marginBottom: '12px' }}>Need Help With This?</h3>
+                <p className="sec-sub card-text" style={{ marginBottom: '20px' }}>
                   Direct consultation with Advocate Sourabh Rawat.
                 </p>
                 <Link href="/contact" className="btn-gold w-full justify-center mb-4">

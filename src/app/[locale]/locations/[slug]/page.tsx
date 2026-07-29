@@ -115,8 +115,8 @@ export default async function LocationPage({ params }: { params: Promise<{ local
               <span className="text-white/80">{content.h1}</span>
             </div>
             <p className="sec-label">{location.kind === 'chamber' ? 'Chamber' : 'Court'}</p>
-            <h1 className="sec-title" style={{ color: 'var(--white)', fontSize: '40px', marginBottom: '16px' }}>{content.h1}</h1>
-            <p className="sec-sub" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '18px', maxWidth: '760px' }}>{content.intro}</p>
+            <h1 className="sec-title subpage-h1-sm" style={{ color: 'var(--white)', marginBottom: '16px' }}>{content.h1}</h1>
+            <p className="sec-sub subpage-lede" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '760px' }}>{content.intro}</p>
           </ScrollReveal>
         </div>
       </div>

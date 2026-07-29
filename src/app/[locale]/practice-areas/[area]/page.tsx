@@ -150,8 +150,8 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
         <div style={{ maxWidth: '1280px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
           <ScrollReveal>
             <p className="sec-label">Practice Area</p>
-            <h1 className="sec-title" style={{ color: 'var(--white)', fontSize: '48px', marginBottom: '16px' }}>{heading}</h1>
-            <p className="sec-sub" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '18px', maxWidth: '700px' }}>{t('desc')}</p>
+            <h1 className="sec-title subpage-h1" style={{ color: 'var(--white)', marginBottom: '16px' }}>{heading}</h1>
+            <p className="sec-sub subpage-lede" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '700px' }}>{t('desc')}</p>
           </ScrollReveal>
         </div>
       </div>
@@ -160,18 +160,18 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
         <div className="practice-area-grid">
           <div>
             <ScrollReveal>
-              <h2 className="sec-title" style={{ fontSize: '32px', marginBottom: '16px' }}>Overview</h2>
+              <h2 className="sec-title body-h2" style={{ marginBottom: '16px' }}>Overview</h2>
               <div className="sec-line" style={{ margin: '0 0 32px 0' }}></div>
               <p className="sec-sub" style={{ maxWidth: 'none', marginBottom: '48px', color: 'var(--dark-70)' }}>
                 {t('content')}
               </p>
               
-              <h3 className="sec-title" style={{ fontSize: '28px', marginBottom: '24px' }}>Our Services</h3>
+              <h3 className="sec-title body-h3" style={{ marginBottom: '24px' }}>Our Services</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 {services.map((service, idx) => (
                   <div key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
                     <CheckCircle2 size={24} color="var(--gold)" style={{ flexShrink: 0, marginTop: '2px' }} />
-                    <span style={{ fontSize: '16px', color: 'var(--navy)', lineHeight: 1.6, fontWeight: 500 }}>{service}</span>
+                    <span className="list-item-txt" style={{ color: 'var(--navy)', lineHeight: 1.6, fontWeight: 500 }}>{service}</span>
                   </div>
                 ))}
               </div>
@@ -180,8 +180,8 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ l
 
           <ScrollReveal delay={0.2}>
             <div className="practice-area-sidebar-card">
-              <h3 className="sec-title" style={{ fontSize: '24px', marginBottom: '16px' }}>Need Immediate Help?</h3>
-              <p className="sec-sub" style={{ marginBottom: '32px', fontSize: '14px' }}>
+              <h3 className="sec-title card-h3" style={{ marginBottom: '16px' }}>Need Immediate Help?</h3>
+              <p className="sec-sub card-text" style={{ marginBottom: '32px' }}>
                 Consult Advocate Sourabh Rawat directly for honest legal counsel.
               </p>
               <a href={waLink} target="_blank" rel="noreferrer" className="btn-gold w-full justify-center mb-4">
