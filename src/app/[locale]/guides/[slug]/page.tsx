@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getGuideBySlug, getAllGuideSlugs, hasEnglishFallback, extractHeadings } from '@/lib/guides';
+import type { ReactNode } from 'react';
 import { getServiceBySlug } from '@/lib/services';
 import { generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import ScrollReveal from '@/components/shared/ScrollReveal';
@@ -10,11 +11,40 @@ import LegalDisclaimer from '@/components/shared/LegalDisclaimer';
 import { ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 
-const slugify = (text: string) =>
-  text
-    .toLowerCase()
-    .replace(/[^\w\s-]/g, '')
-    .replace(/\s+/g, '-');
+/**
+ * Heading ids must match the anchors extractHeadings() produced for the TOC,
+ * including its de-duplication. Rather than re-deriving the slug here (the old
+ * local `slugify` did, and drifted), consume the same ordered list: the Nth H2
+ * rendered is the Nth entry in `toc`. Falls back to text matching if react-markdown
+ * ever renders headings out of order.
+ */
+/**
+ * Flatten react-markdown children to plain text. `String(children)` breaks the
+ * moment a heading contains inline markup (bold, a link) — children is then an
+ * array of elements and stringifies to "[object Object]".
+ */
+function childrenToText(children: ReactNode): string {
+  if (children == null || typeof children === 'boolean') return '';
+  if (typeof children === 'string' || typeof children === 'number') return String(children);
+  if (Array.isArray(children)) return children.map(childrenToText).join('');
+  if (typeof children === 'object' && 'props' in children) {
+    return childrenToText((children as { props?: { children?: ReactNode } }).props?.children);
+  }
+  return '';
+}
+
+function makeHeadingIdResolver(toc: { text: string; slug: string }[]) {
+  let cursor = 0;
+  return (text: string): string | undefined => {
+    const next = toc[cursor];
+    if (next && next.text === text) {
+      cursor += 1;
+      return next.slug;
+    }
+    const found = toc.find((item) => item.text === text);
+    return found?.slug;
+  };
+}
 
 export async function generateStaticParams() {
   return getAllGuideSlugs().map((slug) => ({ slug }));
@@ -101,6 +131,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
   };
 
   const toc = extractHeadings(guide.content);
+  const resolveHeadingId = makeHeadingIdResolver(toc);
   const relatedServices = guide.related
     .map((relSlug) => getServiceBySlug(relSlug, 'en'))
     .filter((s): s is NonNullable<typeof s> => s !== null);
@@ -145,8 +176,8 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
                 <ReactMarkdown
                   components={{
                     h2: ({ children }) => {
-                      const text = String(children);
-                      return <h2 id={slugify(text)}>{children}</h2>;
+                      const text = childrenToText(children);
+                      return <h2 id={resolveHeadingId(text)}>{children}</h2>;
                     },
                   }}
                 >

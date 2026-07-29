@@ -83,19 +83,49 @@ export function hasEnglishFallback(slug: string): boolean {
   return fs.existsSync(path.join(contentDir, `${slug}.en.md`));
 }
 
-/** Extract H2 headings from markdown body to build a table of contents. */
+/**
+ * Turn heading text into a URL anchor.
+ *
+ * Unicode-aware on purpose. The previous version used `[^\w\s-]`, and `\w`
+ * without the `u` flag means [A-Za-z0-9_] — so every Devanagari character was
+ * stripped and the Hindi guides collapsed to duplicate anchors ('-' x3,
+ * '-fir-' x3), breaking their tables of contents.
+ *
+ * \p{M} (combining marks) matters as much as \p{L} here: Devanagari vowel signs
+ * are marks, not letters, so \p{L}\p{N} alone mangles गाइड -> गइड. Keeping marks
+ * gives readable anchors: यह-गाइड-किसके-लिए-है.
+ *
+ * Single source of truth: the guide page imports this so the TOC links and the
+ * rendered heading ids cannot drift apart. Do not re-implement it elsewhere.
+ */
+export function slugifyHeading(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\p{M}\s-]/gu, '')
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+/**
+ * Extract H2 headings from markdown body to build a table of contents.
+ * Anchors are de-duplicated (`foo`, `foo-2`, ...) so two headings that reduce
+ * to the same slug still get unique, stable ids.
+ */
 export function extractHeadings(content: string): { text: string; slug: string }[] {
   const lines = content.split('\n');
   const headings: { text: string; slug: string }[] = [];
+  const seen = new Map<string, number>();
+
   for (const line of lines) {
     const match = line.match(/^##\s+(.+)$/);
     if (match) {
       const text = match[1].trim();
-      const slug = text
-        .toLowerCase()
-        .replace(/[^\w\s-]/g, '')
-        .replace(/\s+/g, '-');
-      headings.push({ text, slug });
+      const base = slugifyHeading(text) || 'section';
+      const count = seen.get(base) ?? 0;
+      seen.set(base, count + 1);
+      headings.push({ text, slug: count === 0 ? base : `${base}-${count + 1}` });
     }
   }
   return headings;
