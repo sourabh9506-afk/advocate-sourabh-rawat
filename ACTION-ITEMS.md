@@ -9,12 +9,6 @@ file updated as new items come up in later phases.
 
 ---
 
-## 1. 🔴 Domain 301 redirect — `lawyerlucknow.in` → `advocatelucknow.in`
-- **What:** Point the second domain at the main site as a permanent (301) redirect. Never a separate/duplicate site.
-- **Where:** Vercel → your project → **Settings → Domains → Add** `lawyerlucknow.in` → choose **"Redirect to advocatelucknow.in"** → make sure it's set to **Permanent (308/301)**.
-- **Why:** Consolidates SEO value onto one domain; avoids a duplicate-content penalty.
-- **Status:** [x] done — confirmed in Vercel: 308 Permanent Redirect, `lawyerlucknow.in` → `advocatelucknow.in`, attached to Production
-
 ## 2. 🔴 Provide Bar Council enrollment YEAR
 - **What:** The exact year Adv. Sourabh Rawat was enrolled with the Bar Council of Uttar Pradesh (e.g. "2014"). You approved showing the year (not the number) in Phase 1, but never gave me the year, so nothing is displayed yet.
 - **Where you give it:** Just tell Claude the year. Claude will add it to the About page + Person schema (strengthens Google's trust signal / E-E-A-T).
@@ -48,13 +42,9 @@ file updated as new items come up in later phases.
   - [ ] https://advocatelucknow.in/en/services/maintenance-lawyer-lucknow
   - [ ] https://advocatelucknow.in/en/services/domestic-violence-lawyer-lucknow
   - [ ] https://advocatelucknow.in/en/services/court-marriage-lucknow
-- **Also:** [ ] Resubmit the sitemap in GSC → **Sitemaps** → enter `sitemap.xml` → Submit (picks up all new pages at once).
-- **Note:** Do this only AFTER the changes are deployed live to `advocatelucknow.in`.
-- **Status:** [ ] not done
-
-## 5. ⚪ Confirm Kaiserbagh chamber PIN (low priority — already answered once)
-- **What:** You confirmed **226001** is correct for the Kaiserbagh chamber in Phase 1. No action unless that was a guess — if you're unsure, double-check it, since a wrong PIN hurts local map ranking.
-- **Status:** [x] confirmed 226001 (re-verify only if uncertain)
+- **Also:** [x] Sitemap resubmitted in GSC (covers this item plus items 8, 9, 11 in one shot).
+- **Note:** Do this only AFTER the changes are deployed live to `advocatelucknow.in` — confirmed live.
+- **Status:** [ ] in progress — sitemap submitted; individual Request Indexing hit GSC's daily quota, continue a few URLs/day until all 12 are done
 
 ## 6. 🔴 Set your Google Business Profile's "Website" field
 - **What:** You confirmed there's **one GBP** (not one per chamber). Point its Website field at the **homepage**: `https://advocatelucknow.in`
@@ -77,8 +67,8 @@ file updated as new items come up in later phases.
   - [ ] https://advocatelucknow.in/en/locations/kaiserbagh-chamber
   - [ ] https://advocatelucknow.in/en/locations/district-court-lucknow
   - [ ] https://advocatelucknow.in/en/locations/high-court-lucknow-bench
-- **Note:** Do this only AFTER deploying, and after resubmitting the sitemap (item 4 already covers a sitemap resubmit — one resubmit picks up both Phase 2 and Phase 3 URLs if done after both are live).
-- **Status:** [ ] not done
+- **Note:** Sitemap already resubmitted (see item 4) — covers these URLs too.
+- **Status:** [ ] in progress — sitemap submitted; individual Request Indexing pending (daily quota)
 
 ## 9. ⚪ Google Search Console — request indexing for the 8 new Legal Guides
 - **What:** Same process as items 4 and 8, for the new `/guides` pages from Phase 4.
@@ -92,9 +82,9 @@ file updated as new items come up in later phases.
   - [ ] https://advocatelucknow.in/en/guides/property-partition-guide-up
   - [ ] https://advocatelucknow.in/en/guides/cheque-bounce-case-guide
   - [ ] https://advocatelucknow.in/en/guides/ipc-to-bns-what-changed
-- **Also:** [ ] Resubmit the sitemap in GSC (one resubmit after deploy picks up Phases 2, 3, and 4 URLs together if not already done).
+- **Also:** [x] Sitemap resubmitted (see item 4).
 - **Note:** The old `/blog` URL and the old `bail-process-in-india` post slug now 301-redirect to `/guides` and `/guides/bail-process-in-lucknow-courts` respectively — if either old URL was previously indexed or has external backlinks, no action needed on your side, the redirect carries the SEO value forward automatically.
-- **Status:** [ ] not done
+- **Status:** [ ] in progress — sitemap submitted; individual Request Indexing pending (daily quota)
 
 ## 10. 🔴 Native-speaker spot-review of the new Hindi pages (Phase 5 exit requirement)
 - **What:** Phase 5's own exit criterion — pick 3 pages of your choice from the new Hindi content and read them as a native Lucknow Hindi speaker, checking whether the phrasing sounds natural (search-Hindi, not "shuddh"/textbook Hindi) and whether any term should be swapped for a more locally common word.
@@ -106,8 +96,8 @@ file updated as new items come up in later phases.
 ## 11. ⚪ Google Search Console — request indexing for the new Hindi (/hi) URLs
 - **What:** Same process as items 4, 8, and 9, for the Hindi versions of the 12 service pages, 7 guides (the 8th, bail-process, already had Hindi from Phase 4), and the location pages that gained real Hindi content this phase instead of throwing errors.
 - **Where:** GSC → **URL Inspection** → paste each URL → **Request Indexing**.
-- **Note:** Do this only after item 10 (native-speaker spot-review) is done and after deploying — no point indexing content that might still get a wording tweak. One sitemap resubmit after all of Phases 2–5 are live picks up every new URL from every phase at once, so there's no need to resubmit separately per phase if you're doing this after Phase 5.
-- **Status:** [ ] not done — do after item 10
+- **Note:** Sitemap already resubmitted covering all Hindi URLs too (see item 4) — done ahead of the native-speaker review since you chose to proceed without waiting.
+- **Status:** [ ] in progress — sitemap submitted; individual Request Indexing pending (daily quota). Item 10 review still outstanding.
 
 ## 12. ⚪ Chamber photos (2–3 real photos per chamber)
 - **What:** Real photos — exterior with signage, and interior — for both the Madiyaon and Kaiserbagh chamber pages. You said "no photos for now"; this stays open for whenever you have them.
@@ -172,7 +162,8 @@ file updated as new items come up in later phases.
 ---
 
 ## Notes
-- **Deploy first, then index.** Items 1, 4, 8, 9, and 11 only make sense once the latest code is live on Vercel.
+- Domain 301 redirect (`lawyerlucknow.in` → `advocatelucknow.in`) and the Kaiserbagh PIN confirmation are both done and removed from this list.
+- All Phase 2–5 code is now committed and live on Vercel — includes a fix for a production bug where every guide/service/location page was 500ing (root cause: missing `setRequestLocale` for next-intl static rendering).
+- Sitemap has been resubmitted in GSC, covering all English + Hindi service, guide, and location URLs. Individual "Request Indexing" is limited by Google's daily quota — continue a few URLs/day (items 4, 8, 9, 11) until done.
 - **Nothing here changes site code by itself** — items 2 and 3 become code changes only after you hand me the values/files. Item 10 may result in small text edits to specific Hindi pages once you flag anything.
-- **Phases 3, 4, and 5 code changes have NOT been committed to git yet** — they're sitting in the working tree at your request. Nothing above needs to wait for that commit except items 1, 4, 8, 9, and 11 (which need the code live on Vercel, which itself needs a commit + deploy first).
 - Claude will append new human-action items to this file at the end of each future phase.

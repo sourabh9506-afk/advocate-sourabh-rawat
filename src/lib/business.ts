@@ -14,6 +14,7 @@ export const BUSINESS = {
   // available (Justdial, Vakilno1, Lawrato, LinkedIn, etc.).
   sameAs: [
     'https://share.google/pZkTxYt32RCd44TK0',
+    'https://www.justdial.com/Lucknow/Advocate-Sourabh-Rawat/0522PX522-X522-250104122653-U8S5_BZDET',
   ],
   locations: [
     {

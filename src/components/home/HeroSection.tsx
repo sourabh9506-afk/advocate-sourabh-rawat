@@ -16,7 +16,7 @@ export default function HeroSection() {
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <h1 className="hero-title">
-            <span className="block">Advocate<br/><span className="gold">Sourabh Rawat</span></span>
+            <span className="block">{t('h1Line1')}<br/><span className="gold">{t('h1Line2')}</span></span>
             <span className="hero-sub block">{t('h1Descriptor')}</span>
           </h1>
         </ScrollReveal>
